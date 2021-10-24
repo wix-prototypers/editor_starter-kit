@@ -79,10 +79,8 @@ export const Actions = {
 
   zoomMode(data) {
     const zoomBtn = editor.querySelector(".zoom");
-    const zgfpp = document.querySelector(".zgfpp");
-    zgfpp.classList.remove("show");
+
     if (data.isActive == true) {
-      zgfpp.classList.remove("show");
       editor.classList.add("zoomMode");
       zoomBtn.classList.add("selected");
       stage.classList.add("zoomMode");
@@ -90,29 +88,21 @@ export const Actions = {
       body.removeAttribute("panel-type");
       stage.removeAttribute("panel-type");
 
-      setTimeout(() => {
-        setZGfppRight();
-      }, 400);
-    } else {
-      setTimeout(() => {
-        setZGfppRight();
-      }, 400);
       editor.classList.remove("zoomMode");
       zoomBtn.classList.remove("selected");
       stage.classList.remove("zoomMode");
       body.classList.remove("zoomMode");
-      zgfpp.classList.remove("show");
     }
   },
 
   //App
   panel(data) {
     const zoomBtn = editor.querySelector(".zoom");
-    const zgfpp = document.querySelector(".zgfpp");
+
     stage.style.pointerEvents = "none";
-    zgfpp.classList.remove("show");
+
     sectionActions.classList.remove("show");
-    zgfpp.style.visibility = "hidden";
+
     sectionActions.style.visibility = "hidden";
     if (data == "close") {
       leftBar.classList.remove("panld");
@@ -122,7 +112,7 @@ export const Actions = {
       sectionActions.classList.remove("show");
       if (stage.classList.contains("zoomMode")) {
         editor.classList.add("zoomMode");
-        zgfpp.classList.remove("show");
+
         sectionActions.classList.remove("show");
       }
       document.querySelector("#left-panel").classList.remove("show");
@@ -136,13 +126,12 @@ export const Actions = {
       document
         .querySelectorAll(`.place-holder`)
         .forEach((selected) => selected.classList.remove("on"));
-      zgfpp.classList.remove("show");
+
       !stage.classList.contains("zoomMode") &&
         zoomBtn.classList.remove("selected");
-      zgfpp.classList.remove("show");
     } else if (data.isOpen) {
       leftBar.classList.add("panld");
-      zgfpp.classList.remove("show");
+
       editor.classList.add("add-sections");
       if (data.type == "add") {
         leftBar.classList.add("panld");
@@ -156,7 +145,6 @@ export const Actions = {
               .querySelectorAll(".place-holder")
               .forEach((ph) => ph.classList.remove("on"));
         }
-        zgfpp.classList.remove("show");
 
         editor.classList.add("zoomMode");
         leftPanel.setAttribute("content", "add-sections");
@@ -170,19 +158,18 @@ export const Actions = {
 
         setTimeout(() => {
           stage.style.pointerEvents = "all";
-          zgfpp.style.visibility = "visible";
+
           sectionActions.style.visibility = "visible";
         }, 500);
 
         setTimeout(() => {
           data.sectionPlaceholder.classList.add("on");
-          zgfpp.classList.remove("show");
         }, 500);
       }
     }
     setTimeout(() => {
       stage.style.pointerEvents = "all";
-      zgfpp.style.visibility = "visible";
+
       sectionActions.style.visibility = "visible";
     }, 500);
   },
@@ -267,7 +254,7 @@ export const Actions = {
     } else if (data.isActive) {
       zoomBtn.classList.add("selected");
       body.setAttribute("panel-type", "edit-panel");
-      document.querySelector("#zgfpp").classList.remove("show");
+
       deselectAll();
       console.log();
       selectSection(document.querySelector("#" + data.id));
@@ -288,13 +275,3 @@ export const Actions = {
     body.classList.remove("closePanel");
   },
 };
-function setZGfppRight() {
-  let zgfpp = document.querySelector("#zgfpp");
-  let bdbox = stage.getBoundingClientRect();
-  let right = bdbox.width - bdbox.x + 20;
-  console.log(right);
-  zgfpp.style.right = right + "px";
-  window.onresize = () => {
-    setZGfppRight();
-  };
-}

@@ -204,6 +204,6 @@ export const TopBar = (state, setState) => {
   );
 
   container.querySelector(".publish").onclick = (e) => {
-    console.log("t0");
+    console.log("ariel was here");
   };
 };
