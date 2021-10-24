@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wix-prototypers/prototypers_prototype-panel.git"
+    "url": "git+https://github.com/wix-prototypers/editor_starter-kit.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wix-prototypers/prototypers_prototype-panel/issues"
+    "url": "https://github.com/wix-prototypers/editor_starter-kit.git/issues"
   },
-  "homepage": "https://github.com/wix-prototypers/prototypers_prototype-panel#readme",
+  "homepage": "https://github.com/wix-prototypers/editor_starter-kit.git#readme",
   "devDependencies": {
     "css-loader": "^6.3.0",
     "css-minimizer-webpack-plugin": "^3.0.2",
