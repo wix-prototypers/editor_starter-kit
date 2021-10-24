@@ -1,7 +1,8 @@
 import { icons } from "./top-bar-icons.js";
 
 //Append Styles
-var href = "../../App/EditorUI/TopBar/top-bar.css";
+var href =
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/EditorUI/TopBar/top-bar.css";
 const exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {

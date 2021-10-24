@@ -1,5 +1,5 @@
 {
-  "name": "prototype-panel",
+  "name": "ed-panel",
   "version": "1.0.0",
   "description": "The \"Prototype Panel\" goal is to add a layer of information to our prototypes. This panel allows us to improve the experience by adding more capabilities that will allow our users to interact and play with the prototype itself.",
   "main": "main.js",
@@ -26,5 +26,8 @@
     "style-loader": "^3.2.1",
     "webpack": "^5.53.0",
     "webpack-cli": "^4.8.0"
+  },
+  "dependencies": {
+    "extract-text-webpack-plugin": "^3.0.2"
   }
 }
