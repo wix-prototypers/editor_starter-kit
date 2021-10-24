@@ -10,7 +10,7 @@ import {
   selectionModel,
   selectSection,
 } from "../../Utils/ADISelectionModel/adiSelectionModel.js";
-import { AddSection } from "../../Utils/AddSection/AddSection.js";
+import { AddSection } from "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/Utils/AddSection/AddSection.js";
 
 import { getCoords } from "../../Utils/functions.js";
 
