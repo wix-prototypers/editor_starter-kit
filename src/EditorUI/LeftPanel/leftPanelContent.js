@@ -1,5 +1,6 @@
 //icons and images
-const searchSrc = "../../Common/Images/top-bar/search.svg";
+const searchSrc =
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/EditorUI/TopBar/icons/search.svg";
 
 const i_icon = "../../Common/Images/left-panel/icons/i.svg";
 

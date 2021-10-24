@@ -18,14 +18,22 @@ if (!exists) {
 }
 
 //icons and images
-const logoSrc = "../../Common/Images/top-bar/wixLogo.svg";
-const chevSrc = "../../Common/Images/top-bar/chev.svg";
-const searchSrc = "../../Common/Images/top-bar/search.svg";
-const desktop2Src = "../../Common/Images/top-bar/tb2/Desktop.svg";
-const mobile2Src = "../../Common/Images/top-bar/tb2/Mobile.svg";
-const undo2Src = "../../Common/Images/top-bar/tb2/Undo.svg";
-const redo2Src = "../../Common/Images/top-bar/tb2/Redo.svg";
-const toolsSrc = "../../Common/Images/top-bar/tb2/Tools.svg";
+const logoSrc =
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/EditorUI/TopBar/icons/wixLogo.svg";
+const chevSrc =
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/EditorUI/TopBar/icons/chev.svg";
+const searchSrc =
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/EditorUI/TopBar/icons/search.svg";
+const desktop2Src =
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/EditorUI/TopBar/icons/tb2/Desktop.svg";
+const mobile2Src =
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/EditorUI/TopBar/icons/tb2/Mobile.svg";
+const undo2Src =
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/EditorUI/TopBar/icons/tb2/Undo.svg";
+const redo2Src =
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/EditorUI/TopBar/icons/tb2/Redo.svg";
+const toolsSrc =
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/EditorUI/TopBar/icons/tb2/Tools.svg";
 const editor = document.querySelector("#editor");
 
 export const TopBar = (state, setState) => {

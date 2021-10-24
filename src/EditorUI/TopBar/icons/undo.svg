@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="29px" viewBox="0 0 29 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>redo</title>
+    <defs>
+        <path d="M21.004,14.4102414 C20.108,10.5622414 16.113,8.19224138 12.105,9.12524138 L9.679,9.68824138 L11.952,6.02424138 L11.135,5.51724138 L8,10.5722414 L13.044,13.7252414 L13.553,12.9112414 L9.898,10.6252414 L12.322,10.0612414 C15.816,9.24624138 19.294,11.2972414 20.067,14.6282414 C20.623,17.0162414 19.886,19.3132414 18.098,20.7722414 L18.706,21.5172414 C20.785,19.8202414 21.644,17.1642414 21.004,14.4102414" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Double-Top-Bar-/-Primitives-/-Undo+Redo" transform="translate(-18.000000, -7.000000)">
+            <g id="redo" transform="translate(18.000000, 7.000000)">
+                <g id="Icon-Copy" transform="translate(0.000000, -0.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#000000" xlink:href="#path-1"></use>
+                    <g id="Group" mask="url(#mask-2)" fill="#17191C">
+                        <g id="Color">
+                            <rect id="D1" x="0" y="0" width="29" height="29"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
