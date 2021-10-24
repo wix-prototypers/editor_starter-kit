@@ -30,7 +30,6 @@ const editor = document.querySelector("#editor");
 
 export const TopBar = (state, setState) => {
   let container = document.querySelector("#top-bar");
-  console.log(location.search);
 
   container.insertAdjacentHTML(
     "afterbegin",
@@ -196,29 +195,7 @@ export const TopBar = (state, setState) => {
     `
   );
 
-  /*   container.querySelectorAll(".zoom").forEach(
-    (zoom) =>
-      (zoom.onclick = (e) => {
-        console.log(state);
-
-        if (!state.zoomMode.isActive && !state.panel.isOpen) {
-          setState(state, "zoomMode", {
-            isActive: true,
-          });
-          e.target.closest(".zoom").classList.add("selected");
-        } else if (state.zoomMode.isActive || state.panel.isOpen) {
-          setState(state, "zoomMode", {
-            isActive: false,
-          });
-          e.target.closest(".zoom") &&
-            e.target.closest(".zoom").classList.remove("selected");
-          setState(state, "panel", "close");
-        }
-      })
-  ); */
-
   container.querySelector(".publish").onclick = (e) => {
     console.log("t0");
-    //setState(state, "zoomMode", { isActive: false });
   };
 };
