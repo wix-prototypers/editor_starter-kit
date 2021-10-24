@@ -37,7 +37,10 @@ body * {
   box-shadow: -2px -7px 9px 7px rgb(0 0 0 / 13%);
   margin-bottom: 60px;
   margin-right: 40px;
+  display: block;
   min-width: 980px;
+  height: calc(100vh - 60px);
+  background-color: white;
 }
 
 #stage {
