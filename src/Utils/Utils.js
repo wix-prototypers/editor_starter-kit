@@ -10,6 +10,6 @@ export const Utils = (state, setState) => {
   //resizeSection(state, setState)
   DragNDrop(state, setState);
   Gfpp(state, setState);
-  // sectionActions(state, setState);
+  sectionActions(state, setState);
   AddSection(state, setState);
 };

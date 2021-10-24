@@ -4,14 +4,7 @@ import {
 } from "./Utils/ADISelectionModel/adiSelectionModel.js";
 import { getCoords, titleCase } from "./Utils/functions.js";
 
-const stage = document.querySelector("#stage");
-const body = document.querySelector("body");
-const leftPanel = document.querySelector("#left-panel");
-const editor = document.querySelector("#editor");
-const leftBar = document.querySelector("#left-bar");
 export const Actions = {
-  //Contorller
-
   remainOpen() {
     body.classList.remove("closePanel");
   },
@@ -97,7 +90,14 @@ export const Actions = {
 
   //App
   panel(data) {
-    const zoomBtn = editor.querySelector(".zoom");
+    const stage = document.querySelector("#stage");
+    const body = document.querySelector("body");
+    const leftPanel = document.querySelector("#left-panel");
+    const editor = document.querySelector("#editor");
+    const leftBar = document.querySelector("#left-bar");
+    const sectionActions = document.querySelector(".sectionActions");
+
+    const zoomBtn = document.querySelector(".zoom");
 
     stage.style.pointerEvents = "none";
 
@@ -122,7 +122,7 @@ export const Actions = {
         .forEach((selected) => selected.classList.remove("selected"));
       stage.removeAttribute("panel-type");
       body.removeAttribute("panel-type");
-      document.querySelector(".tttp").classList.add("hidden");
+
       document
         .querySelectorAll(`.place-holder`)
         .forEach((selected) => selected.classList.remove("on"));
@@ -174,6 +174,12 @@ export const Actions = {
     }, 500);
   },
   regPanel(data) {
+    const stage = document.querySelector("#stage");
+    const body = document.querySelector("body");
+    const leftPanel = document.querySelector("#left-panel");
+    const editor = document.querySelector("#editor");
+    const leftBar = document.querySelector("#left-bar");
+    const sectionActions = document.querySelector(".sectionActions");
     if (data === "close") {
       stage.classList.remove("design");
       leftBar.classList.remove("panld");
@@ -185,7 +191,6 @@ export const Actions = {
         .forEach((selected) => selected.classList.remove("selected"));
       stage.removeAttribute("panel-type");
       body.removeAttribute("panel-type");
-      document.querySelector(".tttp").classList.add("hidden");
     } else if (data) {
       leftBar.classList.add("panld");
       document.querySelector("#left-panel").classList.add("show");
