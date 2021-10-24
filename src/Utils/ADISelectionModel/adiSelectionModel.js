@@ -3,7 +3,8 @@ import { updatesectionActionsTop } from "../sectionActions/sectionActions.js";
 import { getCoords, getSize } from "../functions.js";
 const body = document.querySelector("body");
 //Append Styles
-var href = "../../App/Utils/ADISelectionModel/adiSelectionModel.css";
+var href =
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/Utils/ADISelectionModel/adiSelectionModel.css";
 var exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {

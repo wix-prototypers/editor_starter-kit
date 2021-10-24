@@ -3,7 +3,8 @@ import { closePanelIcon, helpIcon } from "./content.js";
 import { FullScreenModal } from "../FullScreenModal/FullScreenModal.js";
 
 //Append Styles
-var href = "../../App/EditorUI/FloatingPanel/floating-panel.css";
+var href =
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/EditorUI/FloatingPanel/floating-panel.css";
 let exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {
@@ -145,11 +146,10 @@ export const FloatingPanel = (state, setState) => {
             break;
         }
       };
-      document.querySelector(
-        ".FloatingPanel-controls-btn.close"
-      ).onclick = () => {
-        setState(state, "floatingPanel", false);
-      };
+      document.querySelector(".FloatingPanel-controls-btn.close").onclick =
+        () => {
+          setState(state, "floatingPanel", false);
+        };
     });
   });
   document.querySelectorAll(".Floating-Btn2").forEach((btn) => {

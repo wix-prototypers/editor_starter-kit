@@ -1,7 +1,8 @@
 import { getPlaceholder } from "../LeftBar/LeftBar.js";
 import { getCoords, getSize } from "../../Utils/functions.js";
 //Append Styles
-var href = "../../App/EditorUI/Stage/stage.css";
+var href =
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/EditorUI/Stage/stage.css";
 let exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {

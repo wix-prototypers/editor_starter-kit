@@ -1,6 +1,7 @@
 //Append Styles
 
-var href = "../../App/EditorUI/LeftBar/left-bar.css";
+var href =
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/EditorUI/LeftBar/left-bar.css";
 let exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {

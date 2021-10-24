@@ -5,7 +5,8 @@ import {
 import { getCoords } from "../functions.js";
 
 //Append Styles
-var href = "../../App/Utils/AddSection/add-section.css";
+var href =
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/Utils/AddSection/add-section.css";
 const exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {
