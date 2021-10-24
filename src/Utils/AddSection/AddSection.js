@@ -1,3 +1,5 @@
+//to do : add ph   <div class="place-holder" id="ph3"><span>Add Section Here</span></div>
+
 import {
   hoverOnSection,
   selectSection,
