@@ -3,7 +3,8 @@ import { getCoords, getSize } from "../functions.js";
 import { selectSection } from "../ADISelectionModel/adiSelectionModel.js";
 
 //Append Styles
-var href = "../../App/Utils/sectionActions/sectionActions.css";
+var href =
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/Utils/sectionActions/sectionActions.css";
 const exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {
@@ -47,7 +48,6 @@ export const sectionActions = (state, setState) => {
       "background",
       "animation",
       "elipsis",
-  
     ];
     const sectionActionsUl = document.createElement("ul");
 
