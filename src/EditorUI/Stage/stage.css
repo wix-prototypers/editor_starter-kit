@@ -27,7 +27,7 @@ body * {
   width: calc(100% - 60px);
   left: 60px;
   border-radius: 3px;
-  box-shadow: -10px -412px 19px 0px rgb(0 0 0 / 9%);
+
   min-width: 980px;
 }
 
