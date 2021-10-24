@@ -5,7 +5,8 @@ import { selectSection } from "../ADISelectionModel/adiSelectionModel.js";
 //Append Styles
 var href =
   "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/Utils/sectionActions/sectionActions.css";
-const exists = false;
+let exists = false;
+
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {
     exists = true;

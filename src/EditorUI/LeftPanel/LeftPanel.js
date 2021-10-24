@@ -10,12 +10,13 @@ import {
   selectionModel,
   selectSection,
 } from "../../Utils/ADISelectionModel/adiSelectionModel.js";
-import { AddSection } from "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/Utils/AddSection/AddSection.js";
+import { AddSection } from "../../Utils/AddSection/AddSection.js";
 
 const stage = document.querySelector("#stage");
 //Append Styles
-var href = "../../App/EditorUI/LeftPanel/left-panel.css";
-const exists = false;
+var href =
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/EditorUI/LeftPanel/left-panel.css";
+var exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {
     exists = true;

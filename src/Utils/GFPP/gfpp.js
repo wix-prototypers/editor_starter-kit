@@ -4,7 +4,7 @@ import { getCoords } from "../functions.js";
 //Append Styles
 var href =
   "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/Utils/GFPP/gfpp.css";
-const exists = false;
+var exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {
     exists = true;

@@ -1,12 +1,12 @@
 var hrefs = [
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/css/fonts.css",
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/css/normalize.css",
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/css/ptyp.css",
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/css/variables.css",
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/Styles/fonts.css",
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/Styles/normalize.css",
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/Styles/ptyp.css",
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/Styles/variables.css",
 ];
 
 hrefs.forEach((href) => {
-  const exists = false;
+  var exists = false;
   document.querySelectorAll("link").forEach((link) => {
     if (link.getAttribute("href") === href) {
       exists = true;
