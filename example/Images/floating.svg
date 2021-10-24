@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="460px" height="42px" viewBox="0 0 460 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-52.000000, -51.000000)" fill-rule="nonzero">
+            <g id="Group" transform="translate(52.000000, 51.000000)">
+                <path d="M3.5047619,0 L456.495238,0 C458.430865,0 460,1.790861 460,4 L460,38 C460,40.209139 458.430865,42 456.495238,42 L3.5047619,42 C1.56913535,42 0,40.209139 0,38 L0,4 C0,1.790861 1.56913535,0 3.5047619,0 Z" id="path-1" fill="#FFFFFF"></path>
+                <g id="Drag-Handle" transform="translate(13.142857, 21.380906) rotate(90.000000) translate(-13.142857, -21.380906) translate(6.642857, 18.380906)" fill="#162D3D">
+                    <path d="M1.75238095,4 L1.75238095,6 L0,6 L0,4 L1.75238095,4 Z M5.25714286,4 L5.25714286,6 L3.5047619,6 L3.5047619,4 L5.25714286,4 Z M8.76190476,4 L8.76190476,6 L7.00952381,6 L7.00952381,4 L8.76190476,4 Z M12.2666667,4 L12.2666667,6 L10.5142857,6 L10.5142857,4 L12.2666667,4 Z M1.75238095,0 L1.75238095,2 L0,2 L0,0 L1.75238095,0 Z M5.25714286,0 L5.25714286,2 L3.5047619,2 L3.5047619,0 L5.25714286,0 Z M8.76190476,0 L8.76190476,2 L7.00952381,2 L7.00952381,0 L8.76190476,0 Z M12.2666667,0 L12.2666667,2 L10.5142857,2 L10.5142857,0 L12.2666667,0 Z" id="path-3"></path>
+                </g>
+                <g id="Reorder-Sections" transform="translate(37.000000, 11.000000)" font-size="14">
+                    <text id="גכדג" fill="#FFFFFF" font-family="LucidaGrande, Lucida Grande" font-weight="normal">
+                        <tspan x="95.348641" y="14.5055542">גכדג</tspan>
+                    </text>
+                    <text fill="#000000" font-family="HelveticaNeue-Thin, Helvetica Neue" font-weight="300">
+                        <tspan x="0" y="14.5">Reorder Sections</tspan>
+                    </text>
+                </g>
+                <path d="M371.784808,8.53900559 L434.579396,8.53900559 C441.263536,8.53900559 446.682102,13.9575718 446.682102,20.6417119 C446.682102,27.325852 441.263536,32.7444182 434.579396,32.7444182 L371.784808,32.7444182 C365.100668,32.7444182 359.682102,27.325852 359.682102,20.6417119 C359.682102,13.9575718 365.100668,8.53900559 371.784808,8.53900559 Z" id="Rectangle" fill="#116DFF"></path>
+                <g id="Exit-Mode" transform="translate(375.000000, 11.000000)" fill="#FFFFFF" font-family="HelveticaNeue-Thin, Helvetica Neue" font-size="14" font-weight="300">
+                    <text>
+                        <tspan x="0.63862" y="14.3270343">Exit Mode</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

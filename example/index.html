@@ -1,121 +1,562 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Prototype Panel - Example</title>
-    <link
-      rel="shortcut icon"
-      type="image/jpg"
-      href="https://wix-prototypers.github.io/prototypers_logo/favicon.ico"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_prototype-panel@2/dist/prototypePanel.min.css"
-    />
-    <!-- <link rel="stylesheet" href="../src/css/main.css"> -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title> Editor 2.0 | Section Actions </title>
+
+    <link rel="stylesheet" href = "./project.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_prototype-panel@1/dist/prototypePanel.css">
+    <link rel="icon" href="./Images/fav.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+
   </head>
-  <style>
-    .stage {
-      width: 600px;
-      height: 50%;
-      box-shadow: 0px 1px 15px 0 rgba(0, 0, 0, 0.15);
-      left: 50%;
-      transform: translate(-50%, -50%);
-      top: 50%;
-      position: fixed;
-      padding: 108px 70px 67px;
-      display: flex;
-      align-items: center;
-      grid-row-gap: 35px;
-      grid-column-gap: 35px;
-    }
 
-    .stage > .stage-title {
-      position: absolute;
-      top: 40px;
-      left: 50%;
-      font-size: 20px;
-      transform: translateX(-50%);
-      font-family: var(--madefor);
-      color: #48515a;
-      letter-spacing: 1px;
-    }
-
-    .stage-title.animation {
-      animation: title-animation 0.6s cubic-bezier(0.65, 0, 0.35, 1) 3;
-      animation-direction: reverse;
-    }
-
-    @keyframes title-animation {
-      0% {
-        font-size: 20px;
-      }
-      50% {
-        font-size: 23px;
-      }
-      100% {
-        font-size: 20px;
-      }
-    }
-
-    .stage[layout="list"] {
-      display: grid;
-    }
-
-    .stage[layout="gallery"] {
-      display: grid;
-      grid-template-columns: auto auto;
-    }
-
-    .stage-element {
-      background: #b6c1cd;
-      width: 100%;
-      height: 100%;
-      display: inline-block;
-      border-radius: 4px;
-      transition: 0.15s ease-out;
-      cursor: pointer;
-    }
-
-    .stage-element[hover="border"]:hover {
-      box-shadow: inset 0px 0px 0px 2px #32536a;
-    }
-
-    [hover="overlay"][color="dark"] {
-      --overlay-color: #32536a7a;
-    }
-
-    [hover="overlay"][color="light"] {
-      --overlay-color: #e1edf596;
-    }
-
-    .stage-element[hover="overlay"]:hover {
-      box-shadow: inset 0px 0px 0px 500px var(--overlay-color);
-    }
-
-    .stage-element[hover="move-up"]:hover {
-      transform: translateY(-4px);
-      transition: 0.15s ease-out;
-    }
-
-    .stage-element[hover="expand"]:hover {
-      padding: 4px;
-    }
-  </style>
-
-  <body>
-    <div class="stage gallery-layout">
-      <span class="stage-title">Let's Play!</span>
-      <div class="stage-element" hover="border" color="light"></div>
-      <div class="stage-element" hover="border" color="light"></div>
-      <div class="stage-element" hover="border" color="light"></div>
-      <div class="stage-element" hover="border" color="light"></div>
+  <body class="Madefor stageClose mvpScroll blueIndication offColor actionsOverlay useGfpp">
+    <div id="stage" exit="inside" add-section="hide" class="first-time">
+      <div class="bar2 show">
+        <img id="bar2" src="./Images/floating.svg">
+        <div class="bar-btn2">Back to Regular</div>
+      </div>
+      <div class="template">
+      <div class=" site-header" hat="Header" gfpp="Manage-Items animation">
+     
+      <div class="logo"><h1 class="h1">Andrea Larson</h1></div>
+      <div class="top-menu-items">
+     
+        <div class="menu-item">Home</div>
+        <div class="menu-item">Upcoming Shows</div>
+        <div class="menu-item">About</div>
+        <div class="menu-item">Videos</div>
+        <div class="menu-item">Gallery</div>
+        <div class="menu-item">Contact</div>
+        <div class="menu-item">Writing</div>
+      </div>
     </div>
 
+    <div class="place-holder" id="ph0"><span>Add Section Here</span></div>
+
+
+    <div class="section introduction" hat="Section: Introduction" id="s0" gfpp="Change-Section-Background animation help elipsis">
+     <div class="mae"></div>
+
+      <div class="element-container main strip flex" id="e0" hat="Strip" gfpp="Change-Background animation design help">
+        <div class="container-980">
+<!-- <div class="confetti conf-1"><svg width="102" height="74" viewBox="0 0 102 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M23.7 73.7176L0.638306 14.4163L101.67 0.689087L70.3723 73.7176H23.7Z" fill="var(--template2)"/>
+  </svg>
+  </div>
+  <div class="confetti conf-2"><svg width="87" height="92" viewBox="0 0 87 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1.28925 90.3052L34.562 0.994263L86.2222 17.6306V69.2909L1.28925 90.3052Z" fill="var( --template3)"/>
+    </svg>
+    
+    </div>
+    <div class="confetti conf-3">
+      <svg width="140" height="78" viewBox="0 0 140 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M93.1206 1.57666L138.917 27.2228L93.1206 76.6833H1.52716L93.1206 1.57666Z" fill="var(--template1)" />
+      </svg>
+      
+      </div>
+      <div class="element-wrapper confetti" style="top:600px; width:50px; height:50px" hat="Vector Art">
+        <svg style="width:60px;" width="102" height="118" viewBox="0 0 102 118" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M90.1274 116.744L101.232 72.3249L1.28867 1.99426L24.7322 94.5345L90.1274 116.744Z" fill="var(--template2)"/>
+          </svg>
+        </div> -->
+
+        <div class="text-content">
+          <div class="element-wrapper" style="top:200px; width:540px;" hat="Text" gfpp="Edit-Text animation design help">
+             <h1 class="h1">Andrea<br/> Larson</h1>
+          </div>        
+          <div class="element-wrapper" style="top:435px; width:300px;" gfpp="Edit-Text animation design help" hat="Text">
+          <div class="h2">Stand Up Comedian</div>
+          </div>
+          <div class="element-wrapper" style="top:480px; width:466px; height:50px" gfpp="Edit-Text animation design help" hat="Text">
+          <div class="nice-banner">Drive In Owners? Contact Me Here</div>
+          </div>
+        </div> 
+          <div class="left-image element-wrapper" gfpp="Edit-Text animation design help" style="top:100px; z-index:999999999999; left:0px; width:399px; height:475px;" hat="Image">
+          <img src="Images/andrewLarson.png"/>
+        </div> 
+        </div> 
+
+   </div>
+   <div class="outside"></div>
+      </div>
+      <div class="place-holder" id="ph1"><span>Add Section Here</span></div>
+    
+      <div class="section shows" hat="Section: Shows" id="s1" gfpp="Change-Section-Background animation help elipsis">
+        <div class="mae"></div>
+        
+        <div class=" hero  flex" id="e0" hat="Strip" gfpp="Edit-Text animation design help">
+          <div class="container-980">
+          <div class="text-content">       
+             
+            <div class=" element-wrapper " style="top:80px; width:200px; height:30px" gfpp="Edit-Text animation design help" hat="Text" >
+              <div class="h2">Shows</div>
+              </div>
+            <div class=" element-wrapper " style="top:150px; width:566px; height:200px" gfpp="Edit-Text animation design help" hat="Text">
+              <h1 class="h1">
+              Let's Meet<br/> In Real Life</h1>
+            </div>
+            <div class="table element-wrapper " style="top:380px; width:900px; height:620px" gfpp="Manage-Services Settings design help" hat="Text">
+            <div class="table-row flex justify-between">
+              <div class="table-row-left-side flex">
+              <div class="date-day">10</div>
+              <div class="date-month flex column">
+                <span>Oct</span><span>Tue</span></div>
+                <div class="event-title">Garmoush Drive In Comedy Club</div>
+              </div>
+              <div class="table-row-right-side">
+              Buy Tickets
+              </div>
+            </div>
+            <div class="table-row flex justify-between">
+              <div class="table-row-left-side flex">
+              <div class="date-day">12</div>
+              <div class="date-month flex column">
+                <span>Nov</span><span>Tue</span></div>
+                <div class="event-title">The Lorem</div>
+              </div>
+              <div class="table-row-right-side">
+              Buy Tickets
+              </div>
+            </div>
+            <div class="table-row flex justify-between">
+              <div class="table-row-left-side flex">
+              <div class="date-day">16</div>
+              <div class="date-month flex column">
+                <span>Dec</span><span>Tue</span></div>
+                <div class="event-title">The Ipsum</div>
+              </div>
+              <div class="table-row-right-side">
+              Buy Tickets
+              </div>
+            </div>
+
+            <div class="table-row flex justify-between">
+              <div class="table-row-left-side flex">
+              <div class="date-day">22</div>
+              <div class="date-month flex column">
+                <span>Jan</span><span>Tue</span></div>
+                <div class="event-title">Dolor Sit Amet!</div>
+              </div>
+              <div class="table-row-right-side">
+              Buy Tickets
+              </div>
+            </div>
+            </div>
+          
+            <div class=" element-wrapper"  style="bottom:100px; width:466px; height:55px" hat="Button" gfpp="Edit-Text animation design help" >
+              <div class="nice-banner">
+              Drive In Owners? Contact Me Here</div>
+            </div>
+       
+          </div> 
+          
+          </div> 
+  
+     </div>
+     <div class="outside"></div>
+        </div>
+
+
+       
+        <div class="place-holder" id="ph2"><span>Add Section Here</span></div>
+        <div class="section instagram" hat="Section: Instagram" id="s2" gfpp="Change-Section-Background animation help elipsis">
+          <div class="mae"></div>
+          
+          <div class="element-container main-3 strip flex" id="e30" hat="Strip" gfpp="Change-Background animation design help" style="top:0px; height:30%; width:100%;">
+            <div class="container-980" >
+          
+              <div class="element-wrapper" hat="Text" gfpp="Edit-Text animation design help" style="top:80px; height:30px; width:180px;">
+                <h1 class="h2">Instagram</h1>  
+              </div>
+              <div class="element-wrapper" hat="Text" gfpp="Edit-Text animation design help"  style="top:120px; height:30%; width:350px;">
+                    <h1 class="h1">Follow Me</h1>
+                    </div>
+            
+                  </div>
+                </div>
+                <div class=" element-container strip main-3 flex row" style="top:30%; height:70%; width:100%;" id="e40" hat="Strip" gfpp="Change-Background animation design help">      
+                  <div class="container-980" >
+                  <div class="element-wrapper" hat="Image" gfpp="Change-Image animation design help" style="transform:translate(-300px,30px)"> <img src="./Images/insta1.png" ></div>   <div class="element-wrapper" hat="Image" gfpp="Change-Image animation design help" style="transform:translate(300px,30px)"> <img src="./Images/insta2.png"></div>   <div class="element-wrapper" hat="Image" gfpp="Change-Image animation design help" style="transform:translate(0px,30px)"> <img src="./Images/insta3.png"></div>
+                  <div class="element-wrapper flex justify-center" gfpp="Change-Text animation design help" hat="Button" style="bottom:50px; height:46px; width:142px;"><div class="button-drag" style="transform:translate(0px,1px)" ><span>Load More</span> </div></div>
+                </div>
+                </div>
+       <div class="outside"></div>
+  </div>
+  <div class="place-holder" id="ph3"><span>Add Section Here</span></div>
+</div></div>
+  </div>
+  <div class="tttp top-tooltip-set hidden">
+  
+</div>
+
+
+  
+    <main id="editor" mode="edit" class="always-left setup-left">
+
+
+     <section id="left-panel" class="hidden always-left"></section>
+      <section id="left-bar"></section>
+      <section id="top-bar"></section>
+      <section id="panel-frame" class="panel-frame  open"></section>
+      
+  
+      </div>
+    </main>
+
+    
+
+
+    <div class="floating-panel-frame hide">
+      <div class="floating-panel-header noselect">
+         <label>Section Name</label>
+         <div class="actions">
+            <div class="help-button button">?</div>
+            <div class="button close">
+              <svg width="25" height="25" viewBox="0 0 25 25"><path d="M11.793 12.5L8.146 8.854 7.793 8.5l.707-.707.354.353 3.646 3.647 3.646-3.647.354-.353.707.707-.353.354-3.647 3.646 3.647 3.646.353.354-.707.707-.354-.353-3.646-3.647-3.646 3.647-.354.353-.707-.707.353-.354 3.647-3.646z"></path></svg>
+            </div>
+         </div>
+      </div>
+
+      <div class="panel-body">
+        <div class="floating-panel-section">
+      <p>What is The Section's Name?</p>
+      <h1>About Us</h1>
+    </div>
+    </div>
+      <hr style="border:none; border-top:1px solid #0000001c; ">
+      <div class="floating-panel-section" style="width:220px">
+      <p >Add a name so you can easily link to this section or find it in the Layers panel. This name is only visible to you, visitors won't see it.
+        <span style="color:var(--blue--main); line-height:2">Learn More</span>
+      </p>
+      
+    </div>
+    </div>
+        </div>
+    
+
+      
+   <div class="element-container main-2 strip flex template-strip1 off bg1"  id="e0" hat="Strip" gfpp="Edit-Text animation design help">
+    <div class="container-980">
+      <div class="left-image" id="changeMe2"  style="background-image: url(./Images/lady-larson2.png); background-repeat: no-repeat;">
+        
+      </div> 
+    <div class="text-content flex justify-center" style="width:50%; padding:0; margin-top:-20px; " >   
+      <div>
+      <h1 class="h2" style="width:100px; height:30px;" id="main-title">About</h1>  
+      <div class="h1" style="max-width:450px; " id="sub-title" >My Name  is Alexa Young</div>
+      <div class="run" id="paragraph-text"><span>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.</span> </div>
+    </div>   
+ 
+    </div> 
+  
+    </div> 
+
+</div>
+
+<div content="edit" class="edit-panel">
+  <div class="section-header edit-panel-content flex justify-between" style="padding-left:20px">
+ <h3>Edit Section</h3>
+ <div class="flex align-center">
+  <span style="transform:translate(-8px,-3px)">?</span>
+ <div class="button close">
+ <svg width="25" height="25" viewBox="0 0 25 25" class="symbol symbol-headerCloseButton">
+    <path d="M11.793 12.5L8.146 8.854 7.793 8.5l.707-.707.354.353 3.646 3.647 3.646-3.647.354-.353.707.707-.353.354-3.647 3.646 3.647 3.646.353.354-.707.707-.354-.353-3.646-3.647-3.646 3.647-.354.353-.707-.707.353-.354 3.647-3.646z" fill="currentColor"></path>
+ </svg>
+</div>
+</div>
+
+  </div> 
+
+  <div class="section-header switch-content flex justify-between" style="padding-left:20px; ">
+    <div class="flex align-center"><?xml version="1.0" encoding="UTF-8"?>
+      <svg width="8px" height="12px" viewBox="0 0 8 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <title>Path 2</title>
+          <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Panels-/-Design-theme" transform="translate(-26.000000, -24.000000)">
+                  <rect id="BG" fill="#FFFFFF" x="0.969230769" y="6" width="299" height="48"></rect>
+                  <text id="Text" font-family="HelveticaRounded-Bold, Helvetica" font-size="16" font-weight="bold" line-spacing="24" fill="#17191C">
+                 
+                  </text>
+                  <polyline id="Path-2" stroke="#000000" stroke-width="2" points="33.1082458 25 28 30.1082458 33.1082458 35.2164917"></polyline>
+              </g>
+          </g>
+      </svg><h3 style="transform: translate(10px,1px) !important;">Switch Layout</h3></div>
+    <div class="flex align-center">
+     <span style="transform:translate(-8px,-3px)">?</span>
+    <div class="button close">
+    <svg width="25" height="25" viewBox="0 0 25 25" class="symbol symbol-headerCloseButton">
+       <path d="M11.793 12.5L8.146 8.854 7.793 8.5l.707-.707.354.353 3.646 3.647 3.646-3.647.354-.353.707.707-.353.354-3.647 3.646 3.647 3.646.353.354-.707.707-.354-.353-3.646-3.647-3.646 3.647-.354.353-.707-.707.353-.354 3.647-3.646z" fill="currentColor"></path>
+    </svg>
+   
+   </div>
+   </div>
+   
+     </div> 
+
+<div class="content-container edit-panel-content">
+  <div class=" section-title-bar flex justify-between">
+    <span class="panel-section-title">About</span> 
+    <svg style="transform:translate(0px,8px)"width="16px" height="4px" viewBox="0 0 16 4" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <title>Group 2</title>
+      <g id="Page-2" stroke="none" stroke-width="1" fill="#000000" fill-rule="evenodd">
+          <g id="Artboard" transform="translate(-22.000000, -45.000000)" fill="#000000">
+              <g id="Group-2" transform="translate(22.839900, 45.615076)">
+                  <path d="M8.4002,1.80372414 C8.1782,2.54572414 7.3972,2.96872414 6.6552,2.74672414 C5.9132,2.52572414 5.4912,1.74372414 5.7122,1.00172414 C5.9342,0.259724136 6.7152,-0.162275864 7.4572,0.0587241363 C8.1992,0.280724136 8.6212,1.06172414 8.4002,1.80372414" id="Fill-3"></path>
+                  <path d="M14.0535,1.80372414 C13.8315,2.54572414 13.0505,2.96872414 12.3085,2.74672414 C11.5665,2.52572414 11.1445,1.74372414 11.3655,1.00172414 C11.5875,0.259724136 12.3685,-0.162275864 13.1105,0.0587241363 C13.8525,0.280724136 14.2745,1.06172414 14.0535,1.80372414" id="Fill-6"></path>
+                  <path d="M2.805,1.40332414 C2.805,2.17732414 2.177,2.80532414 1.403,2.80532414 C0.628,2.80532414 3.17523785e-14,2.17732414 3.17523785e-14,1.40332414 C3.17523785e-14,0.628324136 0.628,0.00132413628 1.403,0.00132413628 C2.177,0.00132413628 2.805,0.628324136 2.805,1.40332414" id="Fill-1"></path>
+              </g>
+          </g>
+      </g>
+  </svg>
+    </div>
+ <div class="change-layout before-change">
+    <div class="change-button">
+    <!--?xml version="1.0" encoding="UTF-8"?-->
+ Switch Layout
+    </div>
+ </div>
+
+
+<div class="content ">
+  <div class=" section-title-bar flex justify-between">
+    <span class="panel-section-title">Edit Content</span> 
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M9 0.5C11.3474 0.5 13.4724 1.45128 15.0106 2.98943C16.5487 4.52758 17.5 6.65258 17.5 9C17.5 11.3474 16.5487 13.4724 15.0106 15.0106C13.4724 16.5487 11.3474 17.5 9 17.5C6.65258 17.5 4.52758 16.5487 2.98943 15.0106C1.45128 13.4724 0.5 11.3474 0.5 9C0.5 6.65258 1.45128 4.52758 2.98943 2.98943C4.52758 1.45128 6.65258 0.5 9 0.5Z" stroke="black"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M9 8C9.55228 8 10 8.44772 10 9V12C10 12.5523 9.55228 13 9 13C8.44772 13 8 12.5523 8 12V9C8 8.44772 8.44772 8 9 8ZM9 5C9.55228 5 10 5.44772 10 6C10 6.55228 9.55228 7 9 7C8.44772 7 8 6.55228 8 6C8 5.44772 8.44772 5 9 5Z" fill="black"/>
+      </svg>
+      
+    </div>
+  <div content="edit" class="change-style highlight-trigger  Title" id="e0">
+    <span class="sec-sub-tit">Title</span>
+    <div class="text-style-actions" content="edit">
+          <div class="section-panel-options style-input">
+          <div class="options-wrapper">
+          <div option-value="bold" class="option-button">
+          <img src="../../Common/Images/left-panel/icons/style_bold.svg">
+          </div><div option-value="italic" class="option-button">
+          <img src="../../Common/Images/left-panel/icons/style_italic.svg"></div>
+          <div option-value="underline" class="option-button">
+          <img src="../../Common/Images/left-panel/icons/style_underline.svg"></div>
+          <div option-value="uppercase" class="option-button">
+          <img src="../../Common/Images/left-panel/icons/style_uppercase.svg">
+          </div></div> <div class="options-wrapper link-area">
+          <div class="option-button">
+          <img src="../../Common/Images/left-panel/icons/link.svg">
+          </div>
+          </div>
+        </div>
+       </div><div class="style-container">
+          <div class="text-input" id="main-title">
+       About
+          </div>
+          
+    </div>
+  </div>
+
+  <div content="edit" class="change-style highlight-trigger Title" id="e0">
+    <span class="sec-sub-tit">Subtitle</span>
+      <div class="text-style-actions" content="edit">
+            <div class="section-panel-options style-input">
+            <div class="options-wrapper">
+            <div option-value="bold" class="option-button">
+            <img src="../../Common/Images/left-panel/icons/style_bold.svg">
+            </div><div option-value="italic" class="option-button">
+            <img src="../../Common/Images/left-panel/icons/style_italic.svg"></div>
+            <div option-value="underline" class="option-button">
+            <img src="../../Common/Images/left-panel/icons/style_underline.svg"></div>
+            <div option-value="uppercase" class="option-button">
+            <img src="../../Common/Images/left-panel/icons/style_uppercase.svg">
+            </div></div> <div class="options-wrapper link-area">
+            <div class="option-button">
+            <img src="../../Common/Images/left-panel/icons/link.svg">
+            </div>
+            </div>
+          </div>
+         </div><div class="style-container">
+            <div class="text-input" id="sub-title">
+     My Name is Alexa Young
+            </div>
+            
+      </div>
+    </div>
+  
+    <div content="edit" class="change-style highlight-trigger  Paragraph" id="e0">
+      <span class="sec-sub-tit">Paragraph</span>
+        <div class="text-style-actions" content="edit">
+              <div class="section-panel-options style-input">
+              <div class="options-wrapper">
+              <div option-value="bold" class="option-button">
+              <img src="../../Common/Images/left-panel/icons/style_bold.svg">
+              </div><div option-value="italic" class="option-button">
+              <img src="../../Common/Images/left-panel/icons/style_italic.svg"></div>
+              <div option-value="underline" class="option-button">
+              <img src="../../Common/Images/left-panel/icons/style_underline.svg"></div>
+              <div option-value="uppercase" class="option-button">
+              <img src="../../Common/Images/left-panel/icons/style_uppercase.svg">
+              </div></div> <div class="options-wrapper link-area">
+              <div class="option-button">
+              <img src="../../Common/Images/left-panel/icons/link.svg">
+              </div>
+              </div>
+            </div>
+           </div><div class="style-container">
+              <div class="text-input" id="paragraph-text">
+                I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.
+              </div>
+              
+        </div>
+      </div>
+  <div content="edit" class="change-style highlight-trigger  Button" id="e1">
+  <span class="sec-sub-tit">Button</span>
+    <div class="text-style-actions" content="edit">
+       </div><div class="style-container">
+          <div class="flex justify-between align-center" id="button-drag" style="width:279px">
+   <div class="text-input" style="width:120%" id="button-drag" >Button</div>
+   <div class="option-button" style="position:static; transform:translate(-24px,0px);">
+    <img src="../../Common/Images/left-panel/icons/link.svg">
+    </div>
+          </div>
+          
+    </div>
+    
+  </div>
+
+</div>
+<div class="change-background highlight-trigger">
+  <span class="sec-sub-tit">Image</span>
+  <div class="background-container">
+        <div class="background-trigger changeMe"  id="changeMe" style="background-image: url(./Images/lady-larson2.png); background-size: cover; background-position: top; background-repeat:no-repeat;"></div>
+      <div class="background-actions">
+        <div class="background-button" id="change-bg">
+        Change
+        </div>
+        <div class="background-button">
+        Edit
+        </div>
+     </div>
+ 
+ 
+ </div>
+</div>
+
+</div>
+<div class="content-container edit-panel-content">
+
+ <div class="change-layout">
+    <div class="change-button">
+
+ Switch Layout
+    </div>
+ </div>
+
+
+<div class="content ">
+  <div content="edit" class="change-style highlight-trigger  Title" id="e0">
+    <span class="sec-sub-tit">Title</span>
+    <div class="text-style-actions" content="edit">
+          <div class="section-panel-options style-input">
+          <div class="options-wrapper">
+          <div option-value="bold" class="option-button">
+          <img src="../../Common/Images/left-panel/icons/style_bold.svg">
+          </div><div option-value="italic" class="option-button">
+          <img src="../../Common/Images/left-panel/icons/style_italic.svg"></div>
+          <div option-value="underline" class="option-button">
+          <img src="../../Common/Images/left-panel/icons/style_underline.svg"></div>
+          <div option-value="uppercase" class="option-button">
+          <img src="../../Common/Images/left-panel/icons/style_uppercase.svg">
+          </div></div> <div class="options-wrapper link-area">
+          <div class="option-button">
+          <img src="../../Common/Images/left-panel/icons/link.svg">
+          </div>
+          </div>
+        </div>
+       </div><div class="style-container">
+          <div class="text-input" id="main-title">
+       About
+          </div>
+          
+    </div>
+  </div>
+
+
+  
+
+
+</div>
+<div class="change-background highlight-trigger">
+  <span class="sec-sub-tit">Image</span>
+  <div class="background-container">
+        <div class="background-trigger changeMe"  id="changeMe" style="background-image: url(./Images/lady-larson2.png); background-size: cover; background-position: top; background-repeat:no-repeat;"></div>
+      <div class="background-actions">
+        <div class="background-button" id="change-bg">
+        Change
+        </div>
+        <div class="background-button">
+        Edit
+        </div>
+     </div>
+ 
+ 
+ </div>
+</div>
+
+</div>
+<div class="content-container switch-content">
+  <div class=" section-title-bar flex justify-between">
+    <span class="panel-section-title">Current Layout</span> 
+    <img src="../../Common/Images/left-panel/icons/i.svg">
+    </div>
+  <div class="change-layout">
+     
+  </div>
+ 
+  <div class=" section-title-bar flex justify-between">
+    <span class="panel-section-title">Alternaive Layouts</span> 
+    <img src="../../Common/Images/left-panel/icons/i.svg">
+    </div>
+    <div class="alt alt1" id="alt1" style="position:relative">
+      <svg style="position:absolute; right:-9px; top:-9px; z-index:99999;" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24.5483 12C24.5483 5.37258 19.1758 0 12.5483 0C5.92092 0 0.54834 5.37258 0.54834 12C0.54834 18.6274 5.92092 24 12.5483 24C19.1758 24 24.5483 18.6274 24.5483 12Z" fill="#146DFF"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4876 8.82953C15.7805 8.53664 16.2554 8.53664 16.5483 8.82953C16.8412 9.12243 16.8412 9.5973 16.5483 9.89019L11.0483 15.3902L8.54828 12.8902C8.25539 12.5973 8.25539 12.1224 8.54828 11.8295C8.84118 11.5366 9.31605 11.5366 9.60894 11.8295L11.0483 13.2689L15.4876 8.82953Z" fill="white"/>
+        </svg>
+    </div>
+    <div class="alt alt2" id="alt2" style="position:relative">
+      <svg style="position:absolute; right:-9px; top:-9px; z-index:99999;" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24.5483 12C24.5483 5.37258 19.1758 0 12.5483 0C5.92092 0 0.54834 5.37258 0.54834 12C0.54834 18.6274 5.92092 24 12.5483 24C19.1758 24 24.5483 18.6274 24.5483 12Z" fill="#146DFF"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4876 8.82953C15.7805 8.53664 16.2554 8.53664 16.5483 8.82953C16.8412 9.12243 16.8412 9.5973 16.5483 9.89019L11.0483 15.3902L8.54828 12.8902C8.25539 12.5973 8.25539 12.1224 8.54828 11.8295C8.84118 11.5366 9.31605 11.5366 9.60894 11.8295L11.0483 13.2689L15.4876 8.82953Z" fill="white"/>
+        </svg>
+    </div>
+    <div class="alt alt3" id="alt3" style="position:relative">
+      <svg style="position:absolute; right:-9px; top:-9px; z-index:99999;" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24.5483 12C24.5483 5.37258 19.1758 0 12.5483 0C5.92092 0 0.54834 5.37258 0.54834 12C0.54834 18.6274 5.92092 24 12.5483 24C19.1758 24 24.5483 18.6274 24.5483 12Z" fill="#146DFF"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4876 8.82953C15.7805 8.53664 16.2554 8.53664 16.5483 8.82953C16.8412 9.12243 16.8412 9.5973 16.5483 9.89019L11.0483 15.3902L8.54828 12.8902C8.25539 12.5973 8.25539 12.1224 8.54828 11.8295C8.84118 11.5366 9.31605 11.5366 9.60894 11.8295L11.0483 13.2689L15.4876 8.82953Z" fill="white"/>
+        </svg>
+    </div>
+    <div class="alt alt4" id="alt4" style="position:relative">
+      <svg style="position:absolute; right:-9px; top:-9px; z-index:99999;" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24.5483 12C24.5483 5.37258 19.1758 0 12.5483 0C5.92092 0 0.54834 5.37258 0.54834 12C0.54834 18.6274 5.92092 24 12.5483 24C19.1758 24 24.5483 18.6274 24.5483 12Z" fill="#146DFF"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4876 8.82953C15.7805 8.53664 16.2554 8.53664 16.5483 8.82953C16.8412 9.12243 16.8412 9.5973 16.5483 9.89019L11.0483 15.3902L8.54828 12.8902C8.25539 12.5973 8.25539 12.1224 8.54828 11.8295C8.84118 11.5366 9.31605 11.5366 9.60894 11.8295L11.0483 13.2689L15.4876 8.82953Z" fill="white"/>
+        </svg>
+    </div>
+ </div>
+</div>
+
+
+
+    <script type="text/javascript" src="./project.js"></script>
+  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- just for the change inputs functions in example file -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_prototype-panel@1/dist/prototypePanel.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/dist/editor.js"></script>
-    <!-- <script src="https://wix-prototypers.github.io/prototypers_prototype-panel/dist/prototypePanel.js"></script> -->
-    <!-- <script src="../src/js/main.js"></script> -->
-    <script src="./examplePrototypePanel.js"></script>
   </body>
 </html>
