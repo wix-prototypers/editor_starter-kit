@@ -1,0 +1,44 @@
+@import url("https://static.parastorage.com/services/third-party/fonts/Helvetica/fontFace.css");
+@import url("https://static.parastorage.com/unpkg/@wix/wix-fonts@1.9.0/madefor.min.css");
+@import url("https://static.parastorage.com/unpkg/@wix/wix-fonts@1.9.3/madeforDisplay.min.css");
+
+@import url("https://static.parastorage.com/services/third-party/fonts/Helvetica/fontFace.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.text-HelveticaNeueW01-UltLt {
+  font-family: "HelveticaNeueW01-UltLt";
+}
+
+.text-HelveticaNeueW01-Thin {
+  font-family: "HelveticaNeueW01-Thin";
+}
+
+.text-HelveticaNeueW01-45Light {
+  font-family: "HelveticaNeueW01-45Ligh";
+}
+
+.text-HelveticaNeueW01-55Roman {
+  font-family: "HelveticaNeueW01-55Roma";
+}
+
+.text-HelveticaNeueW01-65 {
+  font-family: "HelveticaNeueW01-65Medi";
+}
+
+.text-HelveticaNeueW01-75Bold {
+  font-family: "HelveticaNeueW01-75Bold";
+}
+
+.text-HelveticaNeueW01-95Black {
+  font-family: "HelveticaNeueW01-95Blac";
+}
+.Madefor {
+  font-family: "Madefor";
+}
+.Madefor-Display {
+  font-family: "Madefor Display";
+}

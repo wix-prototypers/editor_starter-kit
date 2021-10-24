@@ -1,0 +1,165 @@
+.hide {
+  display: none;
+}
+
+/* Positioning */
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.floating-centered {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Displays */
+.hide {
+  display: none !important;
+}
+
+/* flex */
+.flex {
+  display: flex;
+}
+
+.flex.row {
+  flex-direction: row;
+}
+
+.flex.column {
+  flex-direction: column;
+}
+
+.flex.align-start {
+  align-items: flex-start;
+}
+
+.flex.align-center {
+  align-items: center;
+}
+
+.flex.align-baseline {
+  align-items: baseline;
+}
+
+.flex.align-end {
+  align-items: flex-end;
+}
+
+.flex.justify-start {
+  justify-content: flex-start;
+}
+
+.flex.justify-center {
+  justify-content: center;
+}
+
+.flex.justify-end {
+  justify-content: flex-end;
+}
+
+.flex.justify-around {
+  justify-content: space-around;
+}
+
+.flex.justify-between {
+  justify-content: space-between;
+}
+
+.flex.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.z1 {
+  z-index: 1;
+}
+
+.no-default-drag {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  -user-drag: none;
+}
+.nowrap {
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+.wrap {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.cursor-move {
+  cursor: move;
+  cursor: -moz-move;
+  cursor: -webkit-move;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+.dark {
+  background-color: var(--dark);
+}
+.darklight {
+  background-color: var(--darklight);
+}
+.light {
+  background-color: var(--light);
+}
+.primary {
+  background-color: var(--primary);
+}
+.more1 {
+  background-color: var(--more1);
+}
+.more2 {
+  background-color: var(--more2);
+}
+
+.more3 {
+  background-color: var(--more3);
+}
+.tint1 {
+  opacity: 75%;
+}
+.tint2 {
+  opacity: 50%;
+}
+.shade1 {
+  filter: brightness(78%);
+}
+.shade2 {
+  filter: brightness(53%);
+}
+
+hr {
+  border: 0.5px solid #d9e1e8;
+  margin: 24px 0px;
+  width: inherit;
+  height: 0px;
+}
+
+.move {
+  cursor: move;
+}

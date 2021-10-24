@@ -1,0 +1,186 @@
+@viewport {
+  user-zoom: fixed !important;
+}
+
+body {
+  background-color: #f7f7f7;
+  user-zoom: fixed;
+  overflow: hidden;
+}
+
+body * {
+  -webkit-font-smoothing: antialiased;
+}
+
+#stage {
+  --leftbar-open: 472;
+  height: calc(100vh - 40px);
+  min-width: 980px;
+  position: fixed;
+  top: 70px;
+  background-color: #f7f7f7;
+  z-index: -1;
+  overflow: scroll !important;
+  scroll-behavior: auto;
+  overflow-x: hidden !important;
+  padding: 0px 1px 0px 1px;
+  width: calc(100% - 60px);
+  left: 60px;
+  border-radius: 3px;
+  box-shadow: -10px -412px 19px 0px rgb(0 0 0 / 9%);
+  min-width: 980px;
+}
+
+#stage .template {
+  background-color: var(--template-light);
+  margin-bottom: 90px;
+  box-shadow: -2px -7px 9px 7px rgb(0 0 0 / 13%);
+  margin-bottom: 60px;
+  margin-right: 40px;
+  min-width: 980px;
+}
+
+#stage {
+  transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.665, 1);
+  transform-origin: top;
+}
+
+#stage.zoomMode:not([panel-type="add-sections"]) {
+  transform: scale(0.5);
+  left: 100px;
+  top: 79px;
+  height: calc(200vh - 60px);
+  transition: left 0.5s cubic-bezier(0.075, 0.82, 0.665, 1);
+}
+
+#stage.design.zoomMode:not([panel-type="add-sections"]) {
+  transform: scale(0.5);
+  left: 220px;
+  top: 80px;
+  height: calc(200vh - 60px);
+  transition: left 0.5s cubic-bezier(0.075, 0.82, 0.665, 1);
+}
+
+#stage.design .Add-Section {
+  opacity: 0;
+}
+[panel-type="edit-panel"] #stage {
+  transform: scale(0.5) translate(-20%, 0px);
+  top: 80px;
+  height: calc(200vh - 60px);
+  transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.665, 1);
+}
+#stage[panel-type="add-sections"] {
+  transform: scale(0.5);
+  transform-origin: top;
+  left: 342px;
+  height: calc(200vh - 60px);
+  top: 79px;
+  transition: left 0.5s cubic-bezier(0.075, 0.82, 0.665, 1);
+}
+#stage.design[panel-type="add-sections"] {
+  transform: scale(0.5);
+  transform-origin: top;
+  left: 230px;
+  height: calc(200vh - 60px);
+}
+
+#stage[panel-type="add-sections"] .Add-Section {
+  transform: scale(1.5);
+}
+#stage[panel-type="add-sections"] .hpp {
+  transform: scale(1.5) translate(30px, 10px);
+}
+#stage[panel-type="add-sections"]:before,
+#stage[panel-type="add-sections"] .element-container:before {
+  transform: scale(1.5) translate(4px, -3px);
+}
+
+#stage[panel-type="add-sections"] .template,
+body[panel-type="edit-panel"] #stage .template,
+#stage.zoomMode .template {
+  margin-bottom: 150px;
+}
+#stage[panel-type="add-sections"] .drag-handle,
+#stage.zoomMode .drag-handle {
+  display: none;
+}
+#stage[panel-type="add-sections"] .section:before,
+#stage.zoomMode .section:before {
+  display: none !important;
+}
+#stage[panel-type="add-sections"] .strip:before,
+#stage.zoomMode .strip:before {
+  display: none !important;
+}
+#stage[panel-type="add-sections"] #gfpp {
+  display: none !important;
+}
+#stage[panel-type="add-sections"] .hpp {
+  transform: scale(1.5) translate(30px, 10px);
+}
+#stage[panel-type="add-sections"]:before,
+#stage[panel-type="add-sections"] .element-container:before {
+  transform: scale(1.5) translate(4px, -3px);
+}
+
+@keyframes cut {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.5);
+    height: 200vh;
+  }
+}
+body *::-webkit-scrollbar {
+  display: none !important;
+}
+body * {
+  -ms-overflow-style: none !important; /* IE and Edge */
+  scrollbar-width: none !; /* Firefox */
+}
+
+stage * {
+  user-select: none;
+}
+
+#stage.panel-push-stage[panel-type="add"] {
+  transform: translate(655px, 0px);
+  width: calc(100vw - 710px) !important;
+}
+
+@media screen and (min-width: 0px) {
+  #stage.scalable[panel-type="add-sections"] {
+    transform: scale(
+        calc((var(--data-width) - var(--leftbar-open)) / (var(--data-width)))
+      )
+      translate(390px, -720px);
+    height: 1800px;
+    transition: height 0s, top 0s, transform 0s !important;
+  }
+}
+@media screen and (min-width: 600px) {
+  #stage.scalable[panel-type="add-sections"] {
+    transform: scale(
+        calc((var(--data-width) - var(--leftbar-open)) / (var(--data-width)))
+      )
+      translate(330px, -720px);
+    height: 1800px;
+    transition: height 0s, top 0s, transform 0s !important;
+  }
+}
+@media screen and (min-width: 900px) {
+  #stage.scalable[panel-type="add-sections"] {
+    transform: scale(
+        calc((var(--data-width) - var(--leftbar-open)) / (var(--data-width)))
+      )
+      translate(490px, -765px);
+    height: 1500px;
+    transition: height 0s, top 0s, transform 0s !important;
+  }
+}
+#stage[panel-type="add-sections"] #gfpp {
+  display: none !important;
+}

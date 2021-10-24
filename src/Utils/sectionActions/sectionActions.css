@@ -1,0 +1,277 @@
+#sectionActions {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  right: 0px;
+
+  border-radius: 1px !important;
+  box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.08), 0 2px 10px 0 rgba(0, 0, 0, 0.08),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+
+  position: absolute;
+  font-family: "HelveticaNeueW01-45Ligh";
+  white-space: nowrap;
+  z-index: 0 !important;
+  width: 38px;
+  right: 12px;
+  border-radius: 6px !important;
+  padding: 7px 0px;
+  background-color: white;
+  opacity: 0;
+  transition: transform 0.2s;
+}
+
+.roundUI #sectionActions {
+  border-radius: 86px !important;
+  padding: 9px 0px;
+}
+#sectionActions hr {
+  margin: 8px 0px 6px 0px;
+  width: 75% !important;
+  border: 0px;
+  border-top: 1px solid #0000001c;
+}
+
+#sectionActions.overlayz {
+  transform: scale(1.2) !important;
+  transition: transform 0.3s;
+}
+
+#sectionActions.indent {
+  transform: translate(0px, 0px);
+  transition: transform 0.2s;
+}
+
+#sectionActions.un-indent {
+  transform: translate(0px, 0px);
+  transition: transform 0.2s;
+}
+
+#sectionActions.show {
+  opacity: 1;
+}
+.dragging #sectionActions {
+  opacity: 0 !important;
+}
+
+.sectionActions-btn {
+  background-color: transparent !important;
+  min-width: 28px;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  z-index: 9999999999999999 !important;
+  padding: 0;
+  font-size: 14px;
+  height: 28px;
+
+  padding-top: 3px;
+}
+
+.sectionActions-btn :hover {
+  opacity: 1 !important;
+}
+.sectionActions-btn:hover svg * {
+  fill: var(--blue--main) !important;
+}
+
+.actionsColor .sectionActions-btn svg * {
+  fill: var(--section-selection) !important;
+}
+
+p .sectionActions-main-action {
+  pointer-events: all;
+  min-width: 32px;
+  cursor: pointer;
+
+  line-height: 32px;
+  margin: 0 9px 0 0;
+  padding: 0;
+  font-size: 14px;
+  vertical-align: top;
+  display: inline-block;
+  height: 32px;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(white),
+    to(#eeeeee)
+  );
+  background: -o-linear-gradient(top, white 0%, #eeeeee 100%);
+  background: linear-gradient(to bottom, white 0%, #eeeeee 100%);
+  -webkit-box-shadow: 0 2px 6px 0 rgba(22, 45, 61, 0.55);
+  box-shadow: 0 2px 6px 0 rgba(22, 45, 61, 0.55);
+  border-radius: 16px;
+  padding: 0 13px;
+  font-size: 14px;
+}
+
+#sectionActions .sectionActions-btn svg {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  fill: var(--blue--dark);
+}
+
+#sectionActions .sectionActions-btn svg * {
+  fill: black;
+}
+#sectionActions .sectionActions-btn:not(.disabled) svg:hover,
+.sectionActions .sectionActions-btn:hover,
+.sectionActions-main-action:hover {
+  fill: var(--blue--main);
+  color: var(--blue--main);
+}
+
+#sectionActions .sectionActions-btn svg {
+  fill: black;
+  z-index: 100;
+  opacity: 0.85;
+}
+#sectionActions .sectionActions-btn:hover svg {
+  opacity: 1;
+}
+
+#sectionActions .sectionActions-btn.selected:after {
+  content: " ";
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background-color: var(--blue--main);
+  height: 28px;
+  width: 28px;
+  border-radius: 20px;
+}
+
+.sectionActions-tooltip {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  top: -44px;
+  -webkit-box-shadow: 1px 2px 14px 0 rgba(22, 45, 61, 0.205);
+  box-shadow: 1px 2px 14px 0 rgba(22, 45, 61, 0.205);
+  z-index: 3;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px 12px 2px 12px;
+
+  pointer-events: none !important;
+  transform: translate(-130%, 100%);
+  left: 50%;
+  color: #2b5672;
+}
+
+.sectionActions-tooltip .arrow {
+  background-color: #fff;
+  top: 6px;
+  height: 8px;
+  width: 8px;
+  position: relative;
+  left: 100%;
+
+  -webkit-transform: translateX(-50%) rotate(-45deg);
+  -ms-transform: translateX(-50%) rotate(-45deg);
+  transform: translate(100%, -200%) rotate(-45deg);
+}
+.sectionActions-tooltip .arrow:after {
+  content: " ";
+  z-index: -1;
+  position: relative;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(22, 45, 61, 0.27);
+  box-shadow: 0 2px 4px 0 rgba(22, 45, 61, 0.27);
+}
+
+.sectionActions-tooltip.show {
+  -webkit-transform-origin: center bottom;
+  -ms-transform-origin: center bottom;
+  transform-origin: center bottom;
+
+  animation-name: example;
+  animation-duration: 4s;
+  opacity: 100;
+}
+
+#sectionActions.subsectionActions.show {
+  opacity: 1 !important;
+  animation: showsectionActions 0.2s;
+  transition-timing-function: ease-in-out;
+  transform: scale(2) translate(51vw, 0px);
+}
+
+@keyframes showsectionActions {
+  0% {
+    opacity: 0;
+    transform: scale(2) translate(51vw, 0px);
+  }
+  1% {
+    opacity: 1;
+    transform: scale(2) translate(51vw, 0px);
+  }
+
+  100% {
+    transform-origin: top cneter;
+    opacity: 1;
+    transition-timing-function: ease-in-out;
+    transform: scale(2) translate(51vw, 0px);
+  }
+}
+
+.element-container.on-the-move .sectionActions {
+  left: 500000px !important;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+#sectionActions .sectionActions-btn.active:not(.selected) svg {
+  fill: #60bc57;
+}
+
+#sectionActions .sectionActions-btn.disabled svg {
+  opacity: 70%;
+}
+
+.element-container.on-the-move .sectionActions {
+  left: 500000px !important;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+#sectionActions .sectionActions-btn.disabled svg {
+  opacity: 70%;
+}
+
+.zoomMode #sectionActions.show {
+  opacity: 1 !important;
+  pointer-events: all !important;
+
+  animation: showsectionActions 0.2s !important;
+  transition-timing-function: ease-in-out;
+  z-index: 99999999;
+}
+
+[panel-type="add-sections"] #sectionActions {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  pointer-events: none;
+  top: attr(top) !important;
+  right: 10px !important;
+  opacity: 0;
+  position: absolute;
+  font-family: "HelveticaNeueW01-45Ligh";
+  white-space: nowrap;
+  z-index: 99999999 !important;
+  opacity: 0;
+}

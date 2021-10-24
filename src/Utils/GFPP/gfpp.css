@@ -1,0 +1,414 @@
+#gfpp {
+  display: flex;
+  transform: scale(1) translate(0px, 0px);
+  opacity: 0;
+  top: -66px;
+  position: absolute;
+  white-space: nowrap;
+  z-index: 999999999999999999999 !important;
+}
+
+.show#gfpp * {
+  pointer-events: all;
+}
+
+.element-container:not(.selected) #gfpp {
+  opacity: 0;
+  pointer-events: none;
+  animation: none;
+}
+
+.useGfpp .section:not(.selected) #gfpp {
+  opacity: 0;
+  animation: none;
+  pointer-events: none;
+}
+.useGfpp .section.outs > #gfpp {
+  opacity: 0 !important;
+  display: none;
+}
+.element-wrapper:not(.selected) #gfpp {
+  opacity: 0;
+  animation: none;
+}
+.useGfpp .section:not(.selected) #gfpp {
+  opacity: 0;
+  pointer-events: none;
+  animation: none;
+}
+.element-container.strip:not(.selected) #gfpp {
+  opacity: 0;
+  pointer-events: none;
+  animation: none;
+}
+.element-wrapper.strip:not(.selected) #gfpp {
+  opacity: 0;
+  pointer-events: none;
+  animation: none;
+}
+#gfpp.subGfpp {
+  display: block;
+
+  left: 10px;
+
+  transform: scale(1);
+  position: absolute;
+  font-family: "HelveticaNeueW01-45Ligh";
+  white-space: nowrap;
+}
+
+.gfpp-btn {
+  pointer-events: all;
+  min-width: 32px;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  margin: 0 6px 0 0;
+  padding: 0;
+  font-size: 14px;
+  height: 32px;
+
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.12), 0px 4px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.gfpp-main-action {
+  pointer-events: all;
+  min-width: 32px;
+  cursor: pointer;
+  color: #2d4150;
+  line-height: 32px;
+  margin: 0 9px 0 0;
+  padding: 0;
+  font-size: 14px;
+  vertical-align: top;
+  display: inline-block;
+  height: 32px;
+  background: white;
+
+  -webkit-box-shadow: 0 2px 6px 0 rgba(22, 45, 61, 0.55);
+  box-shadow: 0 2px 6px 0 rgba(22, 45, 61, 0.55);
+  border-radius: 16px;
+  padding: 0 13px;
+  font-size: 14px;
+}
+
+#gfpp .gfpp-btn svg {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#gfpp .gfpp-btn:not(.disabled):not(.selected):hover svg,
+#gfpp .gfpp-btn:not(.disabled):not(.selected):hover svg *,
+.gfpp .gfpp-btn:hover,
+.gfpp-main-action:hover {
+  fill: var(--blue--main);
+  color: var(--blue--main) !important;
+}
+
+.gfpp-tooltip {
+  color: black !important;
+}
+
+#gfpp .gfpp-btn.selected svg,
+#gfpp .gfpp-btn.selected svg * {
+  fill: white;
+  z-index: 100;
+}
+#gfpp .gfpp-btn.selected svg:hover {
+  fill: white;
+  z-index: 100;
+}
+
+#gfpp .gfpp-btn.selected:after {
+  content: " ";
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background-color: var(--blue--main);
+  height: 28px;
+  width: 28px;
+  border-radius: 20px;
+}
+
+#gfpp .gfpp-btn.selected .gfpp-tooltip {
+  display: none;
+}
+.gfpp-tooltip {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  top: -44px;
+  -webkit-box-shadow: 1px 2px 14px 0 rgba(22, 45, 61, 0.205);
+  box-shadow: 1px 2px 14px 0 rgba(22, 45, 61, 0.205);
+  z-index: 3;
+  z-index: 999999999999999999999999 !important;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px 12px 2px 12px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.gfpp-tooltip .arrow {
+  background-color: #fff;
+  top: 6px;
+  height: 8px;
+  width: 8px;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%) rotate(-45deg);
+  -ms-transform: translateX(-50%) rotate(-45deg);
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+.gfpp-tooltip .arrow:after {
+  content: " ";
+  z-index: -1;
+  position: relative;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(22, 45, 61, 0.27);
+  box-shadow: 0 2px 4px 0 rgba(22, 45, 61, 0.27);
+}
+
+.gfpp-tooltip.show {
+  -webkit-transform-origin: center bottom;
+  -ms-transform-origin: center bottom;
+  transform-origin: center bottom;
+
+  animation-name: example;
+  animation-duration: 4s;
+  opacity: 100;
+}
+
+.strip.selected > #gfpp {
+  opacity: 1 !important;
+  z-index: 99;
+  animation: showGfpp 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.element-wrapper.selected #gfpp {
+  opacity: 1 !important;
+  z-index: 99;
+  animation: showGfpp2 0.3s !important;
+  transform: translate(-100px, 0px);
+  transition-timing-function: ease-in-out;
+  left: 100px !important;
+}
+.useGfpp .section.selected:not(.parent-selected) > #gfpp.show {
+  opacity: 1 !important;
+  z-index: 99;
+  animation: showGfpp2 0.3s !important;
+  transform: translate(-100px, 0px);
+  left: unset;
+  transition-timing-function: ease-in-out;
+}
+
+.section.parent-selected > #gfpp.show {
+  opacity: 0 !important;
+}
+.section:not(.selected) > #gfpp.show {
+  opacity: 0 !important;
+}
+.resizing .strip.selected #gfpp {
+  opacity: 1 !important;
+  z-index: 99;
+  animation: showGfpp 0.2s;
+}
+
+@keyframes showGfpp {
+  0% {
+    transform-origin: center;
+    opacity: 0;
+    transform: scale(1);
+  }
+  1% {
+    transform-origin: center;
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    transform-origin: center;
+    transition-timing-function: ease-in-out;
+    transform: scale(1.12);
+  }
+
+  100% {
+    transform-origin: center;
+    opacity: 1;
+    transition-timing-function: ease-in-out;
+    transform: scale(1);
+  }
+}
+
+@keyframes showGfpp2 {
+  0% {
+    transform-origin: center;
+    opacity: 0;
+    transform: scale(1) translate(-100px, 0px);
+  }
+  1% {
+    transform-origin: center;
+    opacity: 1;
+    transform: scale(1) translate(-100px, 0px);
+  }
+
+  50% {
+    transform-origin: center;
+    transition-timing-function: ease-in-out;
+    transform: scale(1.2) translate(-100px, 0px);
+  }
+
+  100% {
+    transform-origin: center;
+    opacity: 1;
+    transition-timing-function: ease-in-out;
+    transform: scale(1) translate(-100px, 0px);
+  }
+}
+
+.on-the-move #gfpp {
+  left: 500000px !important;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+#gfpp .gfpp-btn.active:not(.selected) svg {
+  fill: #ddffda;
+}
+
+#gfpp .gfpp-btn.disabled svg {
+  opacity: 70%;
+}
+
+.element-container.on-the-move .gfpp {
+  left: 500000px !important;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.element-wrapper.on-the-move .gfpp {
+  left: 500000px !important;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+#gfpp .gfpp-btn.disabled svg {
+  opacity: 70%;
+}
+
+.zoomMode .gfpp,
+.zoomMode #gfpp {
+  display: none;
+}
+#gfpp.show {
+  opacity: 1 !important;
+  pointer-events: all !important;
+
+  animation: showGfpp 0.2s !important;
+  transition-timing-function: ease-in-out;
+  z-index: 99999999;
+}
+[panel-type="edit-panel"] #gfpp {
+  display: none !important;
+}
+.strip > #gfpp {
+  left: 34px;
+}
+.context-menu {
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  border-radius: 3px;
+  margin: 0;
+  padding: 0px 6px 0px 0px;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+  max-width: 150px;
+  float: right;
+
+  user-select: none;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 0 12px 0 rgb(17 18 25 / 14%);
+  z-index: 999999999999999 !important;
+}
+#s0 .context-menu {
+  transform: translate(-20px, 0px);
+}
+.context-menu li {
+  position: relative;
+  padding: 4px 22px 4px 12px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.context-menu li:hover {
+  background-color: var(--blue--light);
+}
+.vontext-menu li .label {
+  height: 20px;
+
+  font-size: 14px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  color: #333850;
+  white-space: nowrap;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.keyboard-action {
+  white-space: nowrap;
+  display: flex;
+  margin-left: 10px;
+  height: 16px;
+
+  font-size: 10px;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.6;
+  letter-spacing: normal;
+  text-align: right;
+  color: #868aa5;
+}
+#s0 > .gfpp {
+  z-index: 999999999 !important;
+}
+
+.useGfpp .sectionActions-btn[type="animation"],
+.useGfpp .sectionActions-btn[type="background"] {
+  display: none;
+}
+
+.useHighlight .sectionActions-btn[type="duplicate"],
+.useHighlight .sectionActions-btn[type="delete"] {
+  display: none !important;
+}
+.useHighlight .section > #gfpp {
+  display: none !important;
+}

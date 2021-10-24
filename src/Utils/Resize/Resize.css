@@ -1,0 +1,162 @@
+.element-container {
+  position: relative;
+}
+
+.resizable:not(.selected) .resizer,
+.resizable:not(.selected) .drag-handle {
+  display: none;
+}
+
+.resizable .resizers {
+  width: 100%;
+  height: 100%;
+
+  box-sizing: border-box;
+}
+
+.resizable .resizers .resizer {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid #4286f4;
+  position: absolute;
+}
+
+.resizable .resizers .resizer.top-right {
+  right: -3px;
+  top: -3px;
+  cursor: col-resize;
+}
+.resizable .resizers .resizer.bottom-left {
+  left: -3px;
+  bottom: -3px;
+  cursor: ns-resize;
+}
+.resizable .resizers .resizer.bottom-right {
+  right: -3px;
+  bottom: -3px;
+  cursor: ns-resize;
+}
+.resizable .resizers .resizer.top {
+  right: 50%;
+  top: -3px;
+  cursor: ns-resize;
+}
+.resizable .resizers .resizer.bottom {
+  right: 50%;
+  bottom: -5px;
+  cursor: nesw-resize;
+}
+.drag-handle {
+  opacity: 0;
+}
+.section:hover .drag-handle,
+.section.selected .drag-handle {
+  opacity: 1;
+  z-index: 99999999999;
+}
+.drag-handle {
+  position: absolute;
+  padding: 6px 12px;
+  display: flex;
+  height: 19px;
+  bottom: 0px;
+  right: -6px;
+  z-index: 999999999;
+  margin-left: -9.5px;
+  border-radius: 6px;
+  background: var(--section-selection);
+  font-size: 0;
+  transition: padding-left 0.1s;
+  cursor: ns-resize;
+}
+.drag-handle svg {
+  transform: scale(1.2) translate(0px, 2px);
+}
+.dragging .drag-handle {
+  opacity: 0 !important;
+}
+
+.handle-wrapper {
+  position: absolute;
+  display: flex;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+  border-radius: 0px;
+  right: 0;
+  bottom: 0px;
+  width: 100%;
+  z-index: 99999999999;
+  opacity: 0.4;
+  font-size: 0;
+  transition: padding-left 0.1s;
+}
+
+.strip.selected .handle-wrapper:hover .drag-handle-strip {
+  position: absolute;
+
+  display: flex;
+  height: 10px;
+  padding: 0;
+  margin: 0;
+  border-radius: 0px;
+  right: 0;
+  bottom: 0px;
+  width: 100%;
+  z-index: 99999999999;
+  background: var(--blue--main);
+  opacity: 0.6;
+  font-size: 0;
+  transition: padding-left 0.1s;
+  cursor: ns-resize;
+}
+
+.drag-area-top {
+  width: 100%;
+  height: 20px;
+
+  opacity: 50%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: -10px;
+  cursor: ns-resize;
+}
+.drag-area-bottom {
+  width: 100%;
+  height: 20px;
+  opacity: 50%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: -10px;
+  cursor: ns-resize;
+}
+.sub-drag-area {
+  height: 10px;
+  width: 100%;
+}
+.sub-drag-area-color {
+  background-color: var(--blue--main);
+  height: 10px;
+  width: 100%;
+}
+
+.drag-area {
+  opacity: 0;
+  z-index: 99999999;
+  cursor: unset;
+  transition: opacity 100ms ease-in-out;
+}
+
+.element-container.selected .drag-area:hover {
+  opacity: 50%;
+  cursor: ns-resize;
+}
+.element-container.selected .drag-area.hover {
+  opacity: 50%;
+  pointer-events: none;
+  z-index: 0;
+}

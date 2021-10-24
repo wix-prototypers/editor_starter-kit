@@ -1,0 +1,720 @@
+.section {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Madefor Display";
+  align-items: center;
+  justify-content: center;
+  padding: 0px 0px;
+  z-index: -1;
+}
+
+body:not(.elementfirst)
+  .section:not(.selected):not(.parent-selected)
+  *:not(.outside) {
+  pointer-events: none;
+}
+
+.section.selected .outside {
+  pointer-events: none;
+}
+
+[panel-type="edit-panel"] .section.hover:before,
+[panel-type="edit-panel"] .strip:before,
+[panel-type="edit-panel"] .strip:after {
+  display: none;
+}
+[panel-type="edit-panel"] .section.selected:before {
+  display: unset !important;
+  transform: scale(1.6) translate(-24px, -2px) !important;
+}
+
+#stage .section.stripped:after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  left: 0px;
+  z-index: 9999;
+  top: 0px;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  border: 3px solid #116cff !important;
+  outline: none !important;
+}
+
+[panel-type="edit-panel"] .section.hover:not(.selected):after,
+[panel-type="add-sections"] .section.hover:not(.selected):after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  left: 0px;
+  z-index: 9999;
+  top: 0px;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  border: 3px solid var(--section-selection) !important;
+}
+
+#stage .section.selected:not(.parent-selected):before,
+body.sectionHover
+  #stage
+  .section.hover:not(.selected):not(.parent-selected):before {
+  content: attr(hat);
+  border-radius: 3px 3px 0px 0px;
+  white-space: nowrap;
+  position: absolute;
+  top: -27px;
+  right: 0px;
+  z-index: -1;
+  font-size: 16px;
+  padding: 6px 8px 6px 8px;
+  font-size: 16px;
+  background-color: var(--section-selection);
+  color: white;
+}
+
+body:not(.sectionHover) #stage .section.hover:not(.selected):before {
+  content: attr(hat);
+  border-radius: 3px 3px 0px 0px;
+  white-space: nowrap;
+  position: absolute;
+  top: -27px;
+  right: 0px;
+  z-index: -1;
+  font-size: 16px;
+  padding: 6px 8px 6px 8px;
+  font-size: 16px;
+  background-color: var(--section-selection-50);
+
+  color: white;
+  cursor: pointer;
+}
+
+body:not(.sectionHover).purpleIndication
+  #stage
+  .section.hover:not(.selected):before {
+  content: attr(hat);
+  border-radius: 3px 3px 0px 0px;
+  white-space: nowrap;
+  position: absolute;
+  top: -27px;
+  right: 0px;
+  z-index: -1;
+  font-size: 16px;
+  padding: 6px 8px 6px 8px;
+  font-size: 16px;
+  background-color: #7923f670;
+  color: white;
+  cursor: pointer;
+}
+body:not(.sectionHover).greenIndication
+  #stage
+  .section.hover:not(.selected):before {
+  content: attr(hat);
+  border-radius: 3px 3px 0px 0px;
+  white-space: nowrap;
+  position: absolute;
+  top: -27px;
+  right: 0px;
+  z-index: -1;
+  font-size: 16px;
+  padding: 6px 8px 6px 8px;
+  font-size: 16px;
+  background-color: #00a87e70;
+  color: white;
+  cursor: pointer;
+}
+body:not(.sectionHover).darkGreenIndication
+  #stage
+  .section.hover:not(.selected):before {
+  content: attr(hat);
+  border-radius: 3px 3px 0px 0px;
+  white-space: nowrap;
+  position: absolute;
+  top: -27px;
+  right: 0px;
+  z-index: -1;
+  font-size: 16px;
+  padding: 6px 8px 6px 8px;
+  font-size: 16px;
+  background-color: #0a636370;
+  color: white;
+  cursor: pointer;
+}
+#stage .section.parent-selected.hover:before,
+#stage .section.parent-selected.selected:before {
+  content: attr(hat);
+  border-radius: 3px 3px 0px 0px;
+  position: absolute;
+  top: -24px;
+  right: 0px;
+  z-index: -1;
+  font-size: 16px;
+  padding: 4px 8px 4px 8px;
+  font-size: 15px;
+  background-color: var(--section-selection-light);
+  color: var(--section-selection);
+  z-index: 999999999999;
+}
+
+#stage .section.parent-selected:before,
+#stage .section.parent-selected.selected:before {
+  content: attr(hat);
+  border-radius: 3px 3px 0px 0px;
+  white-space: nowrap;
+  position: absolute;
+  top: -27px;
+  right: 0px;
+  z-index: -1;
+  font-size: 16px;
+  padding: 6px 8px 6px 8px;
+  font-size: 16px;
+  background-color: #117cff70;
+  color: white;
+  cursor: pointer;
+}
+
+body.purpleIndication #stage .section.parent-selected:before,
+body.purpleIndication#stage .section.parent-selected.selected:before {
+  background-color: #7923f670;
+}
+body.greenIndication #stage .section.parent-selected:before,
+body.greenIndication#stage .section.parent-selected.selected:before {
+  background-color: #00a87e70;
+}
+body.darkGreenIndication #stage .section.parent-selected:before,
+body.darkGreenIndication#stage .section.parent-selected.selected:before {
+  background-color: #0a636370;
+}
+
+body:not(.sectionHover).purpleIndication
+  #stage
+  .section.hover:not(.selected):after,
+body:not(.sectionHover).purpleIndication #stage .section.parent-selected:after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  left: 0px;
+  z-index: 99999999999;
+  top: 0px;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  border: 3px solid #7923f670;
+  outline: 1px solid #7923f6;
+}
+body:not(.sectionHover).greenIndication
+  #stage
+  .section.hover:not(.selected):after,
+body:not(.sectionHover).greenIndication #stage .section.parent-selected:after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  left: 0px;
+  z-index: 99999999999;
+  top: 0px;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  border: 3px solid #00a87e70;
+  outline: 1px solid #00a87e;
+}
+
+body:not(.sectionHover).darkGreenIndication
+  #stage
+  .section.hover:not(.selected):after,
+body:not(.sectionHover).darkGreenIndication
+  #stage
+  .section.parent-selected:after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  left: 0px;
+  z-index: 99999999999;
+  top: 0px;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  border: 3px solid #0a636370;
+  outline: 1px solid #0a6363;
+}
+
+body:not(.sectionHover) #stage .section.hover:not(.selected):after,
+body:not(.sectionHover) #stage .section.parent-selected:after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  left: 0px;
+  z-index: 99999999999;
+  top: 0px;
+  width: calc(100% - 6px);
+  height: calc(100% - 7px);
+  border: 3px solid var(--section-selection-50);
+  outline: 1px solid var(--section-selection);
+}
+
+#stage #s2.section.stripped.parent-selected:after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  left: 0px;
+  z-index: 99999999999;
+  top: 0px;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  border: 3px solid var(--section-selection-50) !important;
+  outline: 1px solid var(--section-selection) !important;
+}
+
+#stage #s2.section.stripped.parent-selected .strip.selected:after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  left: 0px;
+  z-index: 99999999999;
+  top: 0px;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  border: 3px solid #116dff;
+}
+
+body:not(.sectionHover):not(.elementfirst)
+  #stage
+  .section.hover:not(.selected):not(.parent-selected)
+  .mae {
+  background: var(--section-selection);
+  opacity: 15%;
+  top: 3px;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  position: absolute;
+  pointer-events: none;
+  z-index: 999999999;
+}
+
+body:not(.sectionHover):not(.elementfirst).purpleIndication
+  #stage
+  .section.hover:not(.selected):not(.parent-selected):after {
+  background-color: #7923f620;
+}
+
+body:not(.sectionHover):not(.elementfirst).greenIndication
+  #stage
+  .section.hover:not(.selected):not(.parent-selected):after {
+  background-color: #00a87e20;
+}
+
+body:not(.sectionHover):not(.elementfirst).darkGreenIndication
+  #stage
+  .section.hover:not(.selected):not(.parent-selected):after {
+  background-color: #0a636320;
+}
+
+body:not(.sectionHover):not(.elementfirst) #stage .section.overlay:after {
+  background-color: #116dff25;
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  left: 0px;
+  z-index: 99999999999;
+  top: 0px;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+}
+body:not(.sectionHover):not(.elementfirst).purpleIndication
+  #stage
+  .section.overlay:after {
+  background-color: #8c11ff25;
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  left: 0px;
+  z-index: 99999999999;
+  top: 0px;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+}
+
+body:not(.sectionHover):not(.elementfirst).greenIndication
+  #stage
+  .section.overlay:after {
+  background-color: #00a87e25;
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  left: 0px;
+  z-index: 99999999999;
+  top: 0px;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+}
+
+body:not(.sectionHover):not(.elementfirst).darkGreenIndication
+  #stage
+  .section.overlay:after {
+  background-color: #0a636325;
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  left: 0px;
+  z-index: 99999999999;
+  top: 0px;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+}
+
+#stage .section.selected:not(.parent-selected):after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  left: 0px;
+  z-index: 999999999999;
+  top: 0px;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  border: 3px solid var(--section-selection) !important;
+}
+
+#stage .section.selected:not(#s1):not(.parent-selected):hover:after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  left: 0px;
+  z-index: 99999999;
+  top: 0px;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  border: 3px solid var(--section-selection) !important;
+  outline: 1px solid var(--section-selection-light);
+}
+
+body.sectionHover
+  #stage
+  .section.hover:not(.selected):not(.parent-selected):after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  left: 0px;
+  z-index: 999999999999;
+  top: 0px;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  border: 3px solid var(--section-selection) !important;
+}
+
+.section.parent-selected:hover:after,
+.section.parent-selected.selected:after {
+  border: 3px solid var(--section-selection-light);
+}
+
+#s0 {
+  z-index: 1;
+}
+#s1 {
+  z-index: 2;
+}
+#s2 {
+  z-index: 3;
+}
+#s3 {
+  z-index: 4;
+}
+#s4 {
+  z-index: 5;
+}
+#s5 {
+  z-index: 6;
+}
+#s6 {
+  z-index: 7;
+}
+#s7 {
+  z-index: 8;
+}
+#s8 {
+  z-index: 9;
+}
+.origin-section {
+  z-index: 9999 !important;
+}
+.origin-section .strip.on-the-move {
+  z-index: 999999999 !important;
+}
+.strip {
+  z-index: 99999999 !important;
+}
+.strip.hovered:before {
+  white-space: nowrap;
+  width: fit-content;
+  content: attr(hat);
+  border-radius: 3px 3px 0px 0px;
+  position: absolute;
+  top: -19px;
+  left: 100px;
+  padding: 4px 8px 4px 8px;
+  font-size: 13px;
+  background-color: #e1f0ff;
+  color: var(--blue--main);
+  opacity: 1;
+}
+
+.strip.parent-select:before {
+  white-space: nowrap;
+  width: fit-content;
+  content: attr(hat);
+  border-radius: 3px 3px 0px 0px;
+  position: absolute;
+  top: -19px;
+  left: 100px;
+  padding: 4px 8px 4px 8px;
+  font-size: 13px;
+  background-color: #e1f0ff;
+  color: var(--blue--main);
+  opacity: 1;
+}
+.strip.selected:before {
+  width: fit-content;
+  white-space: nowrap;
+  content: attr(hat);
+  border-radius: 3px 3px 0px 0px;
+  position: absolute;
+  top: -25px;
+  left: 100px;
+  padding: 6px 8px 6px 8px;
+  font-size: 14px;
+  background-color: var(--blue--main);
+  color: white;
+  z-index: 99999999999999 !important;
+  opacity: 1;
+}
+
+.dragging .strip:before {
+  opacity: 0 !important;
+}
+.strip:not(.selected).hovered:after,
+.strip.selected:after {
+  width: fit-content;
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  z-index: 99999999999999 !important;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  outline: 1px solid var(--blue--light);
+  pointer-events: none;
+}
+
+.strip.selected:after {
+  outline: 1px solid var(--blue--main);
+}
+.strip:not(.selected).hovered:after {
+  outline: 1px solid var(--blue--light);
+}
+
+.parent-select .Add-Section,
+.parent-select .Add-Section * {
+  opacity: 0 !important;
+}
+
+.edit-left #adi-panel[type="edit"] {
+  right: unset !important;
+  left: 60px !important;
+  top: 44px;
+}
+.element-wrapper {
+  position: absolute;
+  width: fit-content;
+  z-index: 0;
+}
+.element-wrapper:hover {
+  cursor: move;
+}
+.element-wrapper.hovered:before {
+  white-space: nowrap;
+  width: fit-content;
+  content: attr(hat);
+  border-radius: 3px 3px 0px 0px;
+  position: absolute;
+  top: -21px;
+  left: 0px;
+  padding: 4px 8px 4px 8px;
+  font-size: 13px;
+  background-color: #e1f0ff;
+  color: var(--blue--main);
+  opacity: 1;
+}
+.element-wrapper.selected:before {
+  width: fit-content;
+  white-space: nowrap;
+  content: attr(hat);
+  border-radius: 3px 3px 0px 0px;
+  position: absolute;
+  top: -20px;
+  height: 12px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  font-size: 13px;
+  background-color: var(--blue--main);
+  color: white;
+  z-index: 9999999;
+  opacity: 1;
+}
+
+.dragging .element-wrapper:before {
+  opacity: 0 !important;
+}
+.element-wrapper:not(.selected).hovered:after {
+  width: fit-content;
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 999999999;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+  border: 0px solid var(--blue--light);
+  pointer-events: none;
+}
+
+.element-wrapper.selected:after {
+  border: 1px solid var(--blue--main);
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 999999999;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+.element-wrapper:not(.selected).hovered:after {
+  border: 1px solid var(--blue--light);
+  width: 100%;
+}
+
+.attach-to-me:after,
+.attach-to-me:before,
+.attach-to-me.Add-Section {
+  display: none;
+}
+
+.section:hover:not(.selected) .outside,
+.section.hover:not(.selected) .outside {
+  border-top: 1px dashed var(--section-selection);
+  border-bottom: 1px dashed var(--section-selection);
+  box-sizing: border-box;
+  background-color: #e6e4f5;
+}
+
+.greenIndication .section:hover:not(.selected) .outside,
+.greenIndication .section.hover:not(.selected) .outside {
+  border-top: 1px dashed var(--section-selection);
+  border-bottom: 1px dashed var(--section-selection);
+  box-sizing: border-box;
+  background-color: #eefff8;
+}
+.darkGreenIndication .section:hover:not(.selected) .outside,
+.darkGreenIndication .section.hover:not(.selected) .outside {
+  border-top: 1px dashed var(--section-selection);
+  border-bottom: 1px dashed var(--section-selection);
+  box-sizing: border-box;
+  background-color: #eefff6;
+}
+
+.section.parent-selected:hover .outside,
+.section.parent-selected.hover .outside {
+  border-top: 1px dashed var(--section-selection);
+  border-bottom: 1px dashed var(--section-selection);
+  box-sizing: border-box;
+  background-color: #e6e4f5;
+}
+
+.blueIndication .section:hover:not(.selected) .outside,
+.blueIndication .section.hover:not(.selected) .outside,
+.blueIndication .section.hover.parent-selected .outside {
+  background-color: #ececec;
+}
+
+.blueIndication .section.selected:not(.parent-selected) .outside {
+  background-color: #e0e0e0;
+}
+
+.sectionHover.blueIndication
+  .section:hover:not(.selected):not(.parent-selected)
+  .outside,
+.sectionHover.blueIndication
+  .section.hover:not(.selected):not(.parent-selected)
+  .outside {
+  background-color: #e0e0e0;
+}
+
+.section.selected:not(.parent-selected) .outside {
+  border-top: 1px dashed var(--section-selection);
+  border-bottom: 1px dashed var(--section-selection);
+  box-sizing: border-box;
+  background-color: #d7d3fd;
+}
+.greenIndication .section.selected:not(.parent-selected) .outside {
+  border-top: 1px dashed var(--section-selection);
+  border-bottom: 1px dashed var(--section-selection);
+  box-sizing: border-box;
+  background-color: #dffff4;
+}
+.darkGreenIndication .section.selected:not(.parent-selected) .outside {
+  border-top: 1px dashed var(--section-selection);
+  border-bottom: 1px dashed var(--section-selection);
+  box-sizing: border-box;
+  background-color: #c5e4d7;
+}
+/* .section.parent-selected .outside {
+  border-top: 1px dashed var(--section-selection);
+  border-bottom: 1px dashed var(--section-selection);
+  box-sizing: border-box;
+  background-color: #e6e4f5;
+} */
+
+.sectionHover.purpleIndication
+  .section:hover:not(.selected):not(.parent-selected)
+  .outside,
+.sectionHover.purpleIndication
+  .section.hover:not(.selected):not(.parent-selected)
+  .outside {
+  background-color: #d7d3fd;
+}
+.sectionHover.greenIndication
+  .section:hover:not(.selected):not(.parent-selected)
+  .outside,
+.sectionHover.greenIndication
+  .section.hover:not(.selected):not(.parent-selected)
+  .outside {
+  background-color: #d3fdeb;
+}
+
+.offColor .outside {
+  background-color: transparent !important;
+}
+
+body:not(.elementfirst)
+  .section.hover:not(.selected):not(.parent-selected)
+  .element-wrapper:after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 99999;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+  border: 1px solid #3885ff;
+  pointer-events: none;
+}
+#stage .section.selected .container-980 {
+  border-right: 1px dashed black;
+  border-left: 1px dashed black;
+}
+#stage .section.parent-selected .container-980 {
+  border-right: 1px dashed black;
+  border-left: 1px dashed black;
+}
+#s2 .container-980 {
+  height: 100% !important;
+}

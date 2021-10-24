@@ -1,0 +1,68 @@
+:root {
+  --section-selection: #116dff;
+
+  --blue--dark: #2c4150;
+  --blue--main: #116dff;
+  --blue--light: #e0f0fa;
+  --section-selection-light: #e0f0fa;
+  --filter-blue-main: invert(32%) sepia(38%) saturate(7001%) hue-rotate(212deg)
+    brightness(103%) contrast(101%);
+  --purple--main: #7923f6;
+  --add: #116dff;
+  --pages: #00b69b;
+  --design: #1941b3;
+  --sections: #5a48f5;
+
+  --background: #fd590d;
+  --apps: #fa00a1;
+  --media: #fa7c33;
+  --blog: #ffaa00;
+  --stores: #569eff;
+  --booking: #5a48f5;
+  --data: #00a87e;
+  --ascend: #1763da;
+
+  --mobile--hide: #ff237d;
+  --mobile--layout: #5a48f5;
+  --mobile--tools: #569eff;
+  --sections--light: #eeecfe;
+  --pages--light: #e5f7f4;
+  --design--light: #e7eaf3;
+  --add--light: #569fff44;
+  --background--light: #fff1e1;
+  --apps--light: #fee8f6;
+  --media--light: #feeee6;
+  --data--light: #e5f6f2;
+  --ascend--light: #e6effb;
+
+  --filter--ascend: invert(29%) sepia(87%) saturate(3188%) hue-rotate(210deg)
+    brightness(89%) contrast(91%);
+  --filter--add: invert(32%) sepia(38%) saturate(7001%) hue-rotate(212deg)
+    brightness(103%) contrast(101%);
+  --filter--pages: invert(48%) sepia(30%) saturate(5121%) hue-rotate(141deg)
+    brightness(100%) contrast(101%);
+  --filter--sections: invert(29%) sepia(88%) saturate(4826%) hue-rotate(242deg)
+    brightness(98%) contrast(96%);
+  --filter--background: invert(40%) sepia(67%) saturate(2988%)
+    hue-rotate(356deg) brightness(102%) contrast(98%);
+  --filter--design: invert(13%) sepia(87%) saturate(3670%) hue-rotate(226deg)
+    brightness(97%) contrast(89%);
+  --filter--apps: invert(26%) sepia(94%) saturate(7305%) hue-rotate(311deg)
+    brightness(96%) contrast(113%);
+  --filter--media: invert(59%) sepia(63%) saturate(2794%) hue-rotate(339deg)
+    brightness(103%) contrast(96%);
+  --filter--blog: invert(55%) sepia(91%) saturate(885%) hue-rotate(3deg)
+    brightness(109%) contrast(103%);
+  --filter--stores: invert(67%) sepia(90%) saturate(3603%) hue-rotate(193deg)
+    brightness(103%) contrast(101%);
+  --filter--booking: invert(28%) sepia(81%) saturate(2260%) hue-rotate(236deg)
+    brightness(91%) contrast(111%);
+  --filter--data: invert(40%) sepia(57%) saturate(4790%) hue-rotate(146deg)
+    brightness(102%) contrast(101%);
+  --filter--mobile--hide: invert(27%) sepia(79%) saturate(3544%)
+    hue-rotate(320deg) brightness(100%) contrast(102%);
+  --filter--mobile--layout: invert(25%) sepia(47%) saturate(4578%)
+    hue-rotate(241deg) brightness(97%) contrast(98%);
+  --filter--mobile--tools: invert(64%) sepia(21%) saturate(7500%)
+    hue-rotate(192deg) brightness(101%) contrast(102%);
+}
