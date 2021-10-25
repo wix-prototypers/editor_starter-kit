@@ -71,7 +71,13 @@ export const Actions = {
   //Actions
 
   zoomMode(data) {
-    const zoomBtn = editor.querySelector(".zoom");
+    const stage = document.querySelector("#stage");
+    const body = document.querySelector("body");
+    const leftPanel = document.querySelector("#left-panel");
+    const editor = document.querySelector("#editor");
+    const leftBar = document.querySelector("#left-bar");
+    const sectionActions = document.querySelector(".sectionActions");
+    const zoomBtn = document.querySelector(".zoom");
 
     if (data.isActive == true) {
       editor.classList.add("zoomMode");
@@ -96,7 +102,6 @@ export const Actions = {
     const editor = document.querySelector("#editor");
     const leftBar = document.querySelector("#left-bar");
     const sectionActions = document.querySelector(".sectionActions");
-
     const zoomBtn = document.querySelector(".zoom");
 
     stage.style.pointerEvents = "none";

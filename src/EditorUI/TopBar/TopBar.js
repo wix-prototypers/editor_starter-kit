@@ -1,8 +1,9 @@
 import { icons } from "./top-bar-icons.js";
 
 //Append Styles
-var href =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/EditorUI/TopBar/top-bar.css";
+/* var href =
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@latest/src/EditorUI/TopBar/top-bar.css"; */
+var href = "../../src/EditorUI/TopBar/top-bar.css";
 var exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {
@@ -109,7 +110,7 @@ export const TopBar = (state, setState) => {
    ${redo2} 
     </div>
     <div class="topbar-item zoom zoomB flex row flex justify-arro align-center bordered">
-<?xml version="1.0" encoding="UTF-8"?>
+
 
   <span class="fifty flex justify-between align-center">${icons.zoomIn} &nbsp; <span class="number"> 50%</span></span>
   <span class="hundred flex justify-between align-center">${icons.zoomOut} &nbsp;<span class="number"> 100%</span></span>

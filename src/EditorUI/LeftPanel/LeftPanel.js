@@ -15,7 +15,7 @@ import { AddSection } from "../../Utils/AddSection/AddSection.js";
 const stage = document.querySelector("#stage");
 //Append Styles
 var href =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/EditorUI/LeftPanel/left-panel.css";
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@latest/src/EditorUI/LeftPanel/left-panel.css";
 var exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {
