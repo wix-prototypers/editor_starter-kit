@@ -1,5 +1,5 @@
 //Append Styles
-
+import { icons } from "./left-bar-icons.js";
 var href =
   "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/EditorUI/LeftBar/left-bar.css";
 let exists = false;
@@ -27,9 +27,9 @@ export const LeftBar = (
       "beforeend",
       ` 
   <div class="leftbar-item leftbar-item-${item.toLowerCase()}" id="${item.toLowerCase()}">
-  <img
-    src="../../Common/Images/leftbar/${item.toLowerCase()}.svg"
-  />
+
+${icons[item.toLowerCase()]}
+
   <span class="leftbar-text"> ${
     item === "Ascend"
       ? "My Business"
