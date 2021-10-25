@@ -18,23 +18,7 @@ if (!exists) {
 }
 
 //icons and images
-const logoSrc =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/EditorUI/TopBar/icons/wixLogo.svg";
-const chevSrc =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/EditorUI/TopBar/icons/chev.svg";
-const searchSrc =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/EditorUI/TopBar/icons/search.svg";
-const desktop2Src =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/EditorUI/TopBar/icons/tb2/Desktop.svg";
-const mobile2Src =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/EditorUI/TopBar/icons/tb2/Mobile.svg";
-const undo2Src =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/EditorUI/TopBar/icons/tb2/Undo.svg";
-const redo2Src =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/EditorUI/TopBar/icons/tb2/Redo.svg";
-const toolsSrc =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit/src/EditorUI/TopBar/icons/tb2/Tools.svg";
-const editor = document.querySelector("#editor");
+const { logo, chev, search, desktop2, mobile2, undo2, redo2, tools } = icons;
 
 export const TopBar = (state, setState) => {
   let container = document.querySelector("#top-bar");
@@ -45,7 +29,7 @@ export const TopBar = (state, setState) => {
 <div class="topbar">
   <div class="left-side">
     <div class="wix_logo">
-      <img src="${logoSrc}"/>
+    ${logo}
     </div>
   
     <div class="text-links flex row justify-between">
@@ -91,17 +75,17 @@ export const TopBar = (state, setState) => {
             Page:
             <span class="text-HelveticaNeueW01-45Light">Home</span>
           </div>
-          <img class="page-dropdown" src="${chevSrc}" />
+       ${chev}
         </div>
       </div>
     </div>
     <div class="viewport-icons bordered uy flex row" currentValue="desktop" >
     
         <div class="topbar-item viewport-mode flex align-center selected" type="desktop">
-          <img src="${desktop2Src}" class="icon-desktop"  />
+          ${desktop2}
         </div>
         <div class="topbar-item viewport-mode flex align-center" type="mobile">
-          <img class="icon-mobile" src="${mobile2Src}" />
+          ${mobile2}
         </div>
 <div class="bordered" style="transform: translate(-21px ,0px); width: 20px; height:100%;">
 
@@ -119,10 +103,10 @@ export const TopBar = (state, setState) => {
 
   <div class="bordered" style="height: 100%;"></div>
     <div class="topbar-item icon-item flex justify-center align-center  undo">
-      <img src=${undo2Src} />
+      ${undo2} 
     </div>
     <div class="topbar-item icon-item flex justify-center align-center  redo ">
-    <img src=${redo2Src} />
+   ${redo2} 
     </div>
     <div class="topbar-item zoom zoomB flex row flex justify-arro align-center bordered">
 <?xml version="1.0" encoding="UTF-8"?>
@@ -135,7 +119,7 @@ export const TopBar = (state, setState) => {
 
     <div class="bordered" style="height: 100%;"></div>
     <div class=" topbar-item tools-item   flex align-center " data-collaps="false">
-      <img src=${toolsSrc} alt="" />
+     ${tools} 
 
       <span>
       Tools
@@ -144,8 +128,7 @@ export const TopBar = (state, setState) => {
   
     <div class="bordered" style="height: 100%;"></div>
     <div class=" topbar-item icon-item search-wix search  flex align-center " data-collaps="false">
-      <img src=${searchSrc} alt="" />
-      <span>
+${search} 
       Search
   </span>
     </div>
@@ -153,53 +136,10 @@ export const TopBar = (state, setState) => {
     </div>
   </div>
   <div class="hide-tools-button flex justify-center align-center fixed hide">
-    <img src="${chevSrc}" />
+${chev}
   </div>
 </div>
 
-<div class="topbar third-topbar">
-  <div class="left-side">
-    <div class="wix_logo">
-      <img src="${logoSrc}"/>
-    </div>
-    <div class="flex row justify-arround mww ">
-    <div style="transform:translate(30px,0px);" class="topbar-item  bordered flex  align-center text-HelveticaNeueW01-55Roman ">
- 
-      <div style="transform:translate(-25px,0px);" class=" page_selector_container">
-        <div class="page_selector flex row  justify-between align-center">
-          <div class="text">
-            Page:
-            <span class="text-HelveticaNeueW01-45Light">Home</span>
-          </div>
-          <img class="page-dropdown" src="${chevSrc}" />
-        </div>
-      </div>
-    </div>
-    <div   class="viewport-icons bordered uy flex row" currentValue="desktop" >
-    
-        <div class="topbar-item viewport-mode flex align-center selected" type="desktop">
-          <img src="${desktop2Src}" class="icon-desktop"  />
-        </div>
-        <div class="topbar-item viewport-mode flex align-center" type="mobile">
-          <img class="icon-mobile" src="${mobile2Src}" />
-        </div>
-<div class="bordered" style="transform: translate(-21px ,0px); width: 20px; height:100%;">
-</div>
-      </div>
-      </div>
-   </div>
-  <div class="right-side flex row align-center">
-    <div class="topbar-item flex row flex justify-center align-center save">
-      <span class="item-text save-preview-publish">Save</span>
-    </div>
-    <div class="topbar-item flex row flex justify-center align-center preview">
-      <span class="item-text save-preview-publish">Preview</span>
-    </div>
-    <div class="topbar-item flex row flex justify-center align-center bordered exit-mode publish">
-      <span class="item-text save-preview-publish exit-mode publishb ">Exit Mode</span>
-    </div>
-  </div>
-</div>
     `
   );
 

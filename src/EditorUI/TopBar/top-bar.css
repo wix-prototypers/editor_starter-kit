@@ -414,9 +414,19 @@
   padding: 0 12px 0px 12px !important;
 }
 
-/* #editor .topbar .zoomB {
-  display: none;
-} */
+.topbar [type="mobile"] {
+  padding: 0 9px 0px 12px !important;
+}
+.topbar [type="desktop"] {
+  padding: 0 12px 0px 12px !important;
+}
+
+[type="mobile"] svg {
+  transform: translate(-10px, 0);
+}
+[type="desktop"] svg {
+  transform: translate(-9px, 0);
+}
 .zoomB {
   display: flex;
 
