@@ -98,7 +98,7 @@ export function deselectAllSections() {
     .querySelectorAll(".gfpp-btn, .hpp-btn, .main-action")
     .forEach((act) => act.classList.remove("selected"));
   let secAct = document.querySelector(`#sectionActions`);
-  secAct.classList.remove("indent");
+  secAct && secAct.classList.remove("indent");
 }
 
 export function deselectAllStrips() {
@@ -456,11 +456,12 @@ export function selectionModel(state, setState) {
             element.closest(".strip").classList.add("parent-select");
             element.closest(".section").classList.add("parent-selected");
           } else {
-            element.closest(".section").classList.add("parent-selected");
+            element.closest(".section") &&
+              element.closest(".section").classList.add("parent-selected");
           }
 
           let sectionActions = document.querySelector(`#sectionActions`);
-          sectionActions.classList.remove("indent");
+          sectionActions && sectionActions.classList.remove("indent");
         }
       })
   );

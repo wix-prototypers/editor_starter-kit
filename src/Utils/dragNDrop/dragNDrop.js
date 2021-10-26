@@ -5,13 +5,11 @@ const panel = document.querySelector("#left-panel");
 var mousePosY = 0;
 import { getSize, getCoords } from "../functions.js";
 export function DragNDrop(state, setState) {
-  /*   
-
   panel.onmouseenter = () => {
     stage.classList.remove("hide-ph");
   };
 
-  document.querySelectorAll(".draggable").forEach((item) =>
+  document.querySelectorAll("[draggable").forEach((item) =>
     item.addEventListener("mousedown", function (event) {
       var panel = document.querySelector(".add-panel");
       moved = null;
@@ -50,7 +48,7 @@ export function DragNDrop(state, setState) {
       clone.onmouseup = function (e) {
         !moved && element.click();
         if (document.querySelector(".inme")) {
-          /*  if (document.querySelector(`[add-section="hide"]`)) {
+          if (document.querySelector(`[add-section="hide"]`)) {
             stage.classList.add("hide-ph");
           } else {
             if (document.querySelector(`#stage.first-time`)) {
@@ -58,7 +56,7 @@ export function DragNDrop(state, setState) {
             } else {
               stage.classList.add("hide-ph");
             }
-          } 
+          }
           element.click();
         }
         document
@@ -72,7 +70,6 @@ export function DragNDrop(state, setState) {
       };
     })
   );
-
 
   function getCoords(elem) {
     var box = elem.getBoundingClientRect();
@@ -214,5 +211,5 @@ export function DragNDrop(state, setState) {
         }
       }
     });
-  } */
+  }
 }

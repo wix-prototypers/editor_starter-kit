@@ -106,9 +106,11 @@ export const Actions = {
 
     stage.style.pointerEvents = "none";
 
-    sectionActions.classList.remove("show");
+    sectionActions && sectionActions.classList.remove("show");
 
-    sectionActions.style.visibility = "hidden";
+    if (sectionActions) {
+      sectionActions.style.visibility = "hidden";
+    }
     if (data == "close") {
       leftBar.classList.remove("panld");
       stage.style.pointerEvents = "all";

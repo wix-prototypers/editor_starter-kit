@@ -1183,14 +1183,6 @@ color: #2b5672;
   border-radius: 0 8px 0 0;
 }
 
-.comm-data-panel {
-  position: fixed;
-  top: 79px;
-  left: 7px;
-  z-index: 10;
-  display: none;
-}
-
 .divider-short {
   box-sizing: content-box;
   background-color: #d9e1e8;
