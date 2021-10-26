@@ -23,23 +23,6 @@
   display: flex;
 }
 
-.top-bar-avatar {
-  width: 38px;
-  height: 38px;
-  transform: translate(2px, 9px);
-  cursor: pointer;
-}
-.avatar-container:before {
-  position: absolute;
-  content: "";
-  display: inline-block;
-  width: 28px;
-  height: 28px;
-  border-radius: 100px;
-  transform: translate(6px, 10.5px);
-  border: 1px solid #e6e6e6;
-}
-
 .topbar .topbar-item {
   padding: 0 12px;
   height: 100%;
@@ -56,15 +39,6 @@
 .topbar .topbar-item:not(.wix_logo):not(.page_selector) *,
 .topbar .topbar-item.selected * {
   cursor: pointer;
-}
-
-.lan {
-  font-weight: 400;
-  font-size: 14px;
-  color: black;
-}
-.lan:hover {
-  color: var(--blue--main);
 }
 
 .topbar
@@ -217,9 +191,7 @@
 .topbar .tools-item img {
   transform: translate(-5px, 0px);
 }
-.topbar .tools-item:hover img {
-  filter: var(--filter-blue-main);
-}
+
 .topbar .zoom {
   padding: 0px 9px;
 }
@@ -309,10 +281,10 @@
   color: var(--blue--main);
 }
 
-.mww {
+.pages-bar {
   transform: translate(-30px, 0px);
 }
-.mww *:before {
+.pages-bar *:before {
   opacity: 0 !important;
 }
 
@@ -398,8 +370,3 @@
   height: 28px;
   transform: translate(4px, 0px);
 }
-
-/* .zoomB:hover .number {
-  color: var(--blue-main);
-  background-color: #ebf2ff;
-} */

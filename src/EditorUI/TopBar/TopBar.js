@@ -67,7 +67,7 @@ export const TopBar = (state, setState) => {
   </div>
 </div>
 <div class="topbar second-topbar flex justify-between fixed">
-<div class="flex row justify-arround mww ">
+<div class="flex row justify-arround pages-bar">
     <div class="topbar-item  bordered flex  align-center text-HelveticaNeueW01-55Roman ">
  
       <div class=" page_selector_container">
@@ -144,7 +144,9 @@ ${chev}
     `
   );
 
-  container.querySelector(".publish").onclick = (e) => {
-    console.log("ariel was here");
+  container.querySelector(".zoom").onclick = (e) => {
+    setState(state, "zoomMode", {
+      isActive: !e.target.closest(".zoom").classList.contains("selected"),
+    });
   };
 };

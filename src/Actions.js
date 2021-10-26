@@ -86,7 +86,7 @@ export const Actions = {
       body.classList.add("zoomMode");
       body.removeAttribute("panel-type");
       stage.removeAttribute("panel-type");
-
+    } else {
       editor.classList.remove("zoomMode");
       zoomBtn.classList.remove("selected");
       stage.classList.remove("zoomMode");
