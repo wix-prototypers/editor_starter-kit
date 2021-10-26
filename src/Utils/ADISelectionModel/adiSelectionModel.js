@@ -465,4 +465,14 @@ export function selectionModel(state, setState) {
         }
       })
   );
+
+  stage.onclick = (e) => {
+    if (
+      !e.target.closest("#element-wrapper") &&
+      !e.target.closest(".strip") &&
+      !e.target.closest(".section")
+    ) {
+      deselectAll();
+    }
+  };
 }

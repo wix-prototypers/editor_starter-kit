@@ -523,10 +523,20 @@ body.sectionHover
   position: absolute;
   width: fit-content;
   z-index: 0;
+  user-select: none;
 }
 .element-wrapper:hover {
   cursor: move;
 }
+.element-wrapper * {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
 .element-wrapper.hovered:before {
   white-space: nowrap;
   width: fit-content;

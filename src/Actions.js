@@ -116,7 +116,7 @@ export const Actions = {
       stage.style.pointerEvents = "all";
       editor.classList.remove("add-sections");
       editor.classList.remove("zoomMode");
-      sectionActions.classList.remove("show");
+      sectionActions && sectionActions.classList.remove("show");
       if (stage.classList.contains("zoomMode")) {
         editor.classList.add("zoomMode");
 

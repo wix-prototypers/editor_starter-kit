@@ -5,14 +5,16 @@ import { setState, State } from "./State.js";
 
 new (function App() {
   const editor = document.querySelector("#editor");
+  const stage = document.querySelector("#stage");
   editor.insertAdjacentHTML(
     "afterbegin",
-    `    <section id="left-panel" class="hidden Madefor"></section>
+    `    <section id="left-panel" class="hidden "></section>
   <section id="left-bar"></section>
 <section id="top-bar"></section>
 <section id="panel-frame" class=""></section>`
   );
-
+  editor.classList.add("Madefor");
+  stage.classList.add("Madefor");
   setTimeout(() => {
     const stateObj = State.apply(this, []);
     this.state = stateObj.state;
