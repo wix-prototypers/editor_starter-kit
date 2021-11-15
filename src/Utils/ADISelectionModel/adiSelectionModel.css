@@ -1,512 +1,118 @@
-.section {
+.strip {
   position: relative;
   display: flex;
   justify-content: space-between;
   font-family: "Madefor Display";
   align-items: center;
   justify-content: center;
-  padding: 0px 0px;
-  z-index: -1;
+  z-index: 0;
+  background-color: white;
+}
+.origin-strip {
+  z-index: 999999;
 }
 
-body:not(.elementfirst)
-  .section:not(.selected):not(.parent-selected)
-  *:not(.outside) {
-  pointer-events: none;
+.strip.hovered {
+  z-index: 5 !important;
 }
-
-.section.selected .outside {
-  pointer-events: none;
+.strip.hovered.selected {
+  z-index: 19 !important;
 }
-
-[panel-type="edit-panel"] .section.hover:before,
-[panel-type="edit-panel"] .strip:before,
-[panel-type="edit-panel"] .strip:after {
-  display: none;
-}
-[panel-type="edit-panel"] .section.selected:before {
-  display: unset !important;
-  transform: scale(1.6) translate(-24px, -2px) !important;
-}
-
-#stage .section.stripped:after {
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  left: 0px;
-  z-index: 9999;
-  top: 0px;
-  width: calc(100% - 6px);
-  height: calc(100% - 6px);
-  border: 3px solid #116cff !important;
-  outline: none !important;
-}
-
-[panel-type="edit-panel"] .section.hover:not(.selected):after,
-[panel-type="add-sections"] .section.hover:not(.selected):after {
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  left: 0px;
-  z-index: 9999;
-  top: 0px;
-  width: calc(100% - 6px);
-  height: calc(100% - 6px);
-  border: 3px solid var(--section-selection) !important;
-}
-
-#stage .section.selected:not(.parent-selected):before,
-body.sectionHover
-  #stage
-  .section.hover:not(.selected):not(.parent-selected):before {
-  content: attr(hat);
-  border-radius: 3px 3px 0px 0px;
-  white-space: nowrap;
-  position: absolute;
-  top: -27px;
-  right: 0px;
-  z-index: -1;
-  font-size: 16px;
-  padding: 6px 8px 6px 8px;
-  font-size: 16px;
-  background-color: var(--section-selection);
-  color: white;
-}
-
-body:not(.sectionHover) #stage .section.hover:not(.selected):before {
-  content: attr(hat);
-  border-radius: 3px 3px 0px 0px;
-  white-space: nowrap;
-  position: absolute;
-  top: -27px;
-  right: 0px;
-  z-index: -1;
-  font-size: 16px;
-  padding: 6px 8px 6px 8px;
-  font-size: 16px;
-  background-color: var(--section-selection-50);
-
-  color: white;
-  cursor: pointer;
-}
-
-body:not(.sectionHover).purpleIndication
-  #stage
-  .section.hover:not(.selected):before {
-  content: attr(hat);
-  border-radius: 3px 3px 0px 0px;
-  white-space: nowrap;
-  position: absolute;
-  top: -27px;
-  right: 0px;
-  z-index: -1;
-  font-size: 16px;
-  padding: 6px 8px 6px 8px;
-  font-size: 16px;
-  background-color: #7923f670;
-  color: white;
-  cursor: pointer;
-}
-body:not(.sectionHover).greenIndication
-  #stage
-  .section.hover:not(.selected):before {
-  content: attr(hat);
-  border-radius: 3px 3px 0px 0px;
-  white-space: nowrap;
-  position: absolute;
-  top: -27px;
-  right: 0px;
-  z-index: -1;
-  font-size: 16px;
-  padding: 6px 8px 6px 8px;
-  font-size: 16px;
-  background-color: #00a87e70;
-  color: white;
-  cursor: pointer;
-}
-body:not(.sectionHover).darkGreenIndication
-  #stage
-  .section.hover:not(.selected):before {
-  content: attr(hat);
-  border-radius: 3px 3px 0px 0px;
-  white-space: nowrap;
-  position: absolute;
-  top: -27px;
-  right: 0px;
-  z-index: -1;
-  font-size: 16px;
-  padding: 6px 8px 6px 8px;
-  font-size: 16px;
-  background-color: #0a636370;
-  color: white;
-  cursor: pointer;
-}
-#stage .section.parent-selected.hover:before,
-#stage .section.parent-selected.selected:before {
-  content: attr(hat);
-  border-radius: 3px 3px 0px 0px;
-  position: absolute;
-  top: -24px;
-  right: 0px;
-  z-index: -1;
-  font-size: 16px;
-  padding: 4px 8px 4px 8px;
-  font-size: 15px;
-  background-color: var(--section-selection-light);
-  color: var(--section-selection);
-  z-index: 999999999999;
-}
-
-#stage .section.parent-selected:before,
-#stage .section.parent-selected.selected:before {
-  content: attr(hat);
-  border-radius: 3px 3px 0px 0px;
-  white-space: nowrap;
-  position: absolute;
-  top: -27px;
-  right: 0px;
-  z-index: -1;
-  font-size: 16px;
-  padding: 6px 8px 6px 8px;
-  font-size: 16px;
-  background-color: #117cff70;
-  color: white;
-  cursor: pointer;
-}
-
-body.purpleIndication #stage .section.parent-selected:before,
-body.purpleIndication#stage .section.parent-selected.selected:before {
-  background-color: #7923f670;
-}
-body.greenIndication #stage .section.parent-selected:before,
-body.greenIndication#stage .section.parent-selected.selected:before {
-  background-color: #00a87e70;
-}
-body.darkGreenIndication #stage .section.parent-selected:before,
-body.darkGreenIndication#stage .section.parent-selected.selected:before {
-  background-color: #0a636370;
-}
-
-body:not(.sectionHover).purpleIndication
-  #stage
-  .section.hover:not(.selected):after,
-body:not(.sectionHover).purpleIndication #stage .section.parent-selected:after {
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  left: 0px;
-  z-index: 99999999999;
-  top: 0px;
-  width: calc(100% - 6px);
-  height: calc(100% - 6px);
-  border: 3px solid #7923f670;
-  outline: 1px solid #7923f6;
-}
-body:not(.sectionHover).greenIndication
-  #stage
-  .section.hover:not(.selected):after,
-body:not(.sectionHover).greenIndication #stage .section.parent-selected:after {
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  left: 0px;
-  z-index: 99999999999;
-  top: 0px;
-  width: calc(100% - 6px);
-  height: calc(100% - 6px);
-  border: 3px solid #00a87e70;
-  outline: 1px solid #00a87e;
-}
-
-body:not(.sectionHover).darkGreenIndication
-  #stage
-  .section.hover:not(.selected):after,
-body:not(.sectionHover).darkGreenIndication
-  #stage
-  .section.parent-selected:after {
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  left: 0px;
-  z-index: 99999999999;
-  top: 0px;
-  width: calc(100% - 6px);
-  height: calc(100% - 6px);
-  border: 3px solid #0a636370;
-  outline: 1px solid #0a6363;
-}
-
-body:not(.sectionHover) #stage .section.hover:not(.selected):after,
-body:not(.sectionHover) #stage .section.parent-selected:after {
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  left: 0px;
-  z-index: 99999999999;
-  top: 0px;
-  width: calc(100% - 6px);
-  height: calc(100% - 7px);
-  border: 3px solid var(--section-selection-50);
-  outline: 1px solid var(--section-selection);
-}
-
-#stage #s2.section.stripped.parent-selected:after {
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  left: 0px;
-  z-index: 99999999999;
-  top: 0px;
-  width: calc(100% - 6px);
-  height: calc(100% - 6px);
-  border: 3px solid var(--section-selection-50) !important;
-  outline: 1px solid var(--section-selection) !important;
-}
-
-#stage #s2.section.stripped.parent-selected .strip.selected:after {
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  left: 0px;
-  z-index: 99999999999;
-  top: 0px;
-  width: calc(100% - 6px);
-  height: calc(100% - 6px);
-  border: 3px solid #116dff;
-}
-
-body:not(.sectionHover):not(.elementfirst)
-  #stage
-  .section.hover:not(.selected):not(.parent-selected)
-  .mae {
-  background: var(--section-selection);
-  opacity: 15%;
-  top: 3px;
-  width: calc(100% - 6px);
-  height: calc(100% - 6px);
-  position: absolute;
-  pointer-events: none;
-  z-index: 999999999;
-}
-
-body:not(.sectionHover):not(.elementfirst).purpleIndication
-  #stage
-  .section.hover:not(.selected):not(.parent-selected):after {
-  background-color: #7923f620;
-}
-
-body:not(.sectionHover):not(.elementfirst).greenIndication
-  #stage
-  .section.hover:not(.selected):not(.parent-selected):after {
-  background-color: #00a87e20;
-}
-
-body:not(.sectionHover):not(.elementfirst).darkGreenIndication
-  #stage
-  .section.hover:not(.selected):not(.parent-selected):after {
-  background-color: #0a636320;
-}
-
-body:not(.sectionHover):not(.elementfirst) #stage .section.overlay:after {
-  background-color: #116dff25;
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  left: 0px;
-  z-index: 99999999999;
-  top: 0px;
-  width: calc(100% - 6px);
-  height: calc(100% - 6px);
-}
-body:not(.sectionHover):not(.elementfirst).purpleIndication
-  #stage
-  .section.overlay:after {
-  background-color: #8c11ff25;
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  left: 0px;
-  z-index: 99999999999;
-  top: 0px;
-  width: calc(100% - 6px);
-  height: calc(100% - 6px);
-}
-
-body:not(.sectionHover):not(.elementfirst).greenIndication
-  #stage
-  .section.overlay:after {
-  background-color: #00a87e25;
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  left: 0px;
-  z-index: 99999999999;
-  top: 0px;
-  width: calc(100% - 6px);
-  height: calc(100% - 6px);
-}
-
-body:not(.sectionHover):not(.elementfirst).darkGreenIndication
-  #stage
-  .section.overlay:after {
-  background-color: #0a636325;
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  left: 0px;
-  z-index: 99999999999;
-  top: 0px;
-  width: calc(100% - 6px);
-  height: calc(100% - 6px);
-}
-
-#stage .section.selected:not(.parent-selected):after {
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  left: 0px;
-  z-index: 999999999999;
-  top: 0px;
-  width: calc(100% - 6px);
-  height: calc(100% - 6px);
-  border: 3px solid var(--section-selection) !important;
-}
-
-#stage .section.selected:not(#s1):not(.parent-selected):hover:after {
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  left: 0px;
-  z-index: 99999999;
-  top: 0px;
-  width: calc(100% - 6px);
-  height: calc(100% - 6px);
-  border: 3px solid var(--section-selection) !important;
-  outline: 1px solid var(--section-selection-light);
-}
-
-body.sectionHover
-  #stage
-  .section.hover:not(.selected):not(.parent-selected):after {
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  left: 0px;
-  z-index: 999999999999;
-  top: 0px;
-  width: calc(100% - 6px);
-  height: calc(100% - 6px);
-  border: 3px solid var(--section-selection) !important;
-}
-
-.section.parent-selected:hover:after,
-.section.parent-selected.selected:after {
-  border: 3px solid var(--section-selection-light);
-}
-
-#s0 {
-  z-index: 1;
-}
-#s1 {
-  z-index: 2;
-}
-#s2 {
-  z-index: 3;
-}
-#s3 {
-  z-index: 4;
-}
-#s4 {
+.strip.selected,
+.strip.selected * {
   z-index: 5;
 }
-#s5 {
-  z-index: 6;
+.strip.parent-select,
+.strip.parent-select * {
+  z-index: 5;
 }
-#s6 {
-  z-index: 7;
-}
-#s7 {
-  z-index: 8;
-}
-#s8 {
-  z-index: 9;
-}
-.origin-section {
-  z-index: 9999 !important;
-}
-.origin-section .strip.on-the-move {
-  z-index: 999999999 !important;
-}
-.strip {
-  z-index: 99999999 !important;
-}
-.strip.hovered:before {
-  white-space: nowrap;
-  width: fit-content;
-  content: attr(hat);
-  border-radius: 3px 3px 0px 0px;
-  position: absolute;
-  top: -19px;
-  left: 100px;
-  padding: 4px 8px 4px 8px;
-  font-size: 13px;
-  background-color: #e1f0ff;
-  color: var(--blue--main);
-  opacity: 1;
+.strip.hovered .element-container {
+  z-index: 3;
 }
 
-.strip.parent-select:before {
-  white-space: nowrap;
-  width: fit-content;
+.strip.hovered:before {
   content: attr(hat);
-  border-radius: 3px 3px 0px 0px;
   position: absolute;
-  top: -19px;
-  left: 100px;
+  top: -22px;
+  left: -1px;
   padding: 4px 8px 4px 8px;
   font-size: 13px;
   background-color: #e1f0ff;
   color: var(--blue--main);
+  z-index: 999999999999999999;
   opacity: 1;
 }
 .strip.selected:before {
-  width: fit-content;
-  white-space: nowrap;
   content: attr(hat);
-  border-radius: 3px 3px 0px 0px;
   position: absolute;
-  top: -25px;
-  left: 100px;
-  padding: 6px 8px 6px 8px;
-  font-size: 14px;
+  top: -22px;
+  left: -1px;
+  padding: 4px 8px 4px 8px;
+  font-size: 13px;
   background-color: var(--blue--main);
   color: white;
-  z-index: 99999999999999 !important;
+  z-index: 999999999999999999;
   opacity: 1;
 }
 
-.dragging .strip:before {
-  opacity: 0 !important;
-}
 .strip:not(.selected).hovered:after,
-.strip.selected:after {
-  width: fit-content;
+.strip.parent-select:after {
   content: "";
   position: absolute;
-  left: 3px;
   top: 3px;
-  z-index: 99999999999999 !important;
-  width: calc(100% - 6px);
-  height: calc(100% - 6px);
-  outline: 1px solid var(--blue--light);
-  pointer-events: none;
+  left: 5px;
+  width: calc(100% - 9px);
+  height: 100%;
+  outline: 3px solid var(--blue--light);
+}
+.parent-select.strip:before {
+  content: attr(hat);
+  position: absolute;
+  top: -22px;
+  left: -1px;
+  padding: 4px 8px 4px 8px;
+  font-size: 13px;
+  background-color: #e1f0ff;
+  color: var(--blue--main);
 }
 
-.strip.selected:after {
+.element-container:not(.strip):hover:before {
+  content: attr(hat);
+  position: absolute;
+  top: -22px;
+  font-family: "Madefor";
+  left: -1px;
+  padding: 4px 8px 4px 8px;
+  font-size: 13px;
+  background-color: var(--blue--light);
+  color: var(--blue--main);
+}
+
+.element-container:not(.strip):not(.on-the-move).selected:before {
+  content: attr(hat);
+  position: absolute;
+  top: -22px;
+  font-family: "Madefor";
+  left: -1px;
+  padding: 4px 8px 4px 8px;
+  font-size: 13px;
+  background-color: var(--blue--main);
+  color: white;
+}
+.element-container:not(.strip):not(.selected):hover {
+  outline: 1px solid var(--blue--light);
+}
+.element-container:not(.strip).selected {
   outline: 1px solid var(--blue--main);
 }
-.strip:not(.selected).hovered:after {
-  outline: 1px solid var(--blue--light);
+.strip.selected:after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  width: calc(100% - 10px);
+  height: calc(100% - 6px);
+  outline: 3px solid var(--blue--main);
+  z-index: -100;
 }
 
 .parent-select .Add-Section,
@@ -519,212 +125,275 @@ body.sectionHover
   left: 60px !important;
   top: 44px;
 }
-.element-wrapper {
-  position: absolute;
-  width: fit-content;
-  z-index: 0;
+
+.element-container {
   user-select: none;
 }
-.element-wrapper:hover {
-  cursor: move;
-}
-.element-wrapper * {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none;
+.on-the-move {
+  cursor: move !important;
 }
 
-.element-wrapper.hovered:before {
-  white-space: nowrap;
-  width: fit-content;
-  content: attr(hat);
-  border-radius: 3px 3px 0px 0px;
+#stage.dragging .origin-strip:after {
+  content: "";
   position: absolute;
-  top: -21px;
-  left: 0px;
+  top: 0px;
+  left: -1px;
+  width: 100%;
+  height: 100%;
+  outline: 3px solid var(--blue--light);
+}
+#stage.dragging .origin-strip:before {
+  content: attr(hat);
+  position: absolute;
+  top: -22px;
+  left: -1px;
   padding: 4px 8px 4px 8px;
   font-size: 13px;
   background-color: #e1f0ff;
   color: var(--blue--main);
-  opacity: 1;
+  z-index: 999999999999;
 }
-.element-wrapper.selected:before {
-  width: fit-content;
-  white-space: nowrap;
-  content: attr(hat);
-  border-radius: 3px 3px 0px 0px;
+#stage.dragging .origin-strip .hpp {
+  background-color: #116dff !important;
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+.strip.footer.selected:before {
+  content: "Footer";
   position: absolute;
-  top: -20px;
-  height: 12px;
-  left: 0px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4px 8px;
+  top: -22px;
+  left: -1px;
+  padding: 4px 8px 4px 8px;
   font-size: 13px;
-  background-color: var(--blue--main);
+  background-color: #ea7034;
+
   color: white;
-  z-index: 9999999;
+  z-index: 999999999999999999;
   opacity: 1;
 }
-
-.dragging .element-wrapper:before {
-  opacity: 0 !important;
-}
-.element-wrapper:not(.selected).hovered:after {
-  width: fit-content;
-  content: "";
+.strip.footer.parent-select:before {
+  content: "Footer";
   position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: 999999999;
-  width: calc(100% - 1px);
-  height: calc(100% - 1px);
-  border: 0px solid var(--blue--light);
+  top: -22px;
+  left: -1px;
+  padding: 4px 8px 4px 8px;
+  font-size: 13px;
+  background-color: #ea7034;
+
+  color: white;
+  z-index: 999999999999999999;
+  opacity: 1;
+}
+.strip.footer:not(.selected).hovered:before {
+  content: "Footer";
+  position: absolute;
+  top: -22px;
+  left: -1px;
+  padding: 4px 8px 4px 8px;
+  font-size: 13px;
+  background-color: #f9e3d4;
+
+  color: #ea7034;
+  z-index: 999999999999999999;
+  opacity: 1;
+}
+.strip.footer:not(.selected).hovered {
+  z-index: 99;
+}
+.footer .hpp {
+  display: none;
+  opacity: 0 !important;
   pointer-events: none;
 }
 
-.element-wrapper.selected:after {
-  border: 1px solid var(--blue--main);
+.footer.parent-select:after,
+.footer.selected:after {
   content: "";
   position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: 999999999;
-  width: calc(100% - 1px);
-  height: calc(100% - 1px);
-}
-.element-wrapper:not(.selected).hovered:after {
-  border: 1px solid var(--blue--light);
+  top: 3px;
+  left: -1px;
   width: 100%;
+  height: 100%;
+  outline: 3px solid #ea7034;
+}
+.footer:not(.selected).hovered:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: -1px;
+  width: 100%;
+  height: 100%;
+  outline: 3px solid #f9e3d4;
+}
+#stage.dragging .origin-strip.footer:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -1px;
+  width: 100%;
+  height: 100%;
+  outline: 3px solid #f9e3d4;
+}
+#stage.dragging .origin-strip.footer:before {
+  content: "Footer";
+  position: absolute;
+  top: -22px;
+  left: -1px;
+  padding: 4px 8px 4px 8px;
+  font-size: 13px;
+  background-color: #f9e3d4;
+  color: #ea7034;
+}
+#stage.dragging .attach-to-me.footer .attach-to-section {
+  display: flex;
+  position: absolute;
+  background-color: #ea7034;
+  color: white;
+  z-index: 999999999999;
+  padding: 6px 12px;
+  border-radius: 2px;
+  top: 10px;
+  left: calc(50% - 50px);
+  font-size: 14px;
+}
+.header:before {
+  top: 100% !important;
+  border-radius: 0px 0px 3px 3px !important;
 }
 
-.attach-to-me:after,
-.attach-to-me:before,
-.attach-to-me.Add-Section {
+.header:hover:not(.selected):before {
+  top: 100% !important;
+  background-color: #f8cbb3 !important;
+  border-radius: 0px 0px 3px 3px !important;
+  color: #fb6718;
+
+  font-size: 16px;
+}
+.header.selected:before {
   display: none;
 }
-
-.section:hover:not(.selected) .outside,
-.section.hover:not(.selected) .outside {
-  border-top: 1px dashed var(--section-selection);
-  border-bottom: 1px dashed var(--section-selection);
-  box-sizing: border-box;
-  background-color: #e6e4f5;
+.header.parent-select:before {
+  display: none !important;
+}
+.header {
+  height: 79px;
+  width: calc(100% - 40px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 20px 0px 20px !important;
+}
+.header:hover {
+  z-index: 99999 !important;
+}
+.footer {
+  top: 18px;
+  height: 179px;
+  width: calc(100% - 30px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 15px 0px 15px;
+  background-color: #9b7da0;
+}
+.footer:before {
+  top: -28px !important;
+  border-radius: 0px 0px 3px 3px !important;
 }
 
-.greenIndication .section:hover:not(.selected) .outside,
-.greenIndication .section.hover:not(.selected) .outside {
-  border-top: 1px dashed var(--section-selection);
-  border-bottom: 1px dashed var(--section-selection);
-  box-sizing: border-box;
-  background-color: #eefff8;
+.footer:hover:not(.selected):before {
+  background-color: #f8cbb3 !important;
+  border-radius: 0px 0px 3px 3px !important;
+  color: #fb6718;
+  font-size: 16px;
 }
-.darkGreenIndication .section:hover:not(.selected) .outside,
-.darkGreenIndication .section.hover:not(.selected) .outside {
-  border-top: 1px dashed var(--section-selection);
-  border-bottom: 1px dashed var(--section-selection);
-  box-sizing: border-box;
-  background-color: #eefff6;
+.footer.selected:before {
+  display: none;
 }
-
-.section.parent-selected:hover .outside,
-.section.parent-selected.hover .outside {
-  border-top: 1px dashed var(--section-selection);
-  border-bottom: 1px dashed var(--section-selection);
-  box-sizing: border-box;
-  background-color: #e6e4f5;
+.footer.parent-select:before {
+  display: none !important;
+}
+.top-menu-items {
+  right: 15px;
+  padding: 10px;
+}
+.footer .top-menu-items {
+  z-index: 999999999999 !important;
 }
 
-.blueIndication .section:hover:not(.selected) .outside,
-.blueIndication .section.hover:not(.selected) .outside,
-.blueIndication .section.hover.parent-selected .outside {
-  background-color: #ececec;
+.header:hover:not(.selected):after {
+  background-color: #ffb08656 !important;
+  outline: none !important;
+  border-bottom: 1px solid #ff6600 !important;
+  top: 0px !important;
+  left: 0px !important;
+  height: 100% !important;
+  z-index: -10 !important;
+  width: 100% !important;
+}
+.header.selected:after {
+  outline: 3px solid #ff6600 !important;
 }
 
-.blueIndication .section.selected:not(.parent-selected) .outside {
-  background-color: #e0e0e0;
+.header.selected:before {
+  background-color: #ff6600;
 }
 
-.sectionHover.blueIndication
-  .section:hover:not(.selected):not(.parent-selected)
-  .outside,
-.sectionHover.blueIndication
-  .section.hover:not(.selected):not(.parent-selected)
-  .outside {
-  background-color: #e0e0e0;
+.footer:hover:not(.selected):after {
+  background-color: #ffb08656 !important;
+  outline: none !important;
+  border: 1px solid #ff6600 !important;
+  top: 0px !important;
+  left: 0px !important;
+  height: 100% !important;
+  width: 100% !important;
+  z-index: -10 !important;
+}
+.footer.selected:after {
+  outline: 3px solid #ff6600 !important;
 }
 
-.section.selected:not(.parent-selected) .outside {
-  border-top: 1px dashed var(--section-selection);
-  border-bottom: 1px dashed var(--section-selection);
-  box-sizing: border-box;
-  background-color: #d7d3fd;
-}
-.greenIndication .section.selected:not(.parent-selected) .outside {
-  border-top: 1px dashed var(--section-selection);
-  border-bottom: 1px dashed var(--section-selection);
-  box-sizing: border-box;
-  background-color: #dffff4;
-}
-.darkGreenIndication .section.selected:not(.parent-selected) .outside {
-  border-top: 1px dashed var(--section-selection);
-  border-bottom: 1px dashed var(--section-selection);
-  box-sizing: border-box;
-  background-color: #c5e4d7;
-}
-/* .section.parent-selected .outside {
-  border-top: 1px dashed var(--section-selection);
-  border-bottom: 1px dashed var(--section-selection);
-  box-sizing: border-box;
-  background-color: #e6e4f5;
-} */
-
-.sectionHover.purpleIndication
-  .section:hover:not(.selected):not(.parent-selected)
-  .outside,
-.sectionHover.purpleIndication
-  .section.hover:not(.selected):not(.parent-selected)
-  .outside {
-  background-color: #d7d3fd;
-}
-.sectionHover.greenIndication
-  .section:hover:not(.selected):not(.parent-selected)
-  .outside,
-.sectionHover.greenIndication
-  .section.hover:not(.selected):not(.parent-selected)
-  .outside {
-  background-color: #d3fdeb;
+.footer.selected:before {
+  background-color: #ff6600;
 }
 
-.offColor .outside {
-  background-color: transparent !important;
-}
-
-body:not(.elementfirst)
-  .section.hover:not(.selected):not(.parent-selected)
-  .element-wrapper:after {
-  content: "";
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: 99999;
-  width: calc(100% - 1px);
-  height: calc(100% - 1px);
-  border: 1px solid #3885ff;
+.top-menu-items .menu-item {
   pointer-events: none;
 }
-#stage .section.selected .container-980 {
-  border-right: 1px dashed black;
-  border-left: 1px dashed black;
+.header .top-menu-items #gfpp {
+  transform: translate(-100px, 120px) !important;
 }
-#stage .section.parent-selected .container-980 {
-  border-right: 1px dashed black;
-  border-left: 1px dashed black;
+
+.top-menu-items.selected:after {
+  border: 1px solid #ff6600 !important;
 }
-#s2 .container-980 {
+.top-menu-items.selected:before {
+  background-color: #ff6600 !important;
+}
+
+.top-menu-items:hover:not(.selected):before {
+  background-color: #ffcaae !important;
+  color: #ff6600;
+}
+
+.top-menu-items.selected:before {
+  background-color: #ff6600;
+}
+
+.top-menu-items:before {
+  border-radius: 0px 0px 3px 3px !important;
+}
+.top-menu-items:hover:not(.selected):after {
+  content: "";
+  border: 1px solid #ffcaae !important;
+  position: absolute;
+  outline: none !important;
+  top: 0px !important;
+  left: 0px !important;
   height: 100% !important;
+  width: 100% !important;
+}
+.top-menu-items:hover:not(.selected) {
+  content: "";
+  border: 0px solid #ffcaae !important;
 }

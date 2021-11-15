@@ -8,123 +8,56 @@ body {
   overflow: hidden;
 }
 
-body * {
-  -webkit-font-smoothing: antialiased;
-}
-
 #stage {
-  --leftbar-open: 472;
-  height: calc(100vh - 40px);
+  height: calc(100vh - 90px);
+  width: calc(100vw - 58px) !important;
   min-width: 980px;
-  position: fixed;
-  top: 88px;
-  background-color: #f7f7f7;
-  z-index: -1;
-  overflow: scroll !important;
-  scroll-behavior: auto;
-  overflow-x: hidden !important;
-  padding: 0px 1px 0px 1px;
-  width: calc(100% - 60px);
-  left: 60px;
+  transform: translate(58px, 88px);
+  background-color: white;
+
+  overflow: scroll;
+  overflow-x: hidden;
+  transition: width 0.25s, transform 0.25s, height 0.27s;
+
   border-radius: 3px;
-
-  min-width: 980px;
+  box-shadow: 5px 3px 20px 0 rgba(0, 0, 0, 0.04),
+    -1px 6px 10px 0 rgba(0, 0, 0, 0.075), 3px 3px 5px -1px rgba(0, 0, 0, 0.07);
 }
 
-#stage .template {
-  background-color: white;
-  margin-bottom: 90px;
-  box-shadow: -2px -7px 9px 7px rgb(0 0 0 / 13%);
-  margin-bottom: 60px;
-  margin-right: 40px;
-  display: block;
-  min-width: 980px;
-  height: calc(100vh - 60px);
-  background-color: white;
-}
-
-#stage {
-  transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.665, 1);
-  transform-origin: top;
-}
-
-#stage.zoomMode:not([panel-type="add-sections"]) {
+#stage.zoomMode {
   transform: scale(0.5);
-  left: 100px;
-  top: 88px;
-  height: calc(200vh - 60px);
-  transition: left 0.5s cubic-bezier(0.075, 0.82, 0.665, 1);
+  transform-origin: top center;
+  overflow: visible;
+  left: 120px;
 }
 
-#stage.design.zoomMode:not([panel-type="add-sections"]) {
-  transform: scale(0.5);
-  left: 220px;
-  top: 88px;
-  height: calc(200vh - 60px);
-  transition: left 0.5s cubic-bezier(0.075, 0.82, 0.665, 1);
+#stage.panel[panel-type="edit"] {
+  width: calc(100vw - 377px) !important;
 }
 
-#stage.design .Add-Section {
-  opacity: 0;
-}
-[panel-type="edit-panel"] #stage {
-  transform: scale(0.5) translate(-20%, 0px);
-  top: 88px;
-  height: calc(200vh - 60px);
-  transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.665, 1);
-}
-#stage[panel-type="add-sections"] {
-  transform: scale(0.5);
-  transform-origin: top;
-  left: 342px;
-  height: calc(200vh - 60px);
-  top: 88px;
-  transition: left 0.5s cubic-bezier(0.075, 0.82, 0.665, 1);
-}
-#stage.design[panel-type="add-sections"] {
-  transform: scale(0.5);
-  transform-origin: top;
-  left: 230px;
-  height: calc(200vh - 60px);
+#stage.panel-covers-bar.panel {
+  transform: translate(290px, 0px);
 }
 
-#stage[panel-type="add-sections"] .Add-Section {
-  transform: scale(1.5);
-}
-#stage[panel-type="add-sections"] .hpp {
-  transform: scale(1.5) translate(30px, 10px);
-}
-#stage[panel-type="add-sections"]:before,
-#stage[panel-type="add-sections"] .element-container:before {
-  transform: scale(1.5) translate(4px, -3px);
+#stage.always-left.panel[panel-type="setup"] {
+  width: calc(100vw - 375px) !important;
+  transform: translate(280px, 0px) !important;
 }
 
-#stage[panel-type="add-sections"] .template,
-body[panel-type="edit-panel"] #stage .template,
-#stage.zoomMode .template {
-  margin-bottom: 150px;
+#stage.panel[dir="left"].panel-cover-stage {
+  transform: translate(0px, 0px) !important;
+  width: calc(100vw - 100px) !important;
 }
-#stage[panel-type="add-sections"] .drag-handle,
-#stage.zoomMode .drag-handle {
-  display: none;
+
+#stage.zoomMode.panneled {
+  transform: scale(0.5) translate(30%, 0px);
+  top: -39vh !important;
+  height: 190vh;
+  overflow: visible;
 }
-#stage[panel-type="add-sections"] .section:before,
-#stage.zoomMode .section:before {
-  display: none !important;
-}
-#stage[panel-type="add-sections"] .strip:before,
-#stage.zoomMode .strip:before {
-  display: none !important;
-}
-#stage[panel-type="add-sections"] #gfpp {
-  display: none !important;
-}
-#stage[panel-type="add-sections"] .hpp {
-  transform: scale(1.5) translate(30px, 10px);
-}
-#stage[panel-type="add-sections"]:before,
-#stage[panel-type="add-sections"] .element-container:before {
-  transform: scale(1.5) translate(4px, -3px);
+
+#stage.zoomMode .element-container:not(.strip) {
+  pointer-events: none;
 }
 
 @keyframes cut {
@@ -148,42 +81,94 @@ body * {
 stage * {
   user-select: none;
 }
-
+#stage.panel.always-left[panel-type="add"] {
+  height: calc(100vh - 40px);
+  width: calc(100vw - 100px) !important;
+  position: fixed;
+  top: 70px;
+  background-color: white;
+  z-index: -1;
+  overflow: scroll;
+  overflow-x: hidden;
+  transition: width 0.25s, transform 0.25s, height 0.27s;
+  left: 76px;
+  transform: translate(0px, 0px) !important;
+  border-radius: 3px;
+  box-shadow: 5px 3px 20px 0 rgba(0, 0, 0, 0.04),
+    -1px 6px 10px 0 rgba(0, 0, 0, 0.075), 3px 3px 5px -1px rgba(0, 0, 0, 0.07);
+}
+#stage.panel.always-left.rightPanel[panel-type="setup"] {
+  height: calc(100vh - 40px);
+  width: calc(100vw - 380px) !important;
+  position: fixed;
+  top: 70px;
+  background-color: white;
+  z-index: -1;
+  overflow: scroll;
+  overflow-x: hidden;
+  transition: width 0.25s, transform 0.25s, height 0.27s;
+  left: 76px;
+  transform: translate(0px, 0px) !important;
+  border-radius: 3px;
+  box-shadow: 5px 3px 20px 0 rgba(0, 0, 0, 0.04),
+    -1px 6px 10px 0 rgba(0, 0, 0, 0.075), 3px 3px 5px -1px rgba(0, 0, 0, 0.07);
+}
+#stage.panel.always-left.rightPanel[panel-type="edit"] {
+  height: calc(100vh - 40px);
+  width: calc(100vw - 380px) !important;
+  position: fixed;
+  background-color: white;
+  z-index: -1;
+  overflow: scroll;
+  overflow-x: hidden;
+  transition: width 0.25s, transform 0.25s, height 0.27s;
+  left: 56px;
+  transform: translate(0px, 0px) !important;
+  border-radius: 3px;
+  box-shadow: 5px 3px 20px 0 rgba(0, 0, 0, 0.04),
+    -1px 6px 10px 0 rgba(0, 0, 0, 0.075), 3px 3px 5px -1px rgba(0, 0, 0, 0.07);
+}
+#stage.panel.always-left.setup-top[panel-type="setup"] {
+  height: calc(100vh - 40px);
+  width: calc(100vw - 380px) !important;
+  position: fixed;
+  top: 70px;
+  background-color: white;
+  z-index: -1;
+  overflow: scroll;
+  overflow-x: hidden;
+  transition: width 0.25s, transform 0.25s, height 0.27s;
+  left: 76px;
+  transform: translate(0px, 0px) !important;
+  border-radius: 3px;
+  box-shadow: 5px 3px 20px 0 rgba(0, 0, 0, 0.04),
+    -1px 6px 10px 0 rgba(0, 0, 0, 0.075), 3px 3px 5px -1px rgba(0, 0, 0, 0.07);
+}
+#stage.panel.pushStage[panel-type="pages"],
+#stage.panel.pushStage[panel-type="apps"],
+#stage.panel.pushStage[panel-type="design"] {
+  transform: translate(326px, 0px);
+  width: calc(100vw - 426px) !important;
+}
+#stage.panel.pushStage[panel-type="pages"][panel-type="edit"],
+#stage.panel.pushStage[panel-type="apps"][panel-type="edit"],
+#stage.panel.pushStage[panel-type="design"][panel-type="edit"] {
+  transform: translate(326px, 0px) !important;
+  width: calc(100vw - 746px) !important;
+}
+#left-panel:not([show-panel="design"]) [content-type="design"] {
+  display: none;
+}
+#left-panel:not([show-panel="pages"]) [content-type="pages"] {
+  display: none;
+}
+#stage.panel-push-stage[panel-type="design"],
+#stage.panel-push-stage[panel-type="apps"],
+#stage.panel-push-stage[panel-type="pages"] {
+  transform: translate(320px, 0px);
+  width: calc(100vw - 375px) !important;
+}
 #stage.panel-push-stage[panel-type="add"] {
   transform: translate(655px, 0px);
   width: calc(100vw - 710px) !important;
-}
-
-@media screen and (min-width: 0px) {
-  #stage.scalable[panel-type="add-sections"] {
-    transform: scale(
-        calc((var(--data-width) - var(--leftbar-open)) / (var(--data-width)))
-      )
-      translate(390px, -720px);
-    height: 1800px;
-    transition: height 0s, top 0s, transform 0s !important;
-  }
-}
-@media screen and (min-width: 600px) {
-  #stage.scalable[panel-type="add-sections"] {
-    transform: scale(
-        calc((var(--data-width) - var(--leftbar-open)) / (var(--data-width)))
-      )
-      translate(330px, -720px);
-    height: 1800px;
-    transition: height 0s, top 0s, transform 0s !important;
-  }
-}
-@media screen and (min-width: 900px) {
-  #stage.scalable[panel-type="add-sections"] {
-    transform: scale(
-        calc((var(--data-width) - var(--leftbar-open)) / (var(--data-width)))
-      )
-      translate(490px, -765px);
-    height: 1500px;
-    transition: height 0s, top 0s, transform 0s !important;
-  }
-}
-#stage[panel-type="add-sections"] #gfpp {
-  display: none !important;
 }

@@ -14,7 +14,7 @@ new (function App() {
 <section id="panel-frame" class=""></section>`
   );
   editor.classList.add("Madefor");
-  stage.classList.add("Madefor");
+  stage && stage.classList.add("Madefor");
   setTimeout(() => {
     const stateObj = State.apply(this, []);
     this.state = stateObj.state;

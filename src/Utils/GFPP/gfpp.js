@@ -1,9 +1,10 @@
 import { gfppBtns } from "./gfpp_data.js";
-import { getCoords } from "../functions.js";
+import { getCoords, getSize } from "../functions.js";
+import { select } from "../ADISelectionModel/adiSelectionModel.js";
 
 //Append Styles
-var href =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@latest/src/Utils/GFPP/gfpp.css";
+
+var href = "../src/Utils/GFPP/gfpp.css";
 var exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {
@@ -132,29 +133,19 @@ export const Gfpp = (state, setState) => {
           } else {
             allBtns.forEach((btn) => btn.classList.remove("selected"));
             console.log(btnTarget);
+
             btnTarget.classList.add("selected");
-            console.log(btnTarget);
-            if (btnTarget.getAttribute("type").includes("elipsis")) {
-              btnTarget.closest("#gfpp").insertAdjacentHTML(
-                "beforeend",
-                `<div class="context-menu">
-              <ul class="context-menu-items">
-              <li>
-              Move Up
-              </li>
-              <li>
-              Move Down
-              </li>
-              <li>
-           Change Background
-              </li>
-              <li>
-     Scroll Animation
-               </li>
-              </ul>
-              </div>`
-              );
-            }
+            let element = btnTarget.closest(".element-container");
+            let elementId = btnTarget.closest(".element-container").id;
+            let type = btnTarget.getAttribute("type");
+            const panel = document.querySelector(
+              `.floating-panel[element="${elementId}"][gfpp-trigger="${type}"]`
+            );
+
+            panel && panel.classList.add("active");
+            panel.style.top = getCoords(element).top + 200 + "px";
+            panel.style.left =
+              getCoords(element).left + getSize(element).width + 140 + "px";
           }
 
           //further actions, see function below
@@ -242,6 +233,7 @@ export const Gfpp = (state, setState) => {
         ) {
           e.target.querySelector("#gfpp") &&
             e.target.querySelector("#gfpp").classList.add("show");
+
           document
             .querySelectorAll("#gfpp.show")
             .forEach((show) => show.classList.remove("show"));

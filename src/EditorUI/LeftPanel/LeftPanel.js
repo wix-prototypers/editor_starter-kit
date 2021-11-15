@@ -6,17 +6,15 @@ import {
   pagesPanel,
   appsContent,
 } from "./leftPanelContent.js";
-import {
-  selectionModel,
-  selectSection,
-} from "../../Utils/ADISelectionModel/adiSelectionModel.js";
-import { AddSection } from "../../Utils/AddSection/AddSection.js";
+
+import * as icons from "./icons.js";
+import { selectionModel } from "../../Utils/ADISelectionModel/adiSelectionModel.js";
 
 const stage = document.querySelector("#stage");
+const body = document.querySelector("body");
 //Append Styles
-var href =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@latest/src/EditorUI/LeftPanel/left-panel.css";
-var exists = false;
+var href = "../src/EditorUI/LeftPanel/left-panel.css";
+const exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {
     exists = true;
@@ -43,9 +41,15 @@ export const LeftPanel = (state, setState) => {
     container.querySelectorAll(".panel-header .close-panel").forEach(
       (close) =>
         (close.onclick = (e) => {
+          var event = new MouseEvent("dblclick", {
+            view: window,
+            bubbles: true,
+            cancelable: true,
+          });
+          body.classList.contains("return100") && stage.dispatchEvent(event);
           if (e.target.closest(".regular")) {
             setState(state, "regPanel", "close");
-            setState(state, "zoomMode", { isActive: false });
+            //setState(state, "zoomMode", { isActive: false });
             setTimeout(() => {
               e.target.closest(".regular") &&
                 e.target.closest(".regular").classList.remove("regular");
@@ -53,7 +57,7 @@ export const LeftPanel = (state, setState) => {
           } else {
             setState(state, "panel", "close");
             setState(state, "regPanel", "close");
-            setState(state, "zoomMode", { isActive: false });
+            // setState(state, "zoomMode", { isActive: false });
           }
         })
     );
@@ -82,6 +86,7 @@ export const LeftPanel = (state, setState) => {
           let scrollId = parseInt(placeholder.id.split("s")[1]) + 1;
           let scrollPh = document.querySelector(`#ph${scrollId}`);
 
+          document.querySelector(".zgfpp").classList.remove("show");
           if (document.querySelector(".closePanel")) {
             document.querySelector(".close-panel").click();
             placeholder.scrollIntoView({
@@ -101,7 +106,7 @@ export const LeftPanel = (state, setState) => {
           }
           setTimeout(() => {
             stage.classList.remove("halt");
-          }, 3000);
+          }, 0);
         };
       });
 
@@ -130,6 +135,110 @@ export const LeftPanel = (state, setState) => {
         </svg><h3 style="transform: translate(12px,0px) !important;">Site Theme</h3></div>`;
     };
 
+    document.querySelectorAll(".cm-trigger").forEach(
+      (trig) =>
+        (trig.onclick = (e) => {
+          document
+            .querySelectorAll(".cmd")
+            .forEach((menu) => menu.classList.remove("cmd"));
+
+          trig.closest(".menu-item").classList.add("cmd");
+          document
+            .querySelectorAll(".cm-menu")
+            .forEach((menu) => menu.remove());
+          if (trig.closest("#left-panel")) {
+            trig.insertAdjacentHTML(
+              "afterbegin",
+              `<div class="cm-menu">
+            <span class="cm-menu-item" item="settings"><span class="icon">${icons.settings}</span>Settings</span>
+            <span class="cm-menu-item" item="seo"><span class="icon">${icons.seo}</span>Seo Basics</span>
+            <span class="cm-menu-item" item="social"><span class="icon">${icons.social}</span>Social Share</span>
+            <hr/>
+            <span class="cm-menu-item" item="rename"><span class="icon">${icons.rename}</span>Rename</span>
+            <span class="cm-menu-item" item="duplicate"><span class="icon">${icons.duplicate}</span>Duplicate</span>
+            <span class="cm-menu-item" item="copy"><span class="icon">${icons.copy}</span>Copy</span>
+            <span class="cm-menu-item" item="hompage"><span class="icon">${icons.hompage}</span>Set as Hompage</span>
+            <span class="cm-menu-item" item="hide"><span class="icon">${icons.hide}</span>Hide From Main Menu</span>
+            <span class="cm-menu-item" item="show"><span class="icon">${icons.show}</span>Show in Main Menu</span>
+            <span class="cm-menu-item" item="delete"><span class="icon">${icons.deleteIcon}</span>Delete</span>
+            </div>`
+            );
+          } else {
+            trig.insertAdjacentHTML(
+              "afterbegin",
+              `<div class="cm-menu">
+          
+              <span class="cm-menu-item" item="rename"><span class="icon">${icons.rename}</span>Rename</span>
+              <span class="cm-menu-item" item="seo"><span class="icon">${icons.seo}</span>Settings and SEO</span>
+              <hr/>
+              <span class="cm-menu-item" item="hide"><span class="icon">${icons.hide}</span>Hide From  Menu</span>
+  
+              </div>`
+            );
+          }
+          document.onclick = (e) => {
+            if (!e.target.closest(".cm-trigger")) {
+              document
+                .querySelectorAll(".cm-menu")
+                .forEach((menu) => menu.remove());
+              document
+                .querySelectorAll(".cmd")
+                .forEach((menu) => menu.classList.remove("cmd"));
+            }
+          };
+
+          document
+            .querySelectorAll(`.cm-menu-item[item="hide"]`)
+            .forEach((hide) => {
+              hide.onclick = (e) => {
+                if (!e.target.closest("#panel-frame2")) {
+                  document
+                    .querySelectorAll(
+                      `.menu-item[value="${e.target
+                        .closest(".menu-item")
+                        .getAttribute("value")}"]`
+                    )
+                    .forEach((item) => item.classList.add("hide-item"));
+                } else {
+                  document
+                    .querySelectorAll(
+                      `.menu-item[value="${e.target
+                        .closest(".menu-item")
+                        .getAttribute("value")}"]`
+                    )
+                    .forEach((item) => item.classList.add("hide-custom-item"));
+                }
+              };
+            });
+
+          document
+            .querySelectorAll(`.cm-menu-item[item="show"]`)
+            .forEach((hide) => {
+              hide.onclick = (e) => {
+                if (!e.target.closest("#panel-frame2")) {
+                  document
+                    .querySelectorAll(
+                      `.menu-item[value="${e.target
+                        .closest(".menu-item")
+                        .getAttribute("value")}"]`
+                    )
+                    .forEach((item) => item.classList.remove("hide-item"));
+                } else {
+                  document
+                    .querySelectorAll(
+                      `.menu-item[value="${e.target
+                        .closest(".menu-item")
+                        .getAttribute("value")}"]`
+                    )
+                    .forEach((item) =>
+                      item.classList.remove("hide-custom-item")
+                    );
+                }
+              };
+            });
+        })
+    );
+
     document.querySelector("#new-design").onclick = (e) => {
       var root = document.documentElement;
 
@@ -157,7 +266,6 @@ export function reorderSections(state, setState) {
   let placeholders = document.querySelectorAll(".place-holder");
   placeholders.forEach((placeholder, id) => (placeholder.id = `ph${id}`));
   setTimeout(() => {
-    AddSection(state, setState);
     selectionModel(state, setState);
   });
 }
@@ -182,9 +290,9 @@ function sectionfy(placeholder, section) {
   placeholder.insertAdjacentHTML("beforeend", `<div class="outside"></div>`);
   placeholder.insertAdjacentElement("beforeend", templateStrip);
   stage.classList.add("halty");
-  selectSection(placeholder);
+  //selectSection(placeholder);
 
   setTimeout(() => {
     stage.classList.remove("halty");
-  }, 1200);
+  }, 0);
 }

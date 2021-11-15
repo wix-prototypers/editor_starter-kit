@@ -1,6 +1,6 @@
 import {
   deselectAll,
-  selectSection,
+  // selectSection,
 } from "./Utils/ADISelectionModel/adiSelectionModel.js";
 import { getCoords, titleCase } from "./Utils/functions.js";
 
@@ -120,7 +120,7 @@ export const Actions = {
       if (stage.classList.contains("zoomMode")) {
         editor.classList.add("zoomMode");
 
-        sectionActions.classList.remove("show");
+        sectionActions && sectionActions.classList.remove("show");
       }
       document.querySelector("#left-panel").classList.remove("show");
       document.querySelector("#left-panel").removeAttribute("content");
@@ -165,8 +165,6 @@ export const Actions = {
 
         setTimeout(() => {
           stage.style.pointerEvents = "all";
-
-          sectionActions.style.visibility = "visible";
         }, 500);
 
         setTimeout(() => {
@@ -176,8 +174,6 @@ export const Actions = {
     }
     setTimeout(() => {
       stage.style.pointerEvents = "all";
-
-      sectionActions.style.visibility = "visible";
     }, 500);
   },
   regPanel(data) {
@@ -218,6 +214,7 @@ export const Actions = {
           document
             .querySelectorAll("#left-panel .title")
             .forEach((title) => (title.innerHTML = titleCase("Site Pages")));
+          console.log("y0");
           break;
         }
         case "design": {
@@ -225,8 +222,8 @@ export const Actions = {
           document
             .querySelectorAll("#left-panel .title")
             .forEach((title) => (title.innerHTML = titleCase("Design")));
-          stage.setAttribute("panel-type", "add-sections");
-          stage.classList.add("design");
+          // stage.setAttribute("panel-type", "add-sections");
+          // stage.classList.add("design");
           break;
         }
         case "apps": {

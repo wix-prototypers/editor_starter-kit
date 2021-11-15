@@ -37,7 +37,12 @@
   padding: 0 12px;
 }
 .leftbar-item-add {
-  margin-bottom: 12px;
+  box-shadow: 0 0 12px -3px rgb(0 0 0 / 20%), 0 2px 7px -1px rgb(0 0 0 / 14%),
+    0 2px 4px -1px rgb(0 0 0 / 20%);
+}
+
+.leftbar-item-add svg {
+  transform: scale(1.6);
 }
 
 .leftbar-item-design svg {
@@ -108,10 +113,10 @@
   background-color: var(--design--light);
 }
 
-.leftbar-item-add:hover,
+/* .leftbar-item-add:hover,
 .leftbar-item-add.selected {
   background-color: var(--add--light);
-}
+} */
 .leftbar-item-background:hover,
 .leftbar-item-background.selected {
   background-color: var(--background--light);

@@ -13,7 +13,7 @@ export const gfppBtns = {
     type: "icon",
     svg: `<svg width="15" height="3" viewBox="0 0 15 3"  xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H3V3H0V0ZM6 0H9V3H6V0ZM15 0H12V3H15V0Z" fill="#000000"/>
-    </svg>
+    </svg> 
     
     `,
     tooltip: "More Actions",

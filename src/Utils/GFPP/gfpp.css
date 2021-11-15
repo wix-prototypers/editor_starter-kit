@@ -36,8 +36,13 @@
   pointer-events: none;
   animation: none;
 }
-.element-container.strip:not(.selected) #gfpp {
+.element-container.strip:not(.selected) > #gfpp {
   opacity: 0;
+  pointer-events: none;
+  animation: none;
+}
+.element-container.selected > #gfpp {
+  opacity: 1;
   pointer-events: none;
   animation: none;
 }
@@ -47,13 +52,13 @@
   animation: none;
 }
 #gfpp.subGfpp {
-  display: block;
+  display: flex;
 
   left: 10px;
 
   transform: scale(1);
   position: absolute;
-  font-family: "HelveticaNeueW01-45Ligh";
+  font-family: "Madefor";
   white-space: nowrap;
 }
 
@@ -73,6 +78,10 @@
   border-radius: 16px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12),
     0px 4px 5px 0px rgba(0, 0, 0, 0.12), 0px 4px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.gfpp-main-action.selected {
+  color: var(--blue--main);
 }
 
 .gfpp-main-action {
@@ -203,7 +212,7 @@
 .element-wrapper.selected #gfpp {
   opacity: 1 !important;
   z-index: 99;
-  animation: showGfpp2 0.3s !important;
+  animation: showGfpp 0.3s !important;
   transform: translate(-100px, 0px);
   transition-timing-function: ease-in-out;
   left: 100px !important;
@@ -211,7 +220,7 @@
 .useGfpp .section.selected:not(.parent-selected) > #gfpp.show {
   opacity: 1 !important;
   z-index: 99;
-  animation: showGfpp2 0.3s !important;
+  animation: showGfpp 0.3s !important;
   transform: translate(-100px, 0px);
   left: unset;
   transition-timing-function: ease-in-out;
@@ -254,7 +263,7 @@
   }
 }
 
-@keyframes showGfpp2 {
+@keyframes showGfpp {
   0% {
     transform-origin: center;
     opacity: 0;

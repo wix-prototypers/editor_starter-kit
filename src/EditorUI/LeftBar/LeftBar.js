@@ -1,7 +1,7 @@
 //Append Styles
 import { icons } from "./left-bar-icons.js";
-var href =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@latest/src/EditorUI/LeftBar/left-bar.css";
+
+var href = "../src/EditorUI/LeftBar/left-bar.css";
 let exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {
@@ -18,7 +18,7 @@ if (!exists) {
 export const LeftBar = (
   state,
   setState,
-  leftBarItems = ["Pages", "Sections", "Add", "Apps", "Design", "Ascend"]
+  leftBarItems = ["Add", "Pages", "Apps", "Design", "Ascend"]
 ) => {
   let container = document.querySelector("#left-bar");
   container.classList.add("leftbar");
@@ -49,54 +49,32 @@ ${icons[item.toLowerCase()]}
   setTimeout(() => {
     document.querySelectorAll(".leftbar-item").forEach((item) => {
       item.addEventListener("click", (e) => {
-        if (e.target.closest(".leftbar-item").id == "sections") {
+        if (e.target.closest(".leftbar-item").classList.contains("selected")) {
+          document.querySelectorAll(".leftbar-item").forEach((item) => {
+            item.classList.remove("selected");
+          });
           setState(state, "regPanel", "close");
-          document.querySelector("#left-panel").classList.remove("regular");
-          if (state.panel.isOpen) {
-            document.querySelector(".actions .close-panel").click();
-          } else {
-            let placeholder = document.querySelector("#ph1");
-            console.log(placeholder);
-            setState(state, "panel", {
-              isOpen: true,
-              type: "add",
-              title: "Add to Section",
-              panelContent: "sections",
-              sectionPlaceholder: placeholder,
-            });
-            document
-              .querySelector(".leftbar-item#sections")
-              .classList.add("selected");
-          }
+          setState(state, "panel", "close");
+          state.zoomMode = {
+            isActive: false,
+          };
         } else {
-          if (
-            e.target.closest(".leftbar-item").classList.contains("selected")
-          ) {
-            document.querySelectorAll(".leftbar-item").forEach((item) => {
-              item.classList.remove("selected");
-            });
-            setState(state, "regPanel", "close");
-            setState(state, "panel", "close");
-            state.zoomMode = {
-              isActive: false,
-            };
-          } else {
-            setState(state, "panel", "close");
-            setState(state, "zoomMode", { isActive: false });
-            document.querySelector("#left-panel").classList.add("regular");
+          setState(state, "panel", "close");
+          setState(state, "zoomMode", { isActive: false });
+          document.querySelector("#left-panel").classList.add("regular");
 
-            document.querySelectorAll(".leftbar-item").forEach((item) => {
-              item.classList.remove("selected");
-            });
-            e.target.closest(".leftbar-item").classList.add("selected");
-            setState(state, "regPanel", e.target.closest(".leftbar-item").id);
-          }
+          document.querySelectorAll(".leftbar-item").forEach((item) => {
+            item.classList.remove("selected");
+          });
+          e.target.closest(".leftbar-item").classList.add("selected");
+          setState(state, "regPanel", e.target.closest(".leftbar-item").id);
         }
+
         if (e.target.closest(".leftbar-item").id == "design") {
           if (
             e.target.closest(".leftbar-item").classList.contains("selected")
           ) {
-            setState(state, "zoomMode", { isActive: true });
+            // setState(state, "zoomMode", { isActive: true });
           } else {
             setState(state, "zoomMode", { isActive: false });
           }
