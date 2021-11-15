@@ -98,7 +98,7 @@ export function selectionModel(state, setState) {
           let elem = e.target.closest(".element-container:not(.strip)");
           deselectAll();
           select(elem);
-          document.querySelectorAll(".element-container").forEach((strip) => {
+          document.querySelectorAll(".parent-select").forEach((strip) => {
             strip.classList.remove("parent-select");
           });
           elem.closest(".strip").classList.add("parent-select");

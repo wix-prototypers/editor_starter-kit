@@ -54,5 +54,5 @@ export const hideFloatingPanels = () => {
     .forEach((panel) => panel.classList.remove("active"));
   document
     .querySelectorAll(".gfpp .selected")
-    .forEach((gfpp) => gfpp.classList.remove("selected"));
+    .forEach((gfpp) => gfpp.classList.remove("selectedp"));
 };

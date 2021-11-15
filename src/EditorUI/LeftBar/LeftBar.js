@@ -62,7 +62,6 @@ ${icons[item.toLowerCase()]}
           setState(state, "panel", "close");
           setState(state, "zoomMode", { isActive: false });
           document.querySelector("#left-panel").classList.add("regular");
-
           document.querySelectorAll(".leftbar-item").forEach((item) => {
             item.classList.remove("selected");
           });
