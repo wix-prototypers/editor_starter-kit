@@ -25,7 +25,7 @@ body {
 }
 
 #stage.zoomMode {
-  transform: scale(0.5);
+  transform: scale(0.5) translate(60px);
   transform-origin: top center;
   overflow: visible;
   left: 120px;
@@ -171,4 +171,387 @@ stage * {
 #stage.panel-push-stage[panel-type="add"] {
   transform: translate(655px, 0px);
   width: calc(100vw - 710px) !important;
+}
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+:root {
+  --AddSection-main: #3899ec;
+  --AddSection-light: #3899ec7f;
+  --should-AddSection-light: #3899ec7f;
+}
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Madefor Display";
+  margin: 18px;
+  padding: 0px 10px;
+  align-items: center;
+}
+.site-header:before {
+  transform: translate(-11px, -28px) !important;
+}
+.top-menu-items {
+  display: flex;
+  padding: 10px 0px;
+}
+.menu-item {
+  margin-right: 25px;
+}
+.strip {
+  height: 500px !important;
+  padding: 0px !important;
+}
+.hero {
+  background-color: salmon;
+
+  background-repeat: no-repeat;
+  height: 500px;
+
+  padding: 30px;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#e0 {
+  font-family: "serif", "DM Serif Display", serif;
+  font-size: 130px;
+
+  color: white;
+}
+
+.our-services {
+  background-color: rgb(255, 255, 255);
+  background-position: 0px;
+  background-repeat: no-repeat;
+  height: 500px;
+
+  box-sizing: content-box;
+  padding: 30px;
+  opacity: 0.9;
+
+  flex-direction: column;
+}
+#e01 {
+  font-family: "serif", "DM Serif Display", serif;
+  font-size: 60px;
+  margin-bottom: 20px;
+  color: black;
+}
+#e02 {
+  font-family: "serif", "DM Serif Display", serif;
+  font-size: 17px;
+
+  font-family: "Madefor";
+  color: black;
+  width: 430px;
+  text-align: center;
+}
+#e03 {
+  font-family: "serif", "DM Serif Display", serif;
+  font-size: 17px;
+
+  font-family: "Madefor";
+  color: white;
+  background-color: black;
+  padding: 12px 24px;
+
+  text-align: center;
+}
+.style1 {
+  transform: translate(-300px, 0px);
+}
+.style3 {
+  transform: translate(300px, 0px);
+}
+.button2 {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.787);
+  padding: 12px 24px;
+  top: 400px;
+  text-align: center;
+}
+.button2 span.text {
+  font-size: 17px;
+  font-weight: 600;
+  font-family: "Madefor Display";
+  color: black;
+
+  text-align: center;
+}
+#stage .logo {
+  font-size: 19px;
+  font-family: "DM Serif Display", "serif", serif;
+  font-family: "serif";
+  letter-spacing: 2px;
+  font-weight: 900;
+  color: black;
+  cursor: default;
+}
+
+.tiles {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 50vh;
+}
+
+.tiles .blogBox {
+  -moz-transition: -moz-transform 0.5s ease, opacity 0.5s ease;
+  -webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+  -ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  position: relative;
+  width: calc(33.33333% - 2.5em);
+  margin: 2.5em;
+  max-width: 250px;
+  user-select: none;
+}
+
+.tiles .blogBox > .image {
+  -moz-transition: -moz-transform 0.5s ease;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  -ms-transition: -ms-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  position: relative;
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: -1;
+  user-select: none !important;
+}
+
+.tiles .blogBox > .image img {
+  display: block;
+  width: 100%;
+  user-select: none !important;
+}
+
+.tiles .blogBox > .image:before {
+  pointer-events: none;
+  -moz-transition: background-color 0.5s ease, opacity 0.5s ease;
+  -webkit-transition: background-color 0.5s ease, opacity 0.5s ease;
+  -ms-transition: background-color 0.5s ease, opacity 0.5s ease;
+  transition: background-color 0.5s ease, opacity 0.5s ease;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: 1;
+  opacity: 0.8;
+  user-select: none !important;
+}
+
+.tiles .blogBox > .image:after {
+  pointer-events: none;
+  -moz-transition: opacity 0.5s ease;
+  -webkit-transition: opacity 0.5s ease;
+  -ms-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 0.25px%3B stroke: %23ffffff%3B %7D%3C/style%3E%3Cline x1='0' y1='0' x2='100' y2='100' /%3E%3Cline x1='100' y1='0' x2='0' y2='100' /%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0.25;
+  z-index: 2;
+  user-select: none !important;
+}
+
+.tiles blogBox > a {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -moz-transition: background-color 0.5s ease, -moz-transform 0.5s ease;
+  -webkit-transition: background-color 0.5s ease, -webkit-transform 0.5s ease;
+  -ms-transition: background-color 0.5s ease, -ms-transform 0.5s ease;
+  transition: background-color 0.5s ease, transform 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  border-radius: 4px;
+  border-bottom: 0;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  z-index: 3;
+}
+
+.tiles blogBox > a > :last-child {
+  margin: 0;
+}
+
+.tiles blogBox > a:hover {
+  color: #ffffff !important;
+}
+
+.tiles blogBox > a h2 {
+  margin: 0;
+}
+
+.tiles blogBox > a .content {
+  -moz-transition: max-height 0.5s ease, opacity 0.5s ease;
+  -webkit-transition: max-height 0.5s ease, opacity 0.5s ease;
+  -ms-transition: max-height 0.5s ease, opacity 0.5s ease;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  width: 100%;
+  max-height: 0;
+  line-height: 1.5;
+  margin-top: 0.35em;
+  opacity: 0;
+}
+
+.tiles blogBox > a .content > :last-child {
+  margin-bottom: 0;
+}
+
+.tiles blogBox.style1 > .image:before {
+  background-color: #f2849e;
+}
+
+.tiles blogBox.style2 > .image:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #7ecaf6;
+}
+
+.tiles blogBox.style3 > .image:before {
+  background-color: #7bd0c1;
+}
+
+.tiles blogBox.style4 > .image:before {
+  background-color: #c75b9b;
+}
+
+.tiles blogBox.style5 > .image:before {
+  background-color: #ae85ca;
+}
+
+.tiles blogBox.style6 > .image:before {
+  background-color: #8499e7;
+}
+
+body:not(.is-touch) .tiles blogBox:hover > .image {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+body:not(.is-touch) .tiles blogBox:hover > .image:before {
+  background-color: #333333;
+  opacity: 0.35;
+}
+
+body:not(.is-touch) .tiles blogBox:hover > .image:after {
+  opacity: 0;
+}
+
+body:not(.is-touch) .tiles blogBox:hover .content {
+  max-height: 15em;
+  opacity: 1;
+}
+
+body.is-preload .tiles blogBox {
+  -moz-transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+body.is-touch .tiles blogBox .content {
+  max-height: 15em;
+  opacity: 1;
+}
+.element-contaoner.strip {
+  position: relative;
+}
+
+.left-tooltip-add ul {
+  top: 110px;
+  left: 320px;
+  width: 130px;
+}
+.top-tooltip-set ul {
+  left: unset !important;
+  right: unset !important;
+  top: 60px !important;
+  left: calc(100vw - 361px) !important;
+  width: 130px;
+}
+.tttp {
+  z-index: 999999999999;
+}
+.tttp ul {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  padding: 18px 18px 0px;
+  top: 89px;
+  left: 55px;
+  width: 130px;
+  box-shadow: rgb(0 0 0 / 8%) 0px 0px 14px 0px;
+  border-radius: 6px;
+  z-index: 99999999999;
+}
+
+.Main {
+  grid-area: Main;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+.Right {
+  grid-area: Right;
+  border-right: 1px dashed black;
+  transform: translate(1px, 0px);
+}
+.Left {
+  border-left: 1px dashed black;
+  grid-area: Left;
+  transform: translate(-1px, 0px);
+}
+.element-container:not(.strip) {
+  position: absolute;
+  cursor: move;
+}
+.element-container:not(.strip) #gfpp {
+  cursor: unset;
+}
+
+.header {
+  height: 79px !important;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 15px 0px 15px;
 }
