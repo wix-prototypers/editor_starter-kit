@@ -55,7 +55,6 @@ export function DragNDrop() {
 
         item.style.left = coords.left - 2 + "px";
         item.style.top = coords.top + 3 + "px";
-
         item.setAttribute("coords", `x:${coords.left}y:${coords.top}`);
 
         document.onmousemove = function (event) {

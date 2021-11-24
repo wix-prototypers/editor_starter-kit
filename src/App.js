@@ -8,7 +8,7 @@ new (function App() {
   const stage = document.querySelector("#stage");
   editor.insertAdjacentHTML(
     "afterbegin",
-    `    <section id="left-panel" class="hidden "></section>
+    `<section id="left-panel" class="hidden "></section>
   <section id="left-bar"></section>
 <section id="top-bar"></section>
 <section id="panel-frame" class=""></section>`

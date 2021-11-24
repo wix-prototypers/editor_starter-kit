@@ -193,7 +193,7 @@ stage * {
   display: flex;
   padding: 10px 0px;
 }
-.menu-item {
+#stage .menu-item {
   margin-right: 25px;
 }
 .strip {
@@ -549,7 +549,6 @@ body.is-touch .tiles blogBox .content {
 
 .header {
   height: 79px !important;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
