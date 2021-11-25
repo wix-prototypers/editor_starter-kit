@@ -13,6 +13,7 @@ body {
   width: calc(100vw - 58px) !important;
   min-width: 980px;
   transform: translate(58px, 88px);
+  transform-origin: top center;
   background-color: white;
 
   overflow: scroll;

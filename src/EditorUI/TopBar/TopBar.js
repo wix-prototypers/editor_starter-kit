@@ -1,9 +1,9 @@
 import { icons } from "./top-bar-icons.js";
 
 //Append Styles
-/* var href =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@latest/src/EditorUI/TopBar/top-bar.css"; */
-var href = "../../src/EditorUI/TopBar/top-bar.css";
+var href =
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@v0.0.0.0.1/src/EditorUI/TopBar/top-bar.css";
+/* var href = "../../src/EditorUI/TopBar/top-bar.css"; */
 var exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {
