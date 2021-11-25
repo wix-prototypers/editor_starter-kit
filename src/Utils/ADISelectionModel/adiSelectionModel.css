@@ -99,6 +99,9 @@
   background-color: var(--blue--main);
   color: white;
 }
+.element-container.on-the-move:before {
+  opacity: 0 !important;
+}
 .element-container:not(.strip):not(.selected):hover {
   outline: 1px solid var(--blue--light);
 }
@@ -277,7 +280,7 @@
 }
 .header {
   height: 79px;
-  width: calc(100% - 40px);
+
   display: flex;
   justify-content: space-between;
   align-items: center;

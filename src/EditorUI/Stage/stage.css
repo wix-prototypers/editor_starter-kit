@@ -26,10 +26,9 @@ body {
 }
 
 #stage.zoomMode {
-  transform: scale(0.5) translate(60px);
+  transform: scale(0.5) translate(120px, 160px);
   transform-origin: top center;
   overflow: visible;
-  left: 120px;
 }
 
 #stage.panel[panel-type="edit"] {
