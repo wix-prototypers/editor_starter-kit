@@ -2,7 +2,7 @@ import {
   deselectAll,
   select,
   deselectAllChildren,
-} from "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@v1.0.0.1-beta/src/Utils/ADISelectionModel/adiSelectionModel.js";
+} from "../ADISelectionModel/adiSelectionModel.js";
 var mousePosY = 0;
 const topBarsHeight = 170;
 const leftBarWidth = 56;
