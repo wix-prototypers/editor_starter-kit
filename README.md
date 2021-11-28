@@ -60,3 +60,7 @@ The following HTML snippet will genrate the editor and a basic site (header,foot
 </html>
 
 ```
+
+### **2.Using Snippets 🔗**
+
+### **3.Using The Prototype API 🔗**
