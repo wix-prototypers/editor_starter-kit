@@ -21,7 +21,7 @@ if (!exists) {
 
 export const Gfpp = (state, setState) => {
   let elemContainers = document.querySelectorAll(
-    ".element-container, .element-wrapper, .section"
+    "#stage .element-container, .element-wrapper, .section"
   );
 
   elemContainers.forEach((elem) => {

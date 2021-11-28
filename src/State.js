@@ -2,10 +2,8 @@ import { Actions } from "./Actions.js";
 
 export function State(
   state = {
-    panel: { isOpen: false, dir: null },
+    leftPanel: "close",
     zoomMode: false,
-    addSectionClick: false,
-    topBarEnter: false,
   }
 ) {
   class PubSub {
@@ -68,7 +66,7 @@ export function State(
   return new Storeducer(state);
 }
 
-export const setState = (state, item, val) => {
-  state[item] = val;
+export const setState = (state, key, val) => {
+  state[key] = val;
   return state;
 };

@@ -17,8 +17,8 @@ new (function App() {
   stage && stage.classList.add("Madefor");
   setTimeout(() => {
     const stateObj = State.apply(this, []);
-    this.state = stateObj.state;
-
+    window.state = stateObj.state;
+    this.state = window.state;
     EditorUI(this.state, setState, this.events, this);
     Utils(this.state, setState, this.events, this);
     if (Styles === "Appended") {

@@ -53,29 +53,26 @@ ${icons[item.toLowerCase()]}
           document.querySelectorAll(".leftbar-item").forEach((item) => {
             item.classList.remove("selected");
           });
-          setState(state, "regPanel", "close");
-          setState(state, "panel", "close");
-          state.zoomMode = {
-            isActive: false,
-          };
+          setState(state, "leftPanel", "close");
+
+          state.zoomMode = "close";
         } else {
-          setState(state, "panel", "close");
-          setState(state, "zoomMode", { isActive: false });
+          setState(state, "leftPanel", "close");
+          setState(state, "zoomMode", "close");
           document.querySelector("#left-panel").classList.add("regular");
           document.querySelectorAll(".leftbar-item").forEach((item) => {
             item.classList.remove("selected");
           });
           e.target.closest(".leftbar-item").classList.add("selected");
-          setState(state, "regPanel", e.target.closest(".leftbar-item").id);
+          state.leftPanel = e.target.closest(".leftbar-item").id;
         }
 
         if (e.target.closest(".leftbar-item").id == "design") {
           if (
             e.target.closest(".leftbar-item").classList.contains("selected")
           ) {
-            // setState(state, "zoomMode", { isActive: true });
           } else {
-            setState(state, "zoomMode", { isActive: false });
+            setState(state, "zoomMode", "close");
           }
         }
       });

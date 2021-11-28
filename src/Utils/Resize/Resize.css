@@ -1,19 +1,20 @@
-.element-container {
-  position: relative;
-}
-
-.resizable:not(.selected) .resizer,
-.resizable:not(.selected) .drag-handle {
+.element-container:not(.selected) .resizer,
+.element-container:not(.selected) .drag-handle {
   display: none;
 }
+.element-container:not(.strip).selected .resizer,
+.element-container:not(.strip).selected .drag-handle {
+  display: unset;
+}
 
-.resizable .resizers {
+.element-container .resizers {
+  position: absolute;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
 }
 
-.resizable .resizers .resizer {
+.element-container .resizers .resizer {
   width: 7px;
   height: 7px;
   border-radius: 50%;
@@ -22,32 +23,32 @@
   position: absolute;
 }
 
-.resizable .resizers .resizer.top-right {
+.element-container .resizers .resizer.top-right {
   right: -3px;
   top: -3px;
   cursor: nesw-resize;
 }
-.resizable .resizers .resizer.top-left {
+.element-container .resizers .resizer.top-left {
   left: -3px;
   top: -3px;
   cursor: nwse-resize;
 }
-.resizable .resizers .resizer.bottom-left {
+.element-container .resizers .resizer.bottom-left {
   left: -3px;
   bottom: -3px;
   cursor: nesw-resize;
 }
-.resizable .resizers .resizer.bottom-right {
+.element-container .resizers .resizer.bottom-right {
   right: -3px;
   bottom: -3px;
   cursor: nwse-resize;
 }
-.resizable .resizers .resizer.top {
+.element-container .resizers .resizer.top {
   right: 50%;
   top: -3px;
   cursor: ns-resize;
 }
-.resizable .resizers .resizer.bottom {
+.element-container .resizers .resizer.bottom {
   right: 50%;
   bottom: -5px;
   cursor: nesw-resize;

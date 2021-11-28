@@ -1,3 +1,7 @@
+import { DragNDrop } from "../dragNDrop/dragNDrop.js";
+import { Gfpp } from "../GFPP/gfpp.js";
+import { Resizable } from "../Resize/Resize.js";
+
 //Append Styles
 var href = "../src/Utils/ADISelectionModel/adiSelectionModel.css";
 var exists = false;
@@ -13,15 +17,15 @@ if (!exists) {
   document.getElementsByTagName("head")[0].appendChild(link);
 }
 
-let elemContainers = document.querySelectorAll(
-  ".element-container:not(.strip)"
-);
-let strips = document.querySelectorAll(".element-container.strip");
 let stage = document.querySelector("#stage");
 let overlay = document.querySelector(".stage-overlay");
 
 export function select(eleme) {
+  deselectAll();
   eleme.classList.add("selected");
+  !eleme.classList.contains(".strip") &&
+    eleme.closest(".strip").classList.add("parent-select");
+  state.selectedElement = eleme;
 }
 
 export function hoverOn(eleme) {
@@ -36,6 +40,10 @@ export function deselect(eleme) {
   gfpp && gfpp.classList.remove("show");
 }
 export function deselectAll() {
+  let elemContainers = document.querySelectorAll(
+    "#stage .element-container:not(.strip)"
+  );
+  let strips = document.querySelectorAll(".element-container.strip");
   strips.forEach((strip) => {
     strip.classList.remove("selected");
     strip.classList.remove("hovered");
@@ -53,6 +61,9 @@ export function deselectAll() {
 }
 
 export function deselectAllChildren() {
+  let elemContainers = document.querySelectorAll(
+    "#stage .element-container:not(.strip)"
+  );
   elemContainers.forEach((elem) => {
     elem.classList.remove("selected");
     elem.classList.remove("hovered");
@@ -64,6 +75,19 @@ export function deselectAllChildren() {
 }
 
 export function selectionModel(state, setState) {
+  let elemContainers = document.querySelectorAll(
+    ".element-container:not(.strip)"
+  );
+  elemContainers.forEach((eleme) =>
+    eleme.addEventListener("stageElement", () => {
+      console.log("to");
+      DragNDrop(state, setState);
+      Resizable(state, setState);
+      selectionModel(state, setState);
+      Gfpp(state, setState);
+    })
+  );
+
   /**
    * select element on stage
    * @param {Object} event
@@ -115,14 +139,16 @@ export function selectionModel(state, setState) {
 
           document
             .querySelectorAll(".element-container:not(.strip)")
-            .forEach((strip) => {
-              strip.classList.remove("clicked");
+            .forEach((eleme) => {
+              eleme.classList.remove("clicked");
             });
 
-          document.querySelectorAll(".element-container").forEach((strip) => {
-            strip.classList.remove("parent-select");
-            strip.classList.remove("hovered");
-          });
+          document
+            .querySelectorAll(".element-container.strip")
+            .forEach((strip) => {
+              strip.classList.remove("parent-select");
+              strip.classList.remove("hovered");
+            });
           strip.classList.add("selected");
         }
       })

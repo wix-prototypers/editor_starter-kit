@@ -18,8 +18,6 @@ if (!exists) {
 const stage = document.getElementById("stage");
 
 export const Stage = (state, setState) => {
-  document.onclick = (e) => {
-    console.log("to");
-  };
+  document.onclick = (e) => {};
 };
 export const zoomMode = (curr, state, setState) => {};

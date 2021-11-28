@@ -14,7 +14,7 @@ const stage = document.querySelector("#stage");
 const body = document.querySelector("body");
 //Append Styles
 var href = "../src/EditorUI/LeftPanel/left-panel.css";
-const exists = false;
+var exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {
     exists = true;
@@ -48,16 +48,14 @@ export const LeftPanel = (state, setState) => {
           });
           body.classList.contains("return100") && stage.dispatchEvent(event);
           if (e.target.closest(".regular")) {
-            setState(state, "regPanel", "close");
+            state.leftPanel = "close";
             //setState(state, "zoomMode", { isActive: false });
             setTimeout(() => {
               e.target.closest(".regular") &&
                 e.target.closest(".regular").classList.remove("regular");
             }, 300);
           } else {
-            setState(state, "panel", "close");
-            setState(state, "regPanel", "close");
-            // setState(state, "zoomMode", { isActive: false });
+            state.leftPanel = "close";
           }
         })
     );

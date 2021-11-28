@@ -1,8 +1,9 @@
 import * as icons from "./icons.js";
 
 export const Resizable = () => {
+  console.log("t");
   var href = "../src/Utils/Resize/Resize.css";
-  const exists = false;
+  var exists = false;
   document.querySelectorAll("link").forEach((link) => {
     if (link.getAttribute("href") === href) {
       exists = true;
@@ -15,7 +16,9 @@ export const Resizable = () => {
     document.getElementsByTagName("head")[0].appendChild(link);
   }
 
-  const elements = document.querySelectorAll(".resizable");
+  const elements = document.querySelectorAll(
+    ".strip:not(.header) .element-container:not(.strip)"
+  );
   elements.forEach((element) => {
     element.insertAdjacentHTML(
       "afterbegin",
