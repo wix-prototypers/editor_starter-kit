@@ -199,10 +199,10 @@ function sectionfy(placeholder, section) {
   placeholder.classList.add("added");
   placeholder.classList.add("section");
   placeholder.classList.add("about2");
-  let tempv1.0.0.4rip = document
+  let templateStrip = document
     .querySelector(".template-strip1")
     .cloneNode(true);
-  tempv1.0.0.4rip.classList.remove("off");
+  templateStrip.classList.remove("off");
   placeholder.setAttribute("hat", "Section : About");
 
   placeholder.classList.remove("place-holder");
@@ -213,7 +213,7 @@ function sectionfy(placeholder, section) {
     `<div class="attach-to-section"><div class="attach-banner">Attach to Section</div></div>`
   );
   placeholder.insertAdjacentHTML("beforeend", `<div class="outside"></div>`);
-  placeholder.insertAdjacentElement("beforeend", tempv1.0.0.4rip);
+  placeholder.insertAdjacentElement("beforeend", templateStrip);
   stage.classList.add("halty");
   //selectSection(placeholder);
 

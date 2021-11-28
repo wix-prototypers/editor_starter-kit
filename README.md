@@ -12,7 +12,7 @@ features inside thr classic editor
 Add the following links in your prototype's index file.
 
 ```HTML
-<script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@v1.0.0.4/src/App.js" />
+<script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@v1.0.0.5/src/App.js" />
 
 ```
 
@@ -55,7 +55,7 @@ The following HTML snippet will genrate the editor and a basic site (header,foot
       <div class="floating-panel" element="e0" gfpp-trigger="Edit-Text" title="Hello Panel" >
          lorem ipsum
       </div>
-      <script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@v1.0.0.4/src/App.js" > </script>
+      <script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@v1.0.0.5/src/App.js" > </script>
    </body>
 </html>
 
