@@ -1,6 +1,6 @@
 # **Editor Starter Kit 1.0 🚀**
 
-![info](https://wix-prototypers.github.io/editor_starter-kit/screenshot.png)
+![screnshot](https://github.com/wix-prototypers/editor_starter-kit/blob/master/screenshot.png)
 
 ### **Introduction**
 
