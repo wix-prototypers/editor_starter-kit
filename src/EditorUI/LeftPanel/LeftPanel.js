@@ -14,7 +14,7 @@ const stage = document.querySelector("#stage");
 const body = document.querySelector("body");
 //Append Styles
 var href = "../src/EditorUI/LeftPanel/left-panel.css";
-var exists = false;
+const exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {
     exists = true;
@@ -199,10 +199,10 @@ function sectionfy(placeholder, section) {
   placeholder.classList.add("added");
   placeholder.classList.add("section");
   placeholder.classList.add("about2");
-  let templateStrip = document
+  let tempv1.0.0.4rip = document
     .querySelector(".template-strip1")
     .cloneNode(true);
-  templateStrip.classList.remove("off");
+  tempv1.0.0.4rip.classList.remove("off");
   placeholder.setAttribute("hat", "Section : About");
 
   placeholder.classList.remove("place-holder");
@@ -213,7 +213,7 @@ function sectionfy(placeholder, section) {
     `<div class="attach-to-section"><div class="attach-banner">Attach to Section</div></div>`
   );
   placeholder.insertAdjacentHTML("beforeend", `<div class="outside"></div>`);
-  placeholder.insertAdjacentElement("beforeend", templateStrip);
+  placeholder.insertAdjacentElement("beforeend", tempv1.0.0.4rip);
   stage.classList.add("halty");
   //selectSection(placeholder);
 
