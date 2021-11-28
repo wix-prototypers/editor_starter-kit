@@ -1,10 +1,10 @@
 import { gfppBtns } from "./gfpp_data.js";
 import { getCoords, getSize } from "../functions.js";
-import { select } from "../ADISelectionModel/adiSelectionModel.js";
 
 //Append Styles
 
-var href = "../src/Utils/GFPP/gfpp.css";
+var href =
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@v1.0.0.0-beta/src/Utils/GFPP/gfpp.css";
 var exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {

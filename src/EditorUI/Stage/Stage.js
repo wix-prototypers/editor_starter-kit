@@ -1,7 +1,6 @@
-import { deselectAll } from "../../Utils/adiSelectionModel/adiSelectionModel.js";
-
 //Append Styles
-var href = "../src/EditorUI/Stage/stage.css";
+var href =
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@v1.0.0.0-beta/src/EditorUI/Stage/stage.css";
 let exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {

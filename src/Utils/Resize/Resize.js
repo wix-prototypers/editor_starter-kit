@@ -1,8 +1,8 @@
 import * as icons from "./icons.js";
 
 export const Resizable = () => {
-  console.log("t");
-  var href = "../src/Utils/Resize/Resize.css";
+  var href =
+    "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@v1.0.0.0-beta/src/Utils/Resize/Resize.css";
   var exists = false;
   document.querySelectorAll("link").forEach((link) => {
     if (link.getAttribute("href") === href) {

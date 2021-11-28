@@ -1,6 +1,6 @@
-import { DragNDrop } from "../dragNDrop/dragNDrop.js";
-import { Gfpp } from "../GFPP/gfpp.js";
-import { Resizable } from "../Resize/Resize.js";
+import { DragNDrop } from "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@v1.0.0.0-beta/src/Utils/dragNDrop/dragNDrop.js";
+import { Gfpp } from "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@v1.0.0.0-beta/src/Utils/GFPP/gfpp.js";
+import { Resizable } from "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@v1.0.0.0-beta/srcUtils/Resize/Resize.js";
 
 //Append Styles
 var href = "../src/Utils/ADISelectionModel/adiSelectionModel.css";
