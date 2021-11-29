@@ -9,6 +9,13 @@ features inside thr classic editor
 
 ### **1.Installation 🔗**
 
+Local usage requires serving the HTML via live server:
+`Atom:`
+https://atom.io/packages/atom-live-server
+
+`VS-code:`
+https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
+
 Add the following links in your prototype's index file.
 
 ```HTML
