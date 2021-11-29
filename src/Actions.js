@@ -32,14 +32,14 @@ export const Actions = {
     const sectionActions = document.querySelector(".sectionActions");
     const zoomBtn = document.querySelector(".zoom");
 
-    if (data == "active") {
+    if (data == "active" || data === true) {
       editor.classList.add("zoomMode");
       zoomBtn.classList.add("selected");
       stage.classList.add("zoomMode");
       body.classList.add("zoomMode");
       body.removeAttribute("panel-type");
       stage.removeAttribute("panel-type");
-    } else {
+    } else if (data === false) {
       editor.classList.remove("zoomMode");
       zoomBtn.classList.remove("selected");
       stage.classList.remove("zoomMode");
@@ -54,7 +54,7 @@ export const Actions = {
     const editor = document.querySelector("#editor");
     const leftBar = document.querySelector("#left-bar");
     const sectionActions = document.querySelector(".sectionActions");
-    if (data === "close") {
+    if (data === "close" || data === false) {
       stage.classList.remove("design");
       leftBar.classList.remove("panld");
 

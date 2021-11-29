@@ -12,7 +12,8 @@ const body = document.querySelector("body");
 var strp = 0;
 
 export function DragNDrop() {
-  var href = "../src/Utils/dragNDrop/dragNDrop.css";
+  var href =
+    "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@v1.0.0.5-beta/src/Utils/dragNDrop/dragNDrop.css";
   var exists = false;
   document.querySelectorAll("link").forEach((link) => {
     if (link.getAttribute("href") === href) {

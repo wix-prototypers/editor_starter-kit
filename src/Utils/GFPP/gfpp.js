@@ -4,7 +4,7 @@ import { getCoords, getSize } from "../functions.js";
 //Append Styles
 
 var href =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@v1.0.0.5-beta/src/Utils/GFPP/gfpp.css";
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@v1.0.0.6-beta/src/Utils/GFPP/gfpp.css";
 var exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {
@@ -27,9 +27,6 @@ export const Gfpp = (state, setState) => {
   elemContainers.forEach((elem) => {
     let isSub = false;
 
-    if (getCoords(elem).top < 150) {
-      isSub = true;
-    }
     let gfppArray = elem.getAttribute("gfpp");
     gfppArray ? (gfppArray = gfppArray.split(" ")) : null;
 

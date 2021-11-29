@@ -237,7 +237,7 @@
   z-index: 99;
   animation: showGfpp 0.2s;
 }
-
+/* 
 @keyframes showGfpp {
   0% {
     transform-origin: center;
@@ -288,7 +288,7 @@
     transform: scale(1) translate(-100px, 0px);
   }
 }
-
+ */
 .on-the-move #gfpp {
   left: 500000px !important;
   -webkit-transition: all 0.2s ease-in-out;

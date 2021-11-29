@@ -3,7 +3,8 @@ import { Gfpp } from "../GFPP/gfpp.js";
 import { Resizable } from "../Resize/Resize.js";
 
 //Append Styles
-var href = "../src/Utils/ADISelectionModel/adiSelectionModel.css";
+var href =
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@v1.0.0.6-beta/src/Utils/ADISelectionModel/adiSelectionModel.css";
 var exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {
