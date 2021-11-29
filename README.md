@@ -9,7 +9,8 @@ features inside thr classic editor
 
 ### **1.Installation 🔗**
 
-Local usage requires serving the HTML via live server:
+#### Local usage requires serving the HTML via live server:
+
 `Atom:`
 https://atom.io/packages/atom-live-server
 
