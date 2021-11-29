@@ -1,0 +1,2 @@
+[ ]working
+[ ]strip gfpp

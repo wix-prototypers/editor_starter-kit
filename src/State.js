@@ -4,6 +4,7 @@ export function State(
   state = {
     leftPanel: "close",
     zoomMode: false,
+    selectedElement: null,
   }
 ) {
   class PubSub {

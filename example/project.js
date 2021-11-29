@@ -11,7 +11,6 @@ initPrototypePanel(panelInfo);
 //Add button to stage
 
 window.onload = () => {
-  console.log("yo");
   const btn = document.getElementById("button-drag");
 
   btn.onclick = () => {

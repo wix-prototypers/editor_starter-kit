@@ -26,31 +26,37 @@
 .element-container .resizers .resizer.top-right {
   right: -3px;
   top: -3px;
+  position: absolute;
   cursor: nesw-resize;
 }
 .element-container .resizers .resizer.top-left {
   left: -3px;
   top: -3px;
+  position: absolute;
   cursor: nwse-resize;
 }
 .element-container .resizers .resizer.bottom-left {
   left: -3px;
+  position: absolute;
   bottom: -3px;
   cursor: nesw-resize;
 }
 .element-container .resizers .resizer.bottom-right {
   right: -3px;
   bottom: -3px;
+  position: absolute;
   cursor: nwse-resize;
 }
 .element-container .resizers .resizer.top {
   right: 50%;
-  top: -3px;
+  top: -4px;
+  position: absolute;
   cursor: ns-resize;
 }
 .element-container .resizers .resizer.bottom {
   right: 50%;
   bottom: -5px;
+  position: absolute;
   cursor: nesw-resize;
 }
 .drag-handle {

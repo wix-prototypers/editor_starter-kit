@@ -102,11 +102,25 @@
 .element-container.on-the-move:before {
   opacity: 0 !important;
 }
-.element-container:not(.strip):not(.selected):hover {
+.element-container:not(.strip):not(.selected):hover:after {
   outline: 1px solid var(--blue--light);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
 }
-.element-container:not(.strip).selected {
+.element-container:not(.strip).selected:after {
   outline: 1px solid var(--blue--main);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
 }
 .strip.selected:after {
   content: "";

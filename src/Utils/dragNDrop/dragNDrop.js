@@ -5,7 +5,7 @@ import {
 } from "../ADISelectionModel/adiSelectionModel.js";
 var mousePosY = 0;
 const topBarsHeight = 170;
-const leftBarWidth = 56;
+const leftBarWidth = 58;
 const stage = document.querySelector("#stage");
 const body = document.querySelector("body");
 
@@ -62,8 +62,6 @@ export function DragNDrop() {
             left: Math.ceil(event.pageX - leftBarWidth - shiftX),
           };
 
-          item.style.left = coords.left - 2 + "px";
-          item.style.top = coords.top + 3 + "px";
           item.setAttribute("coords", `x:${coords.left}y:${coords.top}`);
 
           document.onmousemove = function (event) {
