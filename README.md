@@ -89,14 +89,12 @@ The following HTML snippet will genrate the editor and a basic site (header,foot
 
 #### Stage Snippets
 
-Stages - Creates a fullwidth strip
+Elemement - Creates a fullwidth strip
 
 ```HTML
- <div class="element-container resizable draggable" id="e0" hat="Title" gfpp="Edit-Text animation design help">
-                  <div class="text-content">
-                     Hello
-                  </div>
-   </div>
+ <div class="element-container resizable draggable" id="e0" hat="Title" gfpp="Edit-Text animation design help" style="top:50px; left:30px;">
+     Your Content Here, The size of the content will determine the size of the container
+</div>
 ```
 
 Strip snippet - Creates a fixed (not draggable) fullwidth strip
