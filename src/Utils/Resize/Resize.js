@@ -2,7 +2,7 @@ import * as icons from "./icons.js";
 
 export const Resizable = () => {
   var href =
-    "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.0.1-beta/src/Utils/Resize/Resize.css";
+    "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.0.2-beta/src/Utils/Resize/Resize.css";
   var exists = false;
   document.querySelectorAll("link").forEach((link) => {
     if (link.getAttribute("href") === href) {
