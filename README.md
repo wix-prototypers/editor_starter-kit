@@ -20,7 +20,7 @@ https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
 Add the following links in your prototype's index file.
 
 ```HTML
-<script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.0.2/src/App.js" />
+<script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.0.3/src/App.js" />
 
 ```
 
@@ -63,7 +63,7 @@ The following HTML snippet will genrate the editor and a basic site (header,foot
       <div class="floating-panel" element="e0" gfpp-trigger="Edit-Text" title="Hello Panel" >
          Panel Content Here
       </div>
-      <script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.0.2/src/App.js" > </script>
+      <script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.0.3/src/App.js" > </script>
    </body>
 </html>
 
