@@ -71,16 +71,18 @@ The following HTML snippet will genrate the editor and a basic site (header,foot
 
 ### **2.Using Snippets 🔗**
 
+#### To set up the editor and stage components, consider using the following structure in your `index.html`
+
 ```HTML
   <body>
       <div id="stage" >
          <div class="template">
-   ...
+   ... add site componrnts here(elements, strips,header footer etc..)
          </div>
       </div>
       <div id="editor"></div>
 
-  ...
+  ... add editor utilites here(mainly floating panel )
       </div>
   <body>
 ```
