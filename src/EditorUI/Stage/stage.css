@@ -212,13 +212,6 @@ stage * {
   flex-direction: column;
 }
 
-#e0 {
-  font-family: "serif", "DM Serif Display", serif;
-  font-size: 130px;
-
-  color: white;
-}
-
 .our-services {
   background-color: rgb(255, 255, 255);
   background-position: 0px;
