@@ -61,7 +61,7 @@ The following HTML snippet will genrate the editor and a basic site (header,foot
       </div>
       <div id="editor"></div>
       <div class="floating-panel" element="e0" gfpp-trigger="Edit-Text" title="Hello Panel" >
-         lorem ipsum
+         Panel Content Here
       </div>
       <script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.0.0.9/src/App.js" > </script>
    </body>
@@ -70,5 +70,19 @@ The following HTML snippet will genrate the editor and a basic site (header,foot
 ```
 
 ### **2.Using Snippets 🔗**
+
+```HTML
+  <body>
+      <div id="stage" >
+         <div class="template">
+   ...
+         </div>
+      </div>
+      <div id="editor"></div>
+
+  ...
+      </div>
+  <body>
+```
 
 ### **3.Using The Prototype API 🔗**

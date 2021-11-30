@@ -145,8 +145,10 @@ ${chev}
   );
 
   container.querySelector(".zoom").onclick = (e) => {
-    setState(state, "zoomMode", {
-      isActive: !e.target.closest(".zoom").classList.contains("selected"),
-    });
+    setState(
+      state,
+      "zoomMode",
+      !e.target.closest(".zoom").classList.contains("selected")
+    );
   };
 };
