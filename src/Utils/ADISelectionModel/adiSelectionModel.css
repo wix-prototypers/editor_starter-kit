@@ -295,12 +295,11 @@
 }
 .header {
   height: 79px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 3px 20px 0px 20px !important;
-  z-index: 0;
+  z-index: 0 !important;
 }
 .header:hover,
 .header.parent-select,

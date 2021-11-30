@@ -5,6 +5,7 @@
   top: -66px;
   position: absolute;
   white-space: nowrap;
+  z-index: 999999999 !important;
   font-family: "Madefor";
 }
 
