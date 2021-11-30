@@ -382,7 +382,7 @@
 }
 
 .top-menu-items.selected:after {
-  border: 1px solid #ff6600 !important;
+  outline: 1px solid #ff6600 !important;
 }
 .top-menu-items.selected:before {
   background-color: #ff6600 !important;

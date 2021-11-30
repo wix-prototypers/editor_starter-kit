@@ -4,7 +4,7 @@ import { Resizable } from "../Resize/Resize.js";
 
 //Append Styles
 var href =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.0.0.8-beta/src/Utils/ADISelectionModel/adiSelectionModel.css";
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.0.0.9-beta/src/Utils/ADISelectionModel/adiSelectionModel.css";
 var exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {
@@ -110,6 +110,54 @@ export function selectionModel(state, setState) {
   strips.forEach(
     (strip) =>
       (strip.onclick = (e) => {
+        e.stopImmediatePropagation();
+        e.stopPropagation();
+        if (!e.target.closest(".floating-panel"))
+          document
+            .querySelectorAll(".floating-panel")
+            .forEach((frame) => frame.classList.remove("active"));
+        if (
+          e.target.closest(".element-container:not(.strip)") &&
+          !e.target.closest("#gfpp")
+        ) {
+          let elem = e.target.closest(".element-container:not(.strip)");
+          deselectAll();
+          select(elem);
+          document.querySelectorAll(".parent-select").forEach((strip) => {
+            strip.classList.remove("parent-select");
+          });
+          elem.closest(".strip").classList.add("parent-select");
+        } else {
+          deselectAll();
+          document
+            .querySelectorAll(".gfpp-btn, .hpp-btn, .main-action")
+            .forEach((act) => act.classList.remove("selected"));
+
+          elemContainers.forEach((elem) => {
+            elem.classList.remove("selected");
+            elem.contentEditable = false;
+          });
+
+          document
+            .querySelectorAll(".element-container:not(.strip)")
+            .forEach((eleme) => {
+              eleme.classList.remove("clicked");
+            });
+
+          document
+            .querySelectorAll(".element-container.strip")
+            .forEach((strip) => {
+              strip.classList.remove("parent-select");
+              strip.classList.remove("hovered");
+            });
+          strip.classList.add("selected");
+        }
+      })
+  );
+
+  elementContainers.forEach(
+    (elementContainer) =>
+      (elementContainer.onclick = (e) => {
         e.stopImmediatePropagation();
         e.stopPropagation();
         if (!e.target.closest(".floating-panel"))
