@@ -295,14 +295,16 @@
 }
 .header {
   height: 79px;
-  z-index: 99999999999999 !important;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 3px 20px 0px 20px !important;
 }
-.header:hover {
-  z-index: 99999 !important;
+.header:hover,
+.header.parent-select,
+.header.parent-selected {
+  z-index: 99999999999999 !important;
 }
 .footer {
   top: 18px;
