@@ -129,17 +129,17 @@ Strip snippet - Creates a fixed (not draggable) fullwidth strip
   </tr>
   <tr>
    <td>
-      `state.leftPanel`
+      state.leftPanel
    </td>
 
-   <td>An object with 3 properties: prototypeTitle, prototypeDescription and panelDirection. See details below.
+   <td>open one one of the left panels, or close the panel
    </td>
    <td>
-    Yes
+  add | pages | design | media | apps | bussiness | false
    </td>
   </tr>
   <tr>
-     <td><a href="https://github.com/wix-prototypers/prototypers_prototype-panel/tree/master#panelsections-properties">panelSections[]</a>
+     <td>state.zoomMode
 
    </td>
    <td>An array with sections, in each section the relevant inputs you want to add to the panel.
