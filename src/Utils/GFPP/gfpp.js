@@ -150,11 +150,11 @@ export const Gfpp = (state, setState) => {
       });
     });
     //trigger main action on double-click
-    element.addEventListener("dblclick", (e) => {
+    /*    element.addEventListener("dblclick", (e) => {
       e.stopPropagation();
       let mainAction = element.querySelector(".gfpp-main-action");
       mainAction.click();
-    });
+    }); */
 
     /**
      * Show/hide tooltip

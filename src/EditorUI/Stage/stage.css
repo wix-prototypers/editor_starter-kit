@@ -544,6 +544,7 @@ body.is-touch .tiles blogBox .content {
   height: 79px !important;
   display: flex;
   justify-content: space-between;
+  z-index: 9999999999999 !important;
   align-items: center;
   padding: 3px 15px 0px 15px;
 }

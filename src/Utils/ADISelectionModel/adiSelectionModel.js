@@ -110,6 +110,7 @@ export function selectionModel(state, setState) {
   strips.forEach(
     (strip) =>
       (strip.onclick = (e) => {
+        console.log("to");
         e.stopImmediatePropagation();
         e.stopPropagation();
         if (!e.target.closest(".floating-panel"))
@@ -155,7 +156,7 @@ export function selectionModel(state, setState) {
       })
   );
 
-  elementContainers.forEach(
+  elemContainers.forEach(
     (elementContainer) =>
       (elementContainer.onclick = (e) => {
         e.stopImmediatePropagation();
