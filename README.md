@@ -82,7 +82,7 @@ The following HTML snippet will genrate the editor and a basic site (header,foot
       </div>
       <div id="editor"></div>
 
-  ... add editor utilites here(mainly floating panel )
+  ... add editor utilites here(mainly floating panels )
       </div>
   <body>
 ```
