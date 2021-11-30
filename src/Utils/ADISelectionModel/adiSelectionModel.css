@@ -330,7 +330,7 @@
 .footer.parent-select:before {
   display: none !important;
 }
-.top-menu-items {
+.top-menu-items:not(.logo) {
   right: 15px;
   padding: 10px;
 }
@@ -382,6 +382,10 @@
 }
 
 .top-menu-items.selected:after {
+  outline: 1px solid #ff6600 !important;
+}
+
+.header > .element-container {
   outline: 1px solid #ff6600 !important;
 }
 .top-menu-items.selected:before {

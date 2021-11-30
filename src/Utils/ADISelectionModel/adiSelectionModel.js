@@ -4,7 +4,7 @@ import { Resizable } from "../Resize/Resize.js";
 
 //Append Styles
 var href =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.0.0.9-beta/src/Utils/ADISelectionModel/adiSelectionModel.css";
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.0.1-beta/src/Utils/ADISelectionModel/adiSelectionModel.css";
 var exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {
