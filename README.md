@@ -87,6 +87,33 @@ The following HTML snippet will genrate the editor and a basic site (header,foot
   <body>
 ```
 
+#### Stage Snippets
+
+Stages - Creates a fullwidth strip
+
+```HTML
+ <div class="element-container resizable draggable" id="e0" hat="Title" gfpp="Edit-Text animation design help">
+                  <div class="text-content">
+                     Hello
+                  </div>
+   </div>
+```
+
+Strip snippet - Creates a fixed (not draggable) fullwidth strip
+
+```HTML
+  <div class="element-container strip hero"  hat="Strip" id="s0" >
+ </div>
+```
+
+#### Editor snippets
+
+```HTML
+ <div class="floating-panel" element="e0" gfpp-trigger="Edit-Text" title="Hello Panel" >
+         Panel Content Here
+</div>
+```
+
 ### **3.Using The Prototype API 🔗**
 
 `state.leftPanel`
