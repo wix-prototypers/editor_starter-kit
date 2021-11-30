@@ -14,7 +14,7 @@ const stage = document.querySelector("#stage");
 const body = document.querySelector("body");
 //Append Styles
 var href =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.0.5-beta/src/EditorUI/LeftPanel/left-panel.css";
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.0.6-beta/src/EditorUI/LeftPanel/left-panel.css";
 const exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {
