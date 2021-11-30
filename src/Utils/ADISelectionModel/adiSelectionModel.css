@@ -385,9 +385,6 @@
   outline: 1px solid #ff6600 !important;
 }
 
-.header > .element-container {
-  outline: 1px solid #ff6600 !important;
-}
 .top-menu-items.selected:before {
   background-color: #ff6600 !important;
 }

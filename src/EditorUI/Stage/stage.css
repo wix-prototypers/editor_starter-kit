@@ -271,7 +271,7 @@ stage * {
 
   text-align: center;
 }
-#stage .logo {
+#stage .logo span {
   font-size: 19px;
   font-family: "DM Serif Display", "serif", serif;
   font-family: "serif";
