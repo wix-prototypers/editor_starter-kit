@@ -114,4 +114,42 @@ Strip snippet - Creates a fixed (not draggable) fullwidth strip
 
 ### **3.Using The Prototype API 🔗**
 
-`state.leftPanel`
+<table>
+  <tr>
+   <td>
+    Property
+   </td>
+   <td>
+    TYPE
+   </td>
+   <td>
+    DESCRIPTION
+   </td>
+   <td>
+    Values
+   </td>
+  </tr>
+  <tr>
+   <td>
+      <a href="https://github.com/wix-prototypers/prototypers_prototype-panel/tree/master#panelinfo-properties">panelInfo</a>
+   </td>
+   <td>Object
+   </td>
+   <td>An object with 3 properties: prototypeTitle, prototypeDescription and panelDirection. See details below.
+   </td>
+   <td>
+    Yes
+   </td>
+  </tr>
+  <tr>
+     <td><a href="https://github.com/wix-prototypers/prototypers_prototype-panel/tree/master#panelsections-properties">panelSections[]</a>
+     </td>
+   <td>Array
+   </td>
+   <td>An array with sections, in each section the relevant inputs you want to add to the panel.
+The amount of sections and the distribution of inputs among them is your decision. See details below.
+   </td>
+   <td>
+   </td>
+  </tr>
+</table>
