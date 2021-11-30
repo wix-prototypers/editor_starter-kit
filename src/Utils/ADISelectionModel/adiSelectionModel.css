@@ -300,6 +300,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 3px 20px 0px 20px !important;
+  z-index: 0;
 }
 .header:hover,
 .header.parent-select,
