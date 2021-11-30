@@ -35,11 +35,13 @@ The following HTML snippet will genrate the editor and a basic site (header,foot
       <meta http-equiv="X-UA-Compatible" content="ie=edge" />
       <title> Editor | Starter Kit </title>
       <link rel="stylesheet" href="./project.css" >
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_prototype-panel@2/dist/prototypePanel.css">
       <link rel="icon" href="./Images/fav.png" type="image/x-icon">
    <body>
       <div id="stage" >
          <div class="template">
             <div class="element-container strip header" hat="Header" gfpp="Manage-Items animation">
+               <div class="element-container logo top-menu-items" hat="Text"><span>Hello</span></div>
                <div class="element-container top-menu-items" gfpp="Manage-Menu Navigate layout design animation help" hat="Horizontal Menu">
                   <div class="menu-item" value="home">Home</div>
                   <div class="menu-item" value="upcoming-shows">Upcoming Shows</div>
@@ -50,21 +52,27 @@ The following HTML snippet will genrate the editor and a basic site (header,foot
                   <div class="menu-item" value="writing">Writing</div>
                </div>
             </div>
-            <div class="element-container strip hero"  hat="Strip" id="s0" >
+            <div class="element-container strip hero" hat="Strip" id="s0" >
                <div class="element-container resizable draggable" id="e0" hat="Title" gfpp="Edit-Text animation design help">
                   <div class="text-content">
                      Hello
                   </div>
                </div>
             </div>
+            <div class="element-container strip"  hat="Strip" id="s1" >
+
+            </div>
+
          </div>
       </div>
       <div id="editor"></div>
       <div class="floating-panel" element="e0" gfpp-trigger="Edit-Text" title="Hello Panel" >
-         Panel Content Here
+        Panel Content here
       </div>
-      <script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.0.8/src/App.js" > </script>
-   </body>
+     <script src="https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_prototype-panel@2/dist/prototypePanel.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.0.8-beta/src/App.js"> </script>
+<script src="./project.js"> </script>
+</body>
 </html>
 
 ```
