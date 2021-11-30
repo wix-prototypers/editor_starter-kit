@@ -132,7 +132,7 @@ Strip snippet - Creates a fixed (not draggable) fullwidth strip
       state.leftPanel
    </td>
 
-   <td>open one one of the left panels, or close the panel
+   <td>Open one one of the left panels, or close the panel
    </td>
    <td>
   add | pages | design | media | apps | bussiness | false
@@ -142,10 +142,22 @@ Strip snippet - Creates a fixed (not draggable) fullwidth strip
      <td>state.zoomMode
 
    </td>
-   <td>An array with sections, in each section the relevant inputs you want to add to the panel.
-The amount of sections and the distribution of inputs among them is your decision. See details below.
+   <td>Toggle Zoom Out view
    </td>
    <td>
+     true | false 
    </td>
   </tr>
+
+  <tr>
+     <td>state.selectedElement
+
+   </td>
+   <td> fetch selected element from stage or trigger selection
+   </td>
+   <td>
+  JS element
+   </td>
+  </tr>
+  
 </table>
