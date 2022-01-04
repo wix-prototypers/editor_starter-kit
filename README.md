@@ -105,14 +105,14 @@ The following HTML snippet will genrate the editor and a basic site (header,foot
 </div>
 ```
 
-Strip snippet - Creates a fixed (not draggable) fullwidth strip
+##### Strip snippet - Creates a fixed (not draggable) fullwidth strip
 
 ```HTML
   <div class="element-container strip hero" gfpp="Change-Strip-Background design help"  hat="Strip" id="s0" >
  </div>
 ```
 
-The gfpp attribue
+##### The gfpp attribue
 ```HTML
  < div class="element-container" gfpp="...
 ```
