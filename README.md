@@ -113,6 +113,10 @@ Strip snippet - Creates a fixed (not draggable) fullwidth strip
 ```
 
 The gfpp attribue - add gfpp buttons to your elements:
+```HTML
+  <div class="element-container" gfpp="Change-Strip-Background design help"  hat="Strip" id="s0" >
+ </div>
+```
 Full Supported values list:
 ##### Main Actions (text buttons):
 - Edit-Text
