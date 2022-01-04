@@ -97,6 +97,11 @@ The following HTML snippet will genrate the editor and a basic site (header,foot
 
 #### Stage Snippets
 
+belong inside 
+```HTML
+   <div class="template">
+ ```
+
 ##### Element snippet - Create an on stage element
 
 ```HTML
@@ -149,7 +154,12 @@ Full Supported values list:
 - hover 
 - transition
 
-#### Editor snippets
+#### Editor Snippets
+
+belong inside 
+```HTML
+   <div id="editor">
+ ```
 ##### Floating Panel
 
 ```HTML
