@@ -115,9 +115,8 @@ Strip snippet - Creates a fixed (not draggable) fullwidth strip
 The gfpp attribue
 ```HTML
  < div class="element-container" gfpp="...
-
 ```
-- Add gfpp buttons to your elements:
+ Add gfpp buttons to your elements:
 
 Full Supported values list:
 ##### Main Actions (text buttons):
