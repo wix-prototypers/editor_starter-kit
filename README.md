@@ -167,7 +167,7 @@ belong inside
          Panel Content Here
 </div>
 ```
-Chaמge the `element` attribuite to be the `id` of the cooresponding `element-container`, and the `gfpp-trigger` to be the button triggering the panel.
+Change the `element` attribuite to be the `id` of the cooresponding `element-container`, and the `gfpp-trigger` to be the button triggering the panel.
 the `title` attribute will changes the panel's title, and anything you put instead of `Panel Content Here` wil chnage the panel's content.
 
 ### **3.Using The Prototype API 🔗**
