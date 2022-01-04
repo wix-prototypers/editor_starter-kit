@@ -113,10 +113,11 @@ The following HTML snippet will genrate the editor and a basic site (header,foot
 ```
 
 ##### The gfpp attribue
+ Add gfpp buttons to your elements
 ```HTML
  < div class="element-container" gfpp="...
 ```
- Add gfpp buttons to your elements:
+
 
 Full Supported values list:
 ##### Main Actions (text buttons):
