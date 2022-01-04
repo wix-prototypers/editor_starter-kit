@@ -114,34 +114,34 @@ Strip snippet - Creates a fixed (not draggable) fullwidth strip
 
 The gfpp attribue - add gfpp buttons to your elements:
 Full Supported values list:
-###### Main Actions (text buttons):
-Edit-Text
-Change-Background  
-Change-Text
-Edit-Button
-Settings
-Manage-Menu 
-Change-Design
-Manage-Items
-Change-basic-shape
-Change-Vector-Art
-Change-Strip-Background
-Change-Section-Background 
-Change-Image 
+##### Main Actions (text buttons):
+- Edit-Text
+- Change-Background  
+- Change-Text
+- Edit-Button
+- Settings
+- Manage-Menu 
+- Change-Design
+- Manage-Items
+- Change-basic-shape
+- Change-Vector-Art
+- Change-Strip-Background
+- Change-Section-Background 
+- Change-Image 
 
 
-###### Icon buttons:
-design
-effects
-elipsis
-layout
-link
-data
-crop  
-animation
-help
-hover 
-transition
+##### Icon buttons:
+- design
+- effects
+- elipsis
+- layout
+- link
+- data
+- crop  
+- animation
+- help
+- hover 
+- transition
 
 #### Editor snippets
 
