@@ -108,7 +108,7 @@ The following HTML snippet will genrate the editor and a basic site (header,foot
 Strip snippet - Creates a fixed (not draggable) fullwidth strip
 
 ```HTML
-  <div class="element-container strip hero"  hat="Strip" id="s0" >
+  <div class="element-container strip hero" gfpp="Change-Strip-Background design help"  hat="Strip" id="s0" >
  </div>
 ```
 
