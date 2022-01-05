@@ -15,9 +15,8 @@ export const Actions = {
       select(element);
 
       if (!element.querySelector("#gfpp")) {
-        console.log("To");
         Gfpp();
-        /*    DragNDrop(); */
+        DragNDrop();
         Resizable();
       }
     }

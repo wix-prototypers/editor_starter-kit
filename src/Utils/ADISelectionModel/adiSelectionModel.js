@@ -4,7 +4,7 @@ import { Resizable } from "../Resize/Resize.js";
 
 //Append Styles
 var href =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.1.1-beta/src/Utils/ADISelectionModel/adiSelectionModel.css";
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.1.2-beta/src/Utils/ADISelectionModel/adiSelectionModel.css";
 var exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {
@@ -81,7 +81,7 @@ export function selectionModel(state, setState) {
   );
   elemContainers.forEach((eleme) =>
     eleme.addEventListener("stageElement", () => {
-      /*       DragNDrop(state, setState); */
+      DragNDrop(state, setState);
       Resizable(state, setState);
       selectionModel(state, setState);
       Gfpp(state, setState);
