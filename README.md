@@ -136,7 +136,7 @@ Full Supported values list :
 - Change-Section-Background
 - Change-Image
 
-##### icon buttons
+##### Icon buttons
 - design
 - effects
 - layout
@@ -156,6 +156,9 @@ Full Supported values list :
          Panel Content Here
 </div>
 ```
+Floating panels are triggered by gfpp buttons of stage elements.
+Change the `element` attribute to be the `id` of the desired stage-element, and the `gfpp-trigger` to the button triggering the panel.
+please make sure the button you choose exists and defined(see instructions above)
 
 ### **3.Using The Prototype API 🔗**
 
