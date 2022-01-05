@@ -97,7 +97,7 @@ The following HTML snippet will genrate the editor and a basic site (header,foot
 
 #### Stage Snippets
 
-###### Elemement - Creates a fullwidth strip
+##### Elemement - Creates a fullwidth strip
 
 ```HTML
  <div class="element-container resizable draggable" id="e0" hat="Title" gfpp="Edit-Text animation design help" style="top:50px; left:30px;">
@@ -105,14 +105,14 @@ The following HTML snippet will genrate the editor and a basic site (header,foot
 </div>
 ```
 
-###### Strip snippet - Creates a fixed (not draggable) fullwidth strip
+##### Strip snippet - Creates a fixed (not draggable) fullwidth strip
 
 ```HTML
   <div class="element-container strip hero"  hat="Strip" id="s0" >
  </div>
 ```
 
-###### Adding Gfpp Buttons To stage elements :
+##### Adding Gfpp Buttons To stage elements :
 
 ```HTML
   <div class="element-container" gfpp=...
@@ -120,7 +120,7 @@ The following HTML snippet will genrate the editor and a basic site (header,foot
 
 Full Supported values list :
 
-###### Main Actions (Text Buttons)
+##### Main Actions (Text Buttons)
 - Edit-Text
 - Change-Background
 - Change-Text
@@ -136,7 +136,7 @@ Full Supported values list :
 - Change-Section-Background
 - Change-Image
 
-###### icon buttons
+##### icon buttons
 - design
 - effects
 - layout
