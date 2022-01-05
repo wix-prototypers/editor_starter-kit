@@ -52,18 +52,7 @@ export function DragNDrop() {
           let shiftX = event.pageX - boxCoords.left;
           let shiftY = event.pageY - boxCoords.top;
 
-          let coords = {
-            top: Math.ceil(
-              event.pageY -
-                topBarsHeight +
-                stage.scrollTop -
-                shiftY -
-                strp * 500
-            ),
-            left: Math.ceil(event.pageX - leftBarWidth - shiftX),
-          };
-
-          item.setAttribute("coords", `x:${coords.left}y:${coords.top}`);
+          item.setAttribute("coords", `x:${coords.left} y:${coords.top}`);
 
           document.onmousemove = function (event) {
             mousePosY = window.innerHeight - event.clientY;
@@ -158,7 +147,7 @@ function getElementTop(elem) {
   return parseInt(window.getComputedStyle(elem).top.split("px")[0]);
 }
 function locateStripAndAttach(e, shiftY, item) {
-  let top = e.pageY + stage.scrollTop - shiftY - 163;
+  let top = e.pageY + stage.scrollTop - shiftY - topBarsHeight;
   strp = Math.floor(top / 500);
 
   if (item.closest(".strip").id.split("s")[1] == strp) {
@@ -167,21 +156,5 @@ function locateStripAndAttach(e, shiftY, item) {
     item.style.top = top - strp * 500 + "px";
     item.closest(".strip").removeChild(item);
     document.querySelector(`#s${strp}`).appendChild(item);
-  }
-}
-function showAttachIndication(e, shiftY, item) {
-  let top = e.pageY + stage.scrollTop - shiftY - 163;
-  let stripVal = Math.floor(top / 500);
-
-  if (item.closest(".strip")?.id.split("s")[1] != stripVal) {
-    document
-      .querySelectorAll(".attach-to-me")
-      .forEach((me) => me.classList.remove("attach-to-me"));
-    document.querySelector(`#s${stripVal}`) &&
-      document.querySelector(`#s${stripVal}`).classList.add("attach-to-me");
-  } else {
-    document
-      .querySelectorAll(".attach-to-me")
-      .forEach((me) => me.classList.remove("attach-to-me"));
   }
 }

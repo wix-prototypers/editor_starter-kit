@@ -81,8 +81,7 @@ export function selectionModel(state, setState) {
   );
   elemContainers.forEach((eleme) =>
     eleme.addEventListener("stageElement", () => {
-      console.log("to");
-      DragNDrop(state, setState);
+      /*       DragNDrop(state, setState); */
       Resizable(state, setState);
       selectionModel(state, setState);
       Gfpp(state, setState);

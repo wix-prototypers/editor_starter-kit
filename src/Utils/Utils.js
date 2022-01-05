@@ -8,7 +8,7 @@ import { DragNDrop } from "./dragNDrop/dragNDrop.js";
 
 export const Utils = (state, setState) => {
   Resizable(state, setState);
-  DragNDrop(state, setState);
+  /*   DragNDrop(state, setState); */
   selectionModel(state, setState);
   Gfpp(state, setState);
 

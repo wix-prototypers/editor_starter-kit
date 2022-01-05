@@ -18,16 +18,10 @@ export const gfppBtns = {
     `,
     tooltip: "More Actions",
   },
-
-  "Motion-Effects": {
+  strech: {
     type: "icon",
-    svg: `<svg width="18px" height="18px" viewBox="5 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-
-<path class="st0" d="M13.4,0.8c-2,2.6-3.9,5.2-5.9,7.9C7.2,9,7.1,9.5,7.3,9.9c0.2,0.4,0.6,0.7,1.1,0.6c1.1,0,2.1-0.1,3.2-0.1
-c0,2.4-0.1,4.3-0.1,5.6c0,0.3-0.2,1.1,0.1,1.2c0.3,0.1,0.8-0.4,1.1-0.8c1.8-2.5,3.5-5,5.3-7.5c0.7-0.8,0.7-1.7,0.3-2.1
-c-0.1-0.1-0.3-0.3-0.7-0.3c-1,0-2,0-3,0c0-1.5,0-2.9,0-4.4c0.1-0.9-0.2-1.6-0.5-1.7C13.9,0.5,13.7,0.4,13.4,0.8z"/>
-</svg>`,
-    tooltip: "Interactive Effects",
+    svg: `<svg width="21" height="18" viewBox="0 0 21 18" class="symbol symbol-gfpp_stretch"><g id="Page-1" fill="none" fill-rule="evenodd" stroke="none" stroke-width="1"><g id="gfpp_stretch_up_reg" fill="#1D2D3C"><path id="Fill-17" d="M16.499 4.252a1.243 1.243 0 00-1.996 1.481l1.686 2.272H4.864l1.694-2.27A1.242 1.242 0 104.566 4.25L1 9.03l3.502 4.718a1.242 1.242 0 101.995-1.481L4.812 9.993h11.324l-1.693 2.272a1.242 1.242 0 101.992 1.485L20 8.97l-3.501-4.718z"></path></g></g></svg>`,
+    tooltip: "Strech",
   },
   data: {
     type: "icon",
@@ -133,6 +127,11 @@ c-0.1-0.1-0.3-0.3-0.7-0.3c-1,0-2,0-3,0c0-1.5,0-2.9,0-4.4c0.1-0.9-0.2-1.6-0.5-1.7
     type: "text",
     svg: "",
     tooltip: "Manage Services",
+  },
+  "Manage-Media": {
+    type: "text",
+    svg: "",
+    tooltip: "Manage Media",
   },
   "Edit-Text": {
     type: "text",
