@@ -1,7 +1,7 @@
 //Append Styles
 /* var href = "../../src/EditorUI/FloatingPanel/floating-panel.css"; */
 var href =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.1.2-beta/src/EditorUI/FloatingPanel/floating-panel.css";
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.1.3-beta/src/EditorUI/FloatingPanel/floating-panel.css";
 let exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {
@@ -56,5 +56,5 @@ export const hideFloatingPanels = () => {
     .forEach((panel) => panel.classList.remove("active"));
   document
     .querySelectorAll(".gfpp .selected")
-    .forEach((gfpp) => gfpp.classList.remove("selectedp"));
+    .forEach((gfpp) => gfpp.classList.remove("selected"));
 };

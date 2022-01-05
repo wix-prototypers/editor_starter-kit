@@ -13,7 +13,7 @@ var strp = 0;
 
 export function DragNDrop() {
   var href =
-    "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.1.2-beta/src/Utils/dragNDrop/dragNDrop.css";
+    "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.1.3-beta/src/Utils/dragNDrop/dragNDrop.css";
   var exists = false;
   document.querySelectorAll("link").forEach((link) => {
     if (link.getAttribute("href") === href) {
@@ -52,11 +52,11 @@ export function DragNDrop() {
           let shiftX = event.pageX - boxCoords.left;
           let shiftY = event.pageY - boxCoords.top;
 
-          item.setAttribute("coords", `x:${coords.left} y:${coords.top}`);
+          item.setAttribute("coords", `x:${boxCoords.left} y:${boxCoords.top}`);
 
           document.onmousemove = function (event) {
             mousePosY = window.innerHeight - event.clientY;
-            showAttachIndication(event, shiftY, item);
+
             event.stopPropagation();
             let coords = {
               top: Math.ceil(
