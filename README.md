@@ -121,6 +121,7 @@ The following HTML snippet will genrate the editor and a basic site (header,foot
 Full Supported values list :
 
 ##### Main Actions (Text Buttons)
+
 - Edit-Text
 - Change-Background
 - Change-Text
@@ -137,6 +138,7 @@ Full Supported values list :
 - Change-Image
 
 ##### Icon buttons
+
 - design
 - effects
 - layout
@@ -151,11 +153,14 @@ Full Supported values list :
 
 #### Editor snippets
 
+##### Floating Panel
+
 ```HTML
  <div class="floating-panel" element="e0" gfpp-trigger="Edit-Text" title="Hello Panel" >
          Panel Content Here
 </div>
 ```
+
 Floating panels are triggered by gfpp buttons of stage elements.
 Change the `element` attribute to be the `id` of the desired stage-element, and the `gfpp-trigger` to the button triggering the panel.
 please make sure the button you choose exists and defined(see instructions above)
