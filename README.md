@@ -20,7 +20,7 @@ https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
 Add the following links in your prototype's index file.
 
 ```HTML
-<script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.1.4-beta/src/App.js" />
+<script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.1.5-beta/src/App.js" />
 
 ```
 
@@ -70,7 +70,7 @@ The following HTML snippet will genrate the editor and a basic site (header,foot
         Panel Content here
       </div>
      <script src="https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_prototype-panel@2/dist/prototypePanel.js"></script>
-  <script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.1.4-beta/src/App.js"> </script>
+  <script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.1.5-beta/src/App.js"> </script>
 <script src="./project.js"> </script>
 </body>
 </html>
@@ -163,7 +163,7 @@ Full Supported values list :
 
 Floating panels are triggered by gfpp buttons of stage elements.
 Change the `element` attribute to be the `id` of the desired stage-element, and the `gfpp-trigger` to the button triggering the panel.
-please make sure the button you choose exists and defined(see instructions above)
+please make sure the button you choose exists and defined(see instructions above
 
 ### **3.Using The Prototype API 🔗**
 
