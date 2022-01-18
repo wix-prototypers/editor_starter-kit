@@ -431,3 +431,6 @@
   content: "";
   border: 0px solid #ffcaae !important;
 }
+.element-container.selected {
+  z-index: 99999;
+}
