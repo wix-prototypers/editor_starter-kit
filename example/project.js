@@ -1,13 +1,3 @@
-//Porototype Panel
-
-let panelInfo = {
-  prototypeTitle: "Editor Staeter Kit 1.0",
-  prototypeDescription:
-    "This is where you can describe the prototype shortly, this description is where you can elaborate and describe in details what's the prototype about.",
-  panelDirection: "right",
-};
-initPrototypePanel(panelInfo);
-
 //Add button to stage
 
 window.onload = () => {

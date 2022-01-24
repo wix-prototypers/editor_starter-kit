@@ -42,6 +42,7 @@ export function DragNDrop() {
           !event.target.closest("#gfpp") &&
           !event.target.closest(".resizer")
         ) {
+          
           deselectAll();
           mousePosY = window.innerHeight - event.clientY;
           deselectAllChildren();

@@ -138,8 +138,8 @@ export const Gfpp = (state, setState) => {
             const panel = document.querySelector(
               `.floating-panel[element="${elementId}"][gfpp-trigger="${type}"]`
             );
-
             panel && panel.classList.add("active");
+            panel && panel.setAttribute("element", element.id);
             panel.style.top = getCoords(element).top + 200 + "px";
             panel.style.left =
               getCoords(element).left + getSize(element).width + 140 + "px";

@@ -22,7 +22,6 @@ export const FloatingPanel = (state, setState) => {
     panel.insertAdjacentHTML(
       "afterbegin",
       `<div class="panel-header">
-
       ${panel.getAttribute("title")}
       <div class="flex buttons">
       <div class="control-button btn-help ">
@@ -37,15 +36,18 @@ export const FloatingPanel = (state, setState) => {
       ${icons.closePanelIcon}
       </div>
       </div>
-</div>
+      </div>
       </div>`
     )
   );
 };
 setTimeout(() => {
+  const panel = querySelectorAll(".floating-panel");
   document.querySelectorAll(".floating-panel .btn-close").forEach((btn) => {
     btn.onclick = () => {
       hideFloatingPanels();
+      const onPanelClose = window.onPanelClose;
+      onPanelClose && onPanelClose();
     };
   });
 }, 200);
