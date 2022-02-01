@@ -3,7 +3,7 @@
 window.onload = () => {
   const btn = document.getElementById("button-drag");
 
-  btn.onclick = () => {
+  btn&&btn.onclick = () => {
     const stageElement = btn.cloneNode(true);
 
     stageElement.classList.add("element-container");

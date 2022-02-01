@@ -4,7 +4,7 @@
 import { Gfpp } from "./GFPP/gfpp.js";
 import { selectionModel } from "./ADISelectionModel/adiSelectionModel.js";
 import { Resizable } from "./Resize/Resize.js";
-import { DragNDropElements } from "./dragNDropElements/DragNDropElements.js";
+import { DragNDropElements } from "./dragNDropElements/dragNDropElements.js";
 
 export const Utils = (state, setState) => {
   Resizable(state, setState);

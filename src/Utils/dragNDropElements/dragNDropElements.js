@@ -17,20 +17,6 @@ const body = document.querySelector("body");
 var strp = 0;
 
 export function DragNDropElements() {
-  var href =
-    "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.1.8-beta/src/Utils/dragNDrop/dragNDrop.css";
-  var exists = false;
-  document.querySelectorAll("link").forEach((link) => {
-    if (link.getAttribute("href") === href) {
-      exists = true;
-    }
-  });
-  if (!exists) {
-    var link = document.createElement("link");
-    link.href = href;
-    link.rel = "stylesheet";
-    document.getElementsByTagName("head")[0].appendChild(link);
-  }
   /**
    * Drag elements
    * @param {Object} event

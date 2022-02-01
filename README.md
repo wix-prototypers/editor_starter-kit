@@ -20,7 +20,7 @@ https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
 Add the following links in your prototype's index file.
 
 ```HTML
-<script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.1.8-beta/src/App.js" />
+<script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.1.9-beta/src/App.js" />
 
 ```
 
@@ -70,7 +70,7 @@ The following HTML snippet will genrate the editor and a basic site (header,foot
         Panel Content here
       </div>
      <script src="https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_prototype-panel@2/dist/prototypePanel.js"></script>
-  <script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.1.8-beta/src/App.js"> </script>
+  <script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.1.9-beta/src/App.js"> </script>
 <script src="./project.js"> </script>
 </body>
 </html>
@@ -154,8 +154,6 @@ Full Supported values list :
 
 #### Floating Panel
 
-
-
 ```HTML
  <div class="floating-panel" element="e0" gfpp-trigger="Edit-Text" title="Hello Panel" >
          Panel Content Here
@@ -167,12 +165,15 @@ Change the `element` attribute to be the `id` of the desired stage-element, and 
 please make sure the button you choose exists and defined(see instructions above
 
 ##### Panel close
+
 in your JS file define a function that will be invoked each time a floating panel closes, like so:
+
 ```JavaScript
 function onPanelHide() {
   console.log("Will be invoked on floating panel close");
 }
 ```
+
 In the current version the same function is invoked regardless of the panel's parent element.
 
 ### **3.Using The Prototype API 🔗**
