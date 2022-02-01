@@ -150,9 +150,11 @@ Full Supported values list :
 - <img  width="40" height="40" align="center"  alt="Screen Shot 2022-02-01 at 11 50 37" src="https://user-images.githubusercontent.com/61973635/151946832-1aabd683-419f-44cf-9bc4-f3983b9073b4.png"> transition
 - <img  width="40" height="40" align="center"  alt="Screen Shot 2022-02-01 at 11 50 57" src="https://user-images.githubusercontent.com/61973635/151946883-db21cac4-8437-4801-bc28-d7287076aa28.png"> settingsIcon
 
-#### Editor snippets
+### Editor snippets
 
-##### Floating Panel
+#### Floating Panel
+
+
 
 ```HTML
  <div class="floating-panel" element="e0" gfpp-trigger="Edit-Text" title="Hello Panel" >
@@ -163,6 +165,15 @@ Full Supported values list :
 Floating panels are triggered by gfpp buttons of stage elements.
 Change the `element` attribute to be the `id` of the desired stage-element, and the `gfpp-trigger` to the button triggering the panel.
 please make sure the button you choose exists and defined(see instructions above
+
+##### Panel close
+in your JS file define a function that will be invoked each time a floating panel closes, like so:
+```JavaScript
+function onPanelHide() {
+  console.log("Will be invoked on floating panel close");
+}
+```
+In the current version the same function is invoked regardless of the panel's parent element.
 
 ### **3.Using The Prototype API 🔗**
 
