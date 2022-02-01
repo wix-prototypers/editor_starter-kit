@@ -17,5 +17,5 @@ window.onload = () => {
 };
 
 function onPanelHide() {
-  console.log("panel hidden");
+  console.log("Will be invoked on floating panel close");
 }
