@@ -20,7 +20,7 @@ https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
 Add the following links in your prototype's index file.
 
 ```HTML
-<script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.1.7-beta/src/App.js" />
+<script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.1.8-beta/src/App.js" />
 
 ```
 
@@ -70,7 +70,7 @@ The following HTML snippet will genrate the editor and a basic site (header,foot
         Panel Content here
       </div>
      <script src="https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_prototype-panel@2/dist/prototypePanel.js"></script>
-  <script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.1.7-beta/src/App.js"> </script>
+  <script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.1.8-beta/src/App.js"> </script>
 <script src="./project.js"> </script>
 </body>
 </html>
@@ -139,7 +139,7 @@ Full Supported values list :
 
 ##### Icon buttons
 
--   <img width="40" height="40" align="center" alt="Screen Shot 2022-02-01 at 11 34 32" src="https://user-images.githubusercontent.com/61973635/151944350-dfa9041b-1713-43c4-b1ce-daa12d113658.png" style="top:50px;"> design
+- <img width="40" height="40" align="center" alt="Screen Shot 2022-02-01 at 11 34 32" src="https://user-images.githubusercontent.com/61973635/151944350-dfa9041b-1713-43c4-b1ce-daa12d113658.png" style="top:50px;"> design
 - <img width="40" height="40" align="center" alt="Screen Shot 2022-02-01 at 11 43 35" src="https://user-images.githubusercontent.com/61973635/151945687-08d8ff45-28db-4b58-97ae-a27ae77a45b1.png"> effects
 - <img width="40" height="40" align="center" alt="Screen Shot 2022-02-01 at 11 44 08" src="https://user-images.githubusercontent.com/61973635/151945757-aed9a233-6262-437f-976b-3e2ecacc354a.png"> elipssis
 - <img width="40" height="40" align="center" alt="Screen Shot 2022-02-01 at 11 44 44" src="https://user-images.githubusercontent.com/61973635/151945862-5f37d349-1c59-4db3-83ae-58df9f326e9e.png"> strech
@@ -148,9 +148,7 @@ Full Supported values list :
 - <img  width="40" height="40" align="center"  alt="Screen Shot 2022-02-01 at 11 49 28" src="https://user-images.githubusercontent.com/61973635/151946649-41c37393-e3ad-46ca-9e31-4695de9e5c89.png"> help
 - <img  width="40" height="40" align="center"  alt="Screen Shot 2022-02-01 at 11 49 55" src="https://user-images.githubusercontent.com/61973635/151946720-d7ba7bac-4593-40d9-81a3-cfd69d27b60f.png"> hover
 - <img  width="40" height="40" align="center"  alt="Screen Shot 2022-02-01 at 11 50 37" src="https://user-images.githubusercontent.com/61973635/151946832-1aabd683-419f-44cf-9bc4-f3983b9073b4.png"> transition
--  <img  width="40" height="40" align="center"  alt="Screen Shot 2022-02-01 at 11 50 57" src="https://user-images.githubusercontent.com/61973635/151946883-db21cac4-8437-4801-bc28-d7287076aa28.png"> settingsIcon
-
-
+- <img  width="40" height="40" align="center"  alt="Screen Shot 2022-02-01 at 11 50 57" src="https://user-images.githubusercontent.com/61973635/151946883-db21cac4-8437-4801-bc28-d7287076aa28.png"> settingsIcon
 
 #### Editor snippets
 
