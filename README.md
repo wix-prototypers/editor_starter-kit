@@ -139,17 +139,18 @@ Full Supported values list :
 
 ##### Icon buttons
 
-- design
-- effects
-- layout
-- link
-- data
-- crop
-- strech
-- animation
-- help
-- hover
-- transition
+-   <img width="40" height="40" align="center" alt="Screen Shot 2022-02-01 at 11 34 32" src="https://user-images.githubusercontent.com/61973635/151944350-dfa9041b-1713-43c4-b1ce-daa12d113658.png" style="top:50px;"> design
+- <img width="40" height="40" align="center" alt="Screen Shot 2022-02-01 at 11 43 35" src="https://user-images.githubusercontent.com/61973635/151945687-08d8ff45-28db-4b58-97ae-a27ae77a45b1.png"> effects
+- <img width="40" height="40" align="center" alt="Screen Shot 2022-02-01 at 11 44 08" src="https://user-images.githubusercontent.com/61973635/151945757-aed9a233-6262-437f-976b-3e2ecacc354a.png"> elipssis
+- <img width="40" height="40" align="center" alt="Screen Shot 2022-02-01 at 11 44 44" src="https://user-images.githubusercontent.com/61973635/151945862-5f37d349-1c59-4db3-83ae-58df9f326e9e.png"> strech
+- <img width="40" height="40" align="center" alt="Screen Shot 2022-02-01 at 11 47 34" src="https://user-images.githubusercontent.com/61973635/151946324-9dea81c9-b210-428e-a5e3-f3a7bf88bcfd.png"> data
+- <img  width="40" height="40" align="center"  alt="Screen Shot 2022-02-01 at 11 48 24" src="https://user-images.githubusercontent.com/61973635/151946468-65db25a7-44ab-447e-9306-cc98c28dff6b.png"> crop
+- <img  width="40" height="40" align="center"  alt="Screen Shot 2022-02-01 at 11 49 28" src="https://user-images.githubusercontent.com/61973635/151946649-41c37393-e3ad-46ca-9e31-4695de9e5c89.png"> help
+- <img  width="40" height="40" align="center"  alt="Screen Shot 2022-02-01 at 11 49 55" src="https://user-images.githubusercontent.com/61973635/151946720-d7ba7bac-4593-40d9-81a3-cfd69d27b60f.png"> hover
+- <img  width="40" height="40" align="center"  alt="Screen Shot 2022-02-01 at 11 50 37" src="https://user-images.githubusercontent.com/61973635/151946832-1aabd683-419f-44cf-9bc4-f3983b9073b4.png"> transition
+-  <img  width="40" height="40" align="center"  alt="Screen Shot 2022-02-01 at 11 50 57" src="https://user-images.githubusercontent.com/61973635/151946883-db21cac4-8437-4801-bc28-d7287076aa28.png"> settingsIcon
+
+
 
 #### Editor snippets
 
