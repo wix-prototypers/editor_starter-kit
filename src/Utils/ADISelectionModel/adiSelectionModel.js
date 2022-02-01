@@ -1,7 +1,7 @@
 import { DragNDropElements } from "../dragNDropElements/dragNDropElements.js";
 import { Gfpp } from "../GFPP/gfpp.js";
 import { Resizable } from "../Resize/Resize.js";
-
+import { hideFloatingPanels } from "../../EditorUI/FloatingPanel/FloatingPanel.js";
 //Append Styles
 var href =
   "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.1.7-beta/src/Utils/ADISelectionModel/adiSelectionModel.css";
@@ -28,6 +28,7 @@ export function select(eleme) {
   !eleme.classList.contains(".strip") &&
     eleme.closest(".strip").classList.add("parent-select");
   state.selectedElement = eleme;
+  hideFloatingPanels();
 }
 
 export function hoverOn(eleme) {
@@ -163,13 +164,7 @@ export function selectionModel(state, setState) {
       (elementContainer.onclick = (e) => {
         e.stopImmediatePropagation();
         e.stopPropagation();
-        if (!e.target.closest(".floating-panel"))
-          document
-            .querySelectorAll(".floating-panel")
-            .forEach((frame) => frame.classList.remove("active"));
-        document
-          .querySelectorAll(".gfpp .selected")
-          .forEach((gfpp) => gfpp.classList.remove("selected"));
+        hideFloatingPanels();
         if (
           e.target.closest(".element-container:not(.strip)") &&
           !e.target.closest("#gfpp")

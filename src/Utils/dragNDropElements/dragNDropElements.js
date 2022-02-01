@@ -47,8 +47,12 @@ export function DragNDropElements() {
           !event.target.closest("#gfpp") &&
           !event.target.closest(".resizer")
         ) {
-          const activePanel = document.querySelector(".floating-panel.active");
-          const gfppSelected = document.querySelector(".gfpp .selected");
+          const activePanel = document.querySelector(
+            `.floating-panel.active[element="${item.id}"]`
+          );
+          const gfppSelected = document.querySelector(
+            `#${item.id} .gfpp .selected`
+          );
 
           mousePosY = window.innerHeight - event.clientY;
 

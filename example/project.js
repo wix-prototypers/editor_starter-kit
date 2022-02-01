@@ -15,3 +15,7 @@ window.onload = () => {
     state.selectedElement = stageElement;
   };
 };
+
+function onPanelHide() {
+  console.log("panel hidden");
+}
