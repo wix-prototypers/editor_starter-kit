@@ -36,6 +36,9 @@
 .floating-panel:not(.active) {
   display: none !important;
 }
+.floating-panel * {
+  user-select: none;
+}
 
 .floating-panel.active {
   display: block;

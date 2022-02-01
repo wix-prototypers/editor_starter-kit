@@ -112,6 +112,10 @@
   height: 100%;
   content: "";
 }
+
+.element-container.on-the-move:after {
+  outline: 1px solid var(--blue--main) !important;
+}
 .element-container:not(.strip).selected:after {
   outline: 1px solid var(--blue--main);
   display: block;
@@ -342,10 +346,9 @@
   z-index: 999999999999 !important;
 }
 
-.header:hover:not(.selected):after {
-  background-color: #ffb08656 !important;
+.header:hover:not(.selected):hover:after {
   outline: none !important;
-  border-bottom: 1px solid #ff6600 !important;
+  border-bottom: 3px solid #ff6600 !important;
   top: 0px !important;
   left: 0px !important;
   height: 100% !important;
@@ -353,10 +356,9 @@
   width: 100% !important;
 }
 
-.header.parent-select:not(.selected):after {
-  background-color: #ffb08656 !important;
+.header.parent-select:after {
   outline: none !important;
-  border-bottom: 1px solid #ff6600 !important;
+  border-bottom: 3px solid #ff6600 !important;
   top: 0px !important;
   left: 0px !important;
   height: 100% !important;
@@ -364,11 +366,21 @@
   width: 100% !important;
 }
 
-.header.selected:after {
+.header.parent-select:not(.selected):hover:after {
+  outline: none !important;
+  border-bottom: 3px solid #ff6600 !important;
+  top: 0px !important;
+  left: 0px !important;
+  height: 100% !important;
+  z-index: -10 !important;
+  width: 100% !important;
+}
+
+.header.selected:hover:after {
   outline: 3px solid #ff6600 !important;
 }
 
-.header.selected:before {
+.header.selected:hover:before {
   background-color: #ff6600;
 }
 

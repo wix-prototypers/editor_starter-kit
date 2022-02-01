@@ -1,10 +1,11 @@
-import { DragNDrop } from "../dragNDrop/dragNDrop.js";
+import { DragNDropElements } from "../dragNDropElements/dragNDropElements.js";
 import { Gfpp } from "../GFPP/gfpp.js";
 import { Resizable } from "../Resize/Resize.js";
 
 //Append Styles
 var href =
   "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.1.7-beta/src/Utils/ADISelectionModel/adiSelectionModel.css";
+/*   "../src/Utils/ADISelectionModel/adiSelectionModel.css"; */
 var exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {
@@ -81,7 +82,7 @@ export function selectionModel(state, setState) {
   );
   elemContainers.forEach((eleme) =>
     eleme.addEventListener("stageElement", () => {
-      DragNDrop(state, setState);
+      DragNDropElements(state, setState);
       Resizable(state, setState);
       selectionModel(state, setState);
       Gfpp(state, setState);
@@ -110,12 +111,14 @@ export function selectionModel(state, setState) {
     (strip) =>
       (strip.onclick = (e) => {
         console.log("to");
-        e.stopImmediatePropagation();
-        e.stopPropagation();
+
         if (!e.target.closest(".floating-panel"))
           document
             .querySelectorAll(".floating-panel")
             .forEach((frame) => frame.classList.remove("active"));
+        document
+          .querySelectorAll(".gfpp .selected")
+          .forEach((gfpp) => gfpp.classList.remove("selected"));
         if (
           e.target.closest(".element-container:not(.strip)") &&
           !e.target.closest("#gfpp")
@@ -164,6 +167,9 @@ export function selectionModel(state, setState) {
           document
             .querySelectorAll(".floating-panel")
             .forEach((frame) => frame.classList.remove("active"));
+        document
+          .querySelectorAll(".gfpp .selected")
+          .forEach((gfpp) => gfpp.classList.remove("selected"));
         if (
           e.target.closest(".element-container:not(.strip)") &&
           !e.target.closest("#gfpp")

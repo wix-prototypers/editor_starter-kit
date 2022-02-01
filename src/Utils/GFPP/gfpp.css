@@ -7,10 +7,7 @@
   white-space: nowrap;
   z-index: 999999999 !important;
   font-family: "Madefor";
-}
-
-.show#gfpp * {
-  pointer-events: all;
+  pointer-events: none;
 }
 
 .element-container:not(.selected) #gfpp {
@@ -44,7 +41,7 @@
 }
 .element-container.selected > #gfpp {
   opacity: 1;
-  pointer-events: none;
+  pointer-events: all;
   animation: none;
 }
 .element-wrapper.strip:not(.selected) #gfpp {
@@ -64,7 +61,6 @@
 }
 
 .gfpp-btn {
-  pointer-events: all;
   min-width: 32px;
   cursor: pointer;
   position: relative;
@@ -86,7 +82,6 @@
 }
 
 .gfpp-main-action {
-  pointer-events: all;
   min-width: 32px;
   cursor: pointer;
   color: #2d4150;
@@ -203,42 +198,16 @@
   opacity: 100;
 }
 
-.strip.selected > #gfpp {
+.element-container.selected > #gfpp {
   opacity: 1 !important;
   z-index: 99;
-  animation: showGfpp 0.2s;
   transition-timing-function: ease-in-out;
+  animation: showGfpp 0.3s;
+}
+.on-the-move #gfpp {
+  animation: showGfpp 0s;
 }
 
-.element-wrapper.selected #gfpp {
-  opacity: 1 !important;
-  z-index: 99;
-  animation: showGfpp 0.3s !important;
-  transform: translate(-100px, 0px);
-  transition-timing-function: ease-in-out;
-  left: 100px !important;
-}
-.useGfpp .section.selected:not(.parent-selected) > #gfpp.show {
-  opacity: 1 !important;
-  z-index: 99;
-  animation: showGfpp 0.3s !important;
-  transform: translate(-100px, 0px);
-  left: unset;
-  transition-timing-function: ease-in-out;
-}
-
-.section.parent-selected > #gfpp.show {
-  opacity: 0 !important;
-}
-.section:not(.selected) > #gfpp.show {
-  opacity: 0 !important;
-}
-.resizing .strip.selected #gfpp {
-  opacity: 1 !important;
-  z-index: 99;
-  animation: showGfpp 0.2s;
-}
-/* 
 @keyframes showGfpp {
   0% {
     transform-origin: center;
@@ -268,29 +237,28 @@
   0% {
     transform-origin: center;
     opacity: 0;
-    transform: scale(1) translate(-100px, 0px);
+    transform: scale(1);
   }
   1% {
     transform-origin: center;
     opacity: 1;
-    transform: scale(1) translate(-100px, 0px);
+    transform: scale(1);
   }
 
   50% {
     transform-origin: center;
     transition-timing-function: ease-in-out;
-    transform: scale(1.2) translate(-100px, 0px);
+    transform: scale(1.2);
   }
 
   100% {
     transform-origin: center;
     opacity: 1;
     transition-timing-function: ease-in-out;
-    transform: scale(1) translate(-100px, 0px);
+    transform: scale(1);
   }
 }
- */
-.on-the-move #gfpp {
+*/ .on-the-move #gfpp {
   left: 500000px !important;
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -330,8 +298,6 @@
 #gfpp.show {
   opacity: 1 !important;
   pointer-events: all !important;
-
-  animation: showGfpp 0.2s !important;
   transition-timing-function: ease-in-out;
   z-index: 99999999;
 }
@@ -340,6 +306,7 @@
 }
 .strip > #gfpp {
   left: 34px;
+  top: 20px !important;
 }
 .context-menu {
   font-size: 14px;
@@ -407,7 +374,7 @@
   color: #868aa5;
 }
 #s0 > .gfpp {
-  z-index: 999999999 !important;
+  z-index: 999999999999999 !important;
 }
 
 .useGfpp .sectionActions-btn[type="animation"],

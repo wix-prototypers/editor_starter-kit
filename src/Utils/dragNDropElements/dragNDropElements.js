@@ -3,15 +3,20 @@ import {
   select,
   deselectAllChildren,
 } from "../ADISelectionModel/adiSelectionModel.js";
+
+import {
+  hideFloatingPanels,
+  showPanel,
+} from "../../EditorUI/FloatingPanel/FloatingPanel.js";
+
 var mousePosY = 0;
 const topBarsHeight = 170;
 const leftBarWidth = 58;
 const stage = document.querySelector("#stage");
 const body = document.querySelector("body");
-
 var strp = 0;
 
-export function DragNDrop() {
+export function DragNDropElements() {
   var href =
     "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.1.7-beta/src/Utils/dragNDrop/dragNDrop.css";
   var exists = false;
@@ -42,22 +47,28 @@ export function DragNDrop() {
           !event.target.closest("#gfpp") &&
           !event.target.closest(".resizer")
         ) {
-          
-          deselectAll();
+          const activePanel = document.querySelector(".floating-panel.active");
+          const gfppSelected = document.querySelector(".gfpp .selected");
+
           mousePosY = window.innerHeight - event.clientY;
-          deselectAllChildren();
+
           event.stopPropagation();
-          item.classList.add("on-the-move");
-          item.closest(".strip")?.classList.add("origin-strip");
-          stage.classList.add("dragging");
-          body.classList.add("dragging");
+
           let boxCoords = getCoords(item);
           let shiftX = event.pageX - boxCoords.left;
           let shiftY = event.pageY - boxCoords.top;
-
+          locateStripAndAttach(event, shiftY, item);
           item.setAttribute("coords", `x:${boxCoords.left} y:${boxCoords.top}`);
 
           document.onmousemove = function (event) {
+            deselectAllChildren();
+            deselectAll();
+            item.classList.add("on-the-move");
+            item.closest(".strip")?.classList.add("origin-strip");
+
+            stage.classList.add("dragging");
+            body.classList.add("dragging");
+            hideFloatingPanels();
             mousePosY = window.innerHeight - event.clientY;
 
             event.stopPropagation();
@@ -76,42 +87,15 @@ export function DragNDrop() {
             item.style.top = coords.top + "px";
 
             item.setAttribute("coords", `x:${coords.left},y:${coords.top}`);
-
-            if (mousePosY < 12) {
-              pageScrollDown();
-              function pageScrollDown() {
-                let interval = setInterval(() => {
-                  let dragEnd = stage.classList.contains("page-end")
-                    ? 3900
-                    : 3500;
-                  if (mousePosY < 12 && stage.scrollTop < dragEnd) {
-                    stage.classList.add("autoScroll");
-                    stage.scrollBy({ top: 1, left: 0 });
-                    item.style.top = getElementTop(item) + 1 + "px";
-                  } else {
-                    stage.classList.remove("autoScroll");
-                    clearInterval(interval);
-                  }
-                }, 30);
-              }
-            } else if (window.innerHeight - mousePosY < 100) {
-              stage.classList.add("autoScroll");
-              pageScrollUp();
-              function pageScrollUp() {
-                let interval = setInterval(() => {
-                  if (window.innerHeight - mousePosY < 100) {
-                    stage.scrollBy({ top: -1, left: 0 });
-                    item.style.top = getElementTop(item) - 1 + "px";
-                  } else {
-                    clearInterval(interval);
-                    stage.classList.remove("autoScroll");
-                  }
-                }, 30);
-              }
-            }
           };
 
           item.onmouseup = function (e) {
+            console.log(activePanel);
+            setTimeout(function () {
+              activePanel && showPanel(activePanel, item.id);
+              gfppSelected && gfppSelected.classList.add("selected");
+            });
+
             document
               .querySelectorAll(".attach-to-me")
               .forEach((me) => me.classList.remove("attach-to-me"));
@@ -128,10 +112,10 @@ export function DragNDrop() {
 
             stage.classList.remove("dragging");
             body.classList.remove("dragging");
-            locateStripAndAttach(e, shiftY, item);
 
             select(item);
             item.closest(".strip").classList.add("parent-select");
+            locateStripAndAttach(e, shiftY, item);
           };
         }
       });
@@ -150,14 +134,11 @@ function getElementTop(elem) {
   return parseInt(window.getComputedStyle(elem).top.split("px")[0]);
 }
 function locateStripAndAttach(e, shiftY, item) {
-  let top = e.pageY + stage.scrollTop - shiftY - topBarsHeight;
+  let top = e.pageY - shiftY - topBarsHeight;
   strp = Math.floor(top / 500);
 
-  if (item.closest(".strip").id.split("s")[1] == strp) {
-    return;
-  } else {
-    item.style.top = top - strp * 500 + "px";
-    item.closest(".strip").removeChild(item);
-    document.querySelector(`#s${strp}`).appendChild(item);
-  }
+  item.style.top = top - strp * 500 + "px";
+  item.closest(".strip").removeChild(item);
+  document.querySelector(`#s${strp}`).appendChild(item);
+  select(item);
 }

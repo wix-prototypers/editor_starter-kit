@@ -362,11 +362,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f0f3f5;
-  color: #717375;
+
+  color: black;
   width: 53px;
   border-radius: 4px;
-  font-size: 12px;
+  font-size: 14px;
   height: 28px;
-  transform: translate(4px, 0px);
+  transform: translate(0px, 0px);
 }

@@ -2,7 +2,7 @@ import {
   deselectAll,
   select,
 } from "./Utils/ADISelectionModel/adiSelectionModel.js";
-import { DragNDrop } from "./Utils/dragNDrop/dragNDrop.js";
+import { DragNDropElements } from "./Utils/dragNDropElements/dragNDropElements.js";
 import { getCoords, titleCase } from "./Utils/functions.js";
 import { Gfpp } from "./Utils/GFPP/gfpp.js";
 import { Resizable } from "./Utils/Resize/Resize.js";

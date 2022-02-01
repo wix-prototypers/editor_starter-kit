@@ -86,7 +86,6 @@ export function titleCase(str) {
 /**
  * copy to clipboard
  * @param {string} title
- * @returns {undefined}
  */
 
 export const copyToClipboard = (str) => {
@@ -96,4 +95,30 @@ export const copyToClipboard = (str) => {
   el.select();
   document.execCommand("copy");
   document.body.removeChild(el);
+};
+
+/**
+ * copy to clipboard
+ * @param {HTMLElement} handle
+ * @param {HTMLElement} elementToDrag
+ * @param {Array} Offset
+ */
+export const dragAndDrop = (handle, elementToDrag, offset) => {
+  handle.onmousedown = (e) => {
+    const mousePos = { x: e.pageX, y: e.pageY };
+    const coords = getCoords(panel);
+    const realOffset = {
+      x: mousePos.x - coords.left - LEFT_BAR_WIDTH,
+      y: mousePos.y - coords.top - HEADER_HEIGHT,
+    };
+
+    document.onmousemove = (moveEvent) => {
+      const mousePos = { x: moveEvent.pageX, y: moveEvent.pageY };
+      panel.style.top = mousePos.y - offset.y + "px";
+      panel.style.left = mousePos.x - offset.x + "px";
+    };
+    document.onmouseup = (moveEvent) => {
+      document.onmousemove = null;
+    };
+  };
 };

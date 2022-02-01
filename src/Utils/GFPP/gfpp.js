@@ -1,10 +1,15 @@
 import { gfppBtns } from "./gfpp_data.js";
+import {
+  showPanel,
+  hideFloatingPanels,
+} from "../../EditorUI/FloatingPanel/FloatingPanel.js";
 import { getCoords, getSize } from "../functions.js";
 
 //Append Styles
 
 var href =
   "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.1.7-beta/src/Utils/GFPP/gfpp.css";
+/*   "../src/Utils/GFPP/gfpp.css"; */
 var exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {
@@ -21,7 +26,7 @@ if (!exists) {
 
 export const Gfpp = (state, setState) => {
   let elemContainers = document.querySelectorAll(
-    "#stage .element-container, .element-wrapper, .section"
+    "#stage .element-container, .element-wrapper, .strip"
   );
 
   elemContainers.forEach((elem) => {
@@ -107,10 +112,6 @@ export const Gfpp = (state, setState) => {
 
     allBtns.forEach((btn) => {
       btn.addEventListener("click", function (e) {
-        document.querySelectorAll(".context-menu").forEach((element) => {
-          element.remove();
-        });
-
         e.preventDefault();
         e.stopPropagation();
         e.stopImmediatePropagation();
@@ -120,41 +121,26 @@ export const Gfpp = (state, setState) => {
 
         let btnTarget = e.target;
         btnTarget = btnTarget.closest("li");
-        console.log(btnTarget.closest("li"));
         if (!btnTarget.classList.contains("disabled")) {
           if (btnTarget.classList.contains("selected")) {
             btnTarget.classList.remove("selected");
-            document.querySelectorAll(".context-menu").forEach((element) => {
-              element.remove();
-            });
+            hideFloatingPanels();
           } else {
             allBtns.forEach((btn) => btn.classList.remove("selected"));
             console.log(btnTarget);
 
             btnTarget.classList.add("selected");
-            let element = btnTarget.closest(".element-container");
+
             let elementId = btnTarget.closest(".element-container").id;
             let type = btnTarget.getAttribute("type");
             const panel = document.querySelector(
               `.floating-panel[element="${elementId}"][gfpp-trigger="${type}"]`
             );
-            panel && panel.classList.add("active");
-            panel && panel.setAttribute("element", element.id);
-            panel.style.top = getCoords(element).top + 200 + "px";
-            panel.style.left =
-              getCoords(element).left + getSize(element).width + 140 + "px";
+            showPanel(panel, elementId);
           }
-
-          //further actions, see function below
         }
       });
     });
-    //trigger main action on double-click
-    /*    element.addEventListener("dblclick", (e) => {
-      e.stopPropagation();
-      let mainAction = element.querySelector(".gfpp-main-action");
-      mainAction.click();
-    }); */
 
     /**
      * Show/hide tooltip
@@ -261,35 +247,7 @@ export const Gfpp = (state, setState) => {
             var gfpp = e.target
               .closest(".section")
               .querySelector(".section > #gfpp");
-            if (e.target.closest("#s0")) {
-              gfpp.style.left = window.innerWidth - 350 + "px";
-              gfpp.style.top = 30 + stage.scrollTop + "px";
-            } else if (e.target.closest("#s1")) {
-              if (e.pageX > window.innerWidth - 400) {
-                gfpp.style.top = e.pageY - 860 + stage.scrollTop + "px";
-                gfpp.style.left = window.innerWidth - 480 + "px";
-              } else if (e.pageX < 200) {
-                gfpp.style.top = e.pageY - 860 + stage.scrollTop + "px";
-                gfpp.style.left = 150 + "px";
-              } else if (e.pageX > window.innerWidth - 300) {
-                gfpp.style.top = e.pageY - 860 + stage.scrollTop + "px";
-                gfpp.style.left = e.pageX - 250 + "px";
-              } else {
-                gfpp.style.top = e.pageY - 860 + stage.scrollTop + "px";
-                gfpp.style.left = e.pageX - 50 + "px";
-              }
-            } else {
-              console.log(e.pageY);
-              gfpp.style.top = 50 + "px";
-              gfpp.style.left = window.innerWidth - 350 + "px";
-            }
           }
-        } else {
-          var gfpp = e.target
-            .closest(".section")
-            .querySelector(".section > #gfpp");
-          gfpp.classList.remove("show");
-          e.target.closest(".section").classList.remove("select-overlay");
         }
       });
     });
