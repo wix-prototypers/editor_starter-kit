@@ -139,7 +139,7 @@ Full Supported values list :
 
 ##### Icon buttons
 
-- design  <img width="40" alt="Screen Shot 2022-02-01 at 11 34 32" src="https://user-images.githubusercontent.com/61973635/151944350-dfa9041b-1713-43c4-b1ce-daa12d113658.png">
+- design  <img width="40" style="transform:translate(0px,30px)" alt="Screen Shot 2022-02-01 at 11 34 32" src="https://user-images.githubusercontent.com/61973635/151944350-dfa9041b-1713-43c4-b1ce-daa12d113658.png">
 - effects
 - layout
 - link
