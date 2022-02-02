@@ -3,8 +3,8 @@
 
 import { getCoords, getSize } from "../../Utils/functions.js";
 var href =
-  /*   "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.1.9-beta/src/EditorUI/FloatingPanel/floating-panel.css"; */
-  "../src/EditorUI/FloatingPanel/floating-panel.css";
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.1.9-beta/src/EditorUI/FloatingPanel/floating-panel.css";
+/*   "../src/EditorUI/FloatingPanel/floating-panel.css"; */
 let exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {

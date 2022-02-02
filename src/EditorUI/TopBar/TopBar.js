@@ -3,7 +3,7 @@ import { icons } from "./top-bar-icons.js";
 //Append Styles
 var href =
   "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.1.9-beta/src/EditorUI/TopBar/top-bar.css";
-/* var href = "../../src/EditorUI/TopBar/top-bar.css"; */
+/* "../../src/EditorUI/TopBar/top-bar.css"; */
 var exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {
