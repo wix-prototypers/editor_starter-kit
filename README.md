@@ -164,7 +164,15 @@ Floating panels are triggered by gfpp buttons of stage elements.
 Change the `element` attribute to be the `id` of the desired stage-element, and the `gfpp-trigger` to the button triggering the panel.
 please make sure the button you choose exists and defined(see instructions above
 
-##### Panel close
+##### Postion panel absolutly, relative to screen
+
+```HTML
+ <div class="floating-panel" element="e0" gfpp-trigger="Edit-Text" title="Hello Panel" top="0" left="0" >
+         Panel Content Here
+</div>
+```
+
+##### Panel close function
 
 in your JS file define a function that will be invoked each time a floating panel closes, like so:
 
