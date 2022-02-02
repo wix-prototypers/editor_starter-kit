@@ -197,15 +197,14 @@
   animation-duration: 4s;
   opacity: 100;
 }
+.element-container.selected > #gfpp:not(.show) {
+  opacity: 0;
+  transition-timing-function: ease-in-out;
+}
 
 .element-container.selected > #gfpp {
   opacity: 1 !important;
   z-index: 99;
-  transition-timing-function: ease-in-out;
-  animation: showGfpp 0.3s;
-}
-.on-the-move #gfpp {
-  animation: showGfpp 0s;
 }
 
 @keyframes showGfpp {

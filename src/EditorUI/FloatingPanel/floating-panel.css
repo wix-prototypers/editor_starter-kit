@@ -19,7 +19,6 @@
   .floating-panel {
     z-index: 1000000;
     user-select: auto;
-    transform: scale(0.4);
   }
 }
 
@@ -47,9 +46,7 @@
   border-radius: 4px;
   font-size: 16px;
   background: white;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
   position: absolute;
   width: calc(100vw - var(--margin-modal-lr));
   height: calc(100vh - var(--margin-modal-tb));
@@ -58,10 +55,9 @@
   max-height: 400px;
   border-top: 6px solid #116dff;
   overflow: hidden;
-  z-index: 99999999999999999999999999 !important;
 }
-.floating-panel.active.modal {
-  z-index: 99 !important;
+.floating-panel.active {
+  z-index: 99999999999999 !important;
 }
 #First-Version.modal {
   display: none;
@@ -90,13 +86,6 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-}
-@media screen and (max-height: 900px) {
-  .floating-panel {
-    z-index: 1000000;
-    user-select: auto;
-    transform: translate(-50%, -50%);
-  }
 }
 
 .floating-panel .panel-header {

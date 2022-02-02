@@ -8,8 +8,8 @@ import { getCoords, getSize } from "../functions.js";
 //Append Styles
 
 var href =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.1.9-beta/src/Utils/GFPP/gfpp.css";
-/*   "../src/Utils/GFPP/gfpp.css"; */
+  /*   "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.1.9-beta/src/Utils/GFPP/gfpp.css"; */
+  "../src/Utils/GFPP/gfpp.css";
 var exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {
@@ -215,6 +215,7 @@ export const Gfpp = (state, setState) => {
           e.target.getAttribute("contenteditable") != true
         ) {
           e.target.querySelector("#gfpp") &&
+            !e.target.querySelector("#gfpp").classList.contains("show") &&
             e.target.querySelector("#gfpp").classList.add("show");
 
           document

@@ -3,7 +3,8 @@
 
 import { getCoords, getSize } from "../../Utils/functions.js";
 var href =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.1.9-beta/src/EditorUI/FloatingPanel/floating-panel.css";
+  /*   "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.1.9-beta/src/EditorUI/FloatingPanel/floating-panel.css"; */
+  "../src/EditorUI/FloatingPanel/floating-panel.css";
 let exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {
@@ -18,8 +19,6 @@ if (!exists) {
 }
 
 import * as icons from "./icons.js";
-const HEADER_HEIGHT = 203;
-const LEFT_BAR_WIDTH = 150;
 
 export const FloatingPanel = (state, setState) => {
   document.querySelectorAll(".floating-panel").forEach((panel) =>
@@ -82,8 +81,8 @@ const dragFloatingPanels = () => {
       const mousePos = { x: e.pageX, y: e.pageY };
       const coords = getCoords(panel);
       const offset = {
-        x: mousePos.x - coords.left - LEFT_BAR_WIDTH,
-        y: mousePos.y - coords.top - HEADER_HEIGHT,
+        x: mousePos.x - coords.left,
+        y: mousePos.y - coords.top,
       };
 
       document.onmousemove = (moveEvent) => {
@@ -103,17 +102,14 @@ const positionPanels = () => {
   panels.forEach((panel) => {
     const elementId = panel.getAttribute("element");
     const element = document.querySelector(`#${elementId}`);
-    panel.style.top = getCoords(element).top + 200 + "px";
-    panel.style.left =
-      getCoords(element).left + getSize(element).width + 140 + "px";
+    panel.style.top = getCoords(element).top + "px";
+    panel.style.left = getCoords(element).left + getSize(element).width + "px";
 
     const coords = {
       top: parseInt(panel.getAttribute("top")),
       left: parseInt(panel.getAttribute("left")),
     };
-    if (coords.left || coords.left === 0)
-      panel.style.left = coords.left + LEFT_BAR_WIDTH + "px";
-    if (coords.top || coords.top === 0)
-      panel.style.top = coords.top + HEADER_HEIGHT + "px";
+    if (coords.left || coords.left === 0) panel.style.left = coords.left + "px";
+    if (coords.top || coords.top === 0) panel.style.top = coords.top + "px";
   });
 };

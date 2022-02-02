@@ -4,8 +4,8 @@ import { Resizable } from "../Resize/Resize.js";
 import { hideFloatingPanels } from "../../EditorUI/FloatingPanel/FloatingPanel.js";
 //Append Styles
 var href =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.1.9-beta/src/Utils/ADISelectionModel/adiSelectionModel.css";
-/*   "../src/Utils/ADISelectionModel/adiSelectionModel.css"; */
+  /*   "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.1.9-beta/src/Utils/ADISelectionModel/adiSelectionModel.css"; */
+  "../src/Utils/ADISelectionModel/adiSelectionModel.css";
 var exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {
@@ -24,7 +24,7 @@ let overlay = document.querySelector(".stage-overlay");
 
 export function select(eleme) {
   deselectAll();
-  eleme.classList.add("selected");
+  !eleme.classList.contains("selected") && eleme.classList.add("selected");
   !eleme.classList.contains(".strip") &&
     eleme.closest(".strip").classList.add("parent-select");
   state.selectedElement = eleme;
@@ -154,7 +154,8 @@ export function selectionModel(state, setState) {
               strip.classList.remove("parent-select");
               strip.classList.remove("hovered");
             });
-          strip.classList.add("selected");
+          !strip.classList.contains("selected") &&
+            strip.classList.add("selected");
         }
       })
   );
@@ -199,7 +200,8 @@ export function selectionModel(state, setState) {
               strip.classList.remove("parent-select");
               strip.classList.remove("hovered");
             });
-          strip.classList.add("selected");
+          !strip.classList.contains("selected") &&
+            strip.classList.add("selected");
         }
       })
   );

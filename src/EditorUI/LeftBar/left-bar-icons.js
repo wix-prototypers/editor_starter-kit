@@ -24,12 +24,7 @@ export const icons = {
       </g>
   </svg>`,
   ascend: `<?xml version="1.0" encoding="UTF-8"?>
-  <svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <title>Combined Shape</title>
-      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-          <path d="M16.506144,0.175322536 C17.761442,0.174925526 18.8047544,1.14240825 18.8989017,2.39417081 L18.9048986,2.5740774 L18.9048986,4.97283202 L22.5030305,4.97283202 C23.7583285,4.97243477 24.801641,5.93991749 24.8957883,7.19168005 L24.9017854,7.37158665 L24.9017854,21.7641143 C24.9021824,23.0194123 23.9346997,24.0627248 22.6829371,24.1568721 L22.5030305,24.1628693 L3.31299355,24.1628693 C2.05769556,24.1632662 1.01438311,23.1957835 0.920235817,21.9440209 L0.914238686,21.7641143 L0.914238686,7.37158665 C0.913841675,6.11628865 1.8813244,5.0729762 3.13308696,4.97882891 L3.31299355,4.97283202 L6.91112549,4.97283202 L6.91112549,2.5740774 C6.91072823,1.31877941 7.87821095,0.275466959 9.12997351,0.181319667 L9.30988011,0.175322536 L16.506144,0.175322536 Z M22.9229123,7.82806235 L16.9819267,7.82806235 L16.9819267,9.82806235 L22.9229123,9.82806235 L22.9229123,7.82806235 Z M16.506144,2.5740774 L9.30988011,2.5740774 L9.30988011,4.97283202 L16.506144,4.97283202 L16.506144,2.5740774 Z" id="Combined-Shape" fill="#000000" fill-rule="nonzero"></path>
-      </g>
-  </svg>
+  <svg width="20" height="20" viewBox="0 0 20 20" class="symbol symbol-leftBarButtonAscend icon"><g fill="none" fill-rule="evenodd"><path d="M-3-3h26v26H-3z"></path><path fill="currentColor" d="M13 0a2 2 0 011.995 1.85L15 2v2h3a2 2 0 011.995 1.85L20 6v12a2 2 0 01-1.85 1.995L18 20H2a2 2 0 01-1.995-1.85L0 18V6a2 2 0 011.85-1.995L2 4h3V2A2 2 0 016.85.005L7 0h6zm0 2H7v2h6V2z"></path><path fill="currentColor" d="M10.88 8L14 16h-1.71l-.64-1.76H8.29L7.64 16H6l3.12-8h1.76zm-.92 1.69l-1.2 3.28h2.42L9.96 9.69z" class="icon-transparent icon-animation-1"></path><path fill="currentColor" d="M2 16h16v4H2z"></path></g></svg>
   `,
   media: `<?xml version="1.0" encoding="UTF-8"?>
   <svg width="19px" height="19px" viewBox="0 0 19 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
