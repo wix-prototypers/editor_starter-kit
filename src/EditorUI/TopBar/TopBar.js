@@ -2,7 +2,7 @@ import { icons } from "./top-bar-icons.js";
 
 //Append Styles
 var href =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.2.1-beta/src/EditorUI/TopBar/top-bar.css";
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.2.2-beta/src/EditorUI/TopBar/top-bar.css";
 /* "../../src/EditorUI/TopBar/top-bar.css"; */
 var exists = false;
 document.querySelectorAll("link").forEach((link) => {

@@ -3,7 +3,7 @@
 
 import { getCoords, getSize } from "../../Utils/functions.js";
 var href =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.2.1-beta/src/EditorUI/FloatingPanel/floating-panel.css";
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.2.2-beta/src/EditorUI/FloatingPanel/floating-panel.css";
 /*   "../src/EditorUI/FloatingPanel/floating-panel.css"; */
 let exists = false;
 document.querySelectorAll("link").forEach((link) => {
@@ -63,10 +63,19 @@ export const showPanel = (panel, elementId) => {
 };
 
 export const hideFloatingPanels = () => {
-  window.onPanelHide && window.onPanelHide();
-  document
-    .querySelectorAll(".floating-panel")
-    .forEach((panel) => panel.classList.remove("active"));
+  document.querySelectorAll(".floating-panel").forEach((panel) => {
+    if (
+      panel.classList.contains("active") &&
+      document.panel.getAttribute("elemnet")
+    ) {
+      window.onFloatingPanelHide &&
+        window.onFloatingPanelHide.apply({
+          parentElementId: panel.getAttribute("elemnet"),
+          gfppTrigger: panel.getAttribute("gfpp-trigger"),
+        });
+    }
+    panel.classList.remove("active");
+  });
   document
     .querySelectorAll(".gfpp .selected")
     .forEach((gfpp) => gfpp.classList.remove("selected"));

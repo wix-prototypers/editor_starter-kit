@@ -3,7 +3,7 @@
 window.onload = () => {
   const btn = document.getElementById("button-drag");
 
-  btn&&btn.onclick = () => {
+  btn.onclick = () => {
     const stageElement = btn.cloneNode(true);
 
     stageElement.classList.add("element-container");
@@ -16,6 +16,14 @@ window.onload = () => {
   };
 };
 
-function onPanelHide() {
-  console.log("Will be invoked on floating panel close");
+function onGfppClick() {
+  console.log(
+    `GFPP button was clicked. parent-element:${this.elementContainerId} gfpp button :${this.buttonType}`
+  );
+}
+
+function onFloatingPanelHide() {
+  console.log(
+    `Floating Panel was closed. parent-element:${this.parentElementId} gfpp button:${this.gfppTrigger}`
+  );
 }

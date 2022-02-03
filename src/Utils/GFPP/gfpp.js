@@ -5,10 +5,10 @@ import {
 } from "../../EditorUI/FloatingPanel/FloatingPanel.js";
 import { getCoords, getSize } from "../functions.js";
 
-//Append Styles
+import { uuid } from "../functions.js";
 
 var href =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.2.1-beta/src/Utils/GFPP/gfpp.css";
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.2.2-beta/src/Utils/GFPP/gfpp.css";
 /*   "../src/Utils/GFPP/gfpp.css"; */
 var exists = false;
 document.querySelectorAll("link").forEach((link) => {
@@ -71,6 +71,7 @@ export const Gfpp = (state, setState) => {
         //create text button
         let gfppLiSpan = document.createElement("span");
         gfppLi.classList.add("gfpp-main-action");
+
         gfppLiSpan.innerHTML = gfppBtns[button].tooltip;
         gfppLi.appendChild(gfppLiSpan);
       } else if (gfppBtns[button]) {
@@ -119,23 +120,27 @@ export const Gfpp = (state, setState) => {
           return;
         }
 
-        let btnTarget = e.target;
+        let btnTarget = e.target.closest("li");
+        window.onGfppClick &&
+          onGfppClick.apply({
+            buttonType: btnTarget.getAttribute("type"),
+            elementContainerRef: btnTarget.closest(".element-container"),
+            elementContainerId: btnTarget.closest(".element-container").id,
+          });
         btnTarget = btnTarget.closest("li");
         if (!btnTarget.classList.contains("disabled")) {
+          hideFloatingPanels();
           if (btnTarget.classList.contains("selected")) {
             btnTarget.classList.remove("selected");
-            hideFloatingPanels();
           } else {
             allBtns.forEach((btn) => btn.classList.remove("selected"));
-            console.log(btnTarget);
-
             btnTarget.classList.add("selected");
-
             let elementId = btnTarget.closest(".element-container").id;
             let type = btnTarget.getAttribute("type");
             const panel = document.querySelector(
               `.floating-panel[element="${elementId}"][gfpp-trigger="${type}"]`
             );
+
             showPanel(panel, elementId);
           }
         }
