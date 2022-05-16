@@ -4,7 +4,7 @@ import { Resizable } from "../Resize/Resize.js";
 import { hideFloatingPanels } from "../../EditorUI/FloatingPanel/FloatingPanel.js";
 //Append Styles
 var href =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.3-beta/src/Utils/ADISelectionModel/adiSelectionModel.css";
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.3.1-beta/src/Utils/ADISelectionModel/adiSelectionModel.css";
 /*   "../src/Utils/ADISelectionModel/adiSelectionModel.css"; */
 var exists = false;
 document.querySelectorAll("link").forEach((link) => {
@@ -26,7 +26,7 @@ export function select(eleme) {
   deselectAll();
   !eleme.classList.contains("selected") && eleme.classList.add("selected");
   !eleme.classList.contains(".strip") &&
-    eleme.closest(".strip").classList.add("parent-select");
+    eleme.closest(".strip")?.classList.add("parent-select");
   state.selectedElement = eleme;
 
   window.onElementSelect &&
