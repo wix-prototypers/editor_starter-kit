@@ -1,8 +1,8 @@
 var hrefs = [
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.2.2-beta/src/Styles/fonts.css",
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.2.2-beta/src/Styles/normalize.css",
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.2.2-beta/src/Styles/ptyp.css",
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.2.2-beta/src/Styles/variables.css",
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.3-beta/src/Styles/fonts.css",
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.3-beta/src/Styles/normalize.css",
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.3-beta/src/Styles/ptyp.css",
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.3-beta/src/Styles/variables.css",
 ];
 
 hrefs.forEach((href) => {

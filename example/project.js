@@ -15,7 +15,6 @@ window.onload = () => {
     state.selectedElement = stageElement;
   };
 };
-
 function onGfppClick() {
   console.log(
     `GFPP button was clicked. parent-element:${this.elementContainerId} gfpp button :${this.buttonType}`
@@ -26,4 +25,11 @@ function onFloatingPanelHide() {
   console.log(
     `Floating Panel was closed. parent-element:${this.parentElementId} gfpp button:${this.gfppTrigger}`
   );
+}
+
+function onElementSelect() {
+  console.log(
+    `Element was selected. element:${this.eleme} element id:${this.elemeId}`
+  );
+  state.leftPanel = false;
 }

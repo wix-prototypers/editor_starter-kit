@@ -4,7 +4,7 @@ import { Resizable } from "../Resize/Resize.js";
 import { hideFloatingPanels } from "../../EditorUI/FloatingPanel/FloatingPanel.js";
 //Append Styles
 var href =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.2.2-beta/src/Utils/ADISelectionModel/adiSelectionModel.css";
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.3-beta/src/Utils/ADISelectionModel/adiSelectionModel.css";
 /*   "../src/Utils/ADISelectionModel/adiSelectionModel.css"; */
 var exists = false;
 document.querySelectorAll("link").forEach((link) => {
@@ -28,6 +28,13 @@ export function select(eleme) {
   !eleme.classList.contains(".strip") &&
     eleme.closest(".strip").classList.add("parent-select");
   state.selectedElement = eleme;
+
+  window.onElementSelect &&
+    window.onElementSelect.apply({
+      eleme: eleme,
+      elemeId: eleme.id,
+    });
+
   hideFloatingPanels();
 }
 
@@ -111,8 +118,6 @@ export function selectionModel(state, setState) {
   strips.forEach(
     (strip) =>
       (strip.onclick = (e) => {
-        console.log("to");
-
         if (!e.target.closest(".floating-panel"))
           document
             .querySelectorAll(".floating-panel")
@@ -154,8 +159,7 @@ export function selectionModel(state, setState) {
               strip.classList.remove("parent-select");
               strip.classList.remove("hovered");
             });
-          !strip.classList.contains("selected") &&
-            strip.classList.add("selected");
+          !strip.classList.contains("selected") && select(strip);
         }
       })
   );
