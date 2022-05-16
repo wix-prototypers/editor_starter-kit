@@ -8,7 +8,7 @@ import { getCoords, getSize } from "../functions.js";
 import { uuid } from "../functions.js";
 
 var href =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.3.1-beta/src/Utils/GFPP/gfpp.css";
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.3.2-beta/src/Utils/GFPP/gfpp.css";
 /*   "../src/Utils/GFPP/gfpp.css"; */
 var exists = false;
 document.querySelectorAll("link").forEach((link) => {
