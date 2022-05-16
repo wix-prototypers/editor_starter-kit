@@ -8,7 +8,7 @@ import { getCoords, getSize } from "../functions.js";
 import { uuid } from "../functions.js";
 
 var href =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.2.2-beta/src/Utils/GFPP/gfpp.css";
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.3-beta/src/Utils/GFPP/gfpp.css";
 /*   "../src/Utils/GFPP/gfpp.css"; */
 var exists = false;
 document.querySelectorAll("link").forEach((link) => {
@@ -127,6 +127,7 @@ export const Gfpp = (state, setState) => {
             elementContainerRef: btnTarget.closest(".element-container"),
             elementContainerId: btnTarget.closest(".element-container").id,
           });
+
         btnTarget = btnTarget.closest("li");
         if (!btnTarget.classList.contains("disabled")) {
           hideFloatingPanels();
