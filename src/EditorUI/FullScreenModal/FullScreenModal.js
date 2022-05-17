@@ -7,7 +7,7 @@ import {
 
 //Append Styles
 var href =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.3.4-beta/src/EditorUI/FullScreenModal/FullScreenModal.css";
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.3.5-beta/src/EditorUI/FullScreenModal/FullScreenModal.css";
 let exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {
