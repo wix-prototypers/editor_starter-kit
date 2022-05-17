@@ -104,7 +104,7 @@ export function DragNDropElements() {
             body.classList.remove("dragging");
 
             select(item);
-            item.closest(".strip").classList.add("parent-select");
+            item.closest(".strip"?).classList.add("parent-select");
             locateStripAndAttach(e, shiftY, item);
           };
         }
@@ -128,7 +128,7 @@ function locateStripAndAttach(e, shiftY, item) {
   strp = Math.floor(top / 500);
 
   item.style.top = top - strp * 500 + "px";
-  item.closest(".strip").removeChild(item);
+  item.closest(".strip")?.removeChild(item);
   document.querySelector(`#s${strp}`).appendChild(item);
   select(item);
 }

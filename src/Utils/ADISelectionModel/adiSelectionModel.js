@@ -4,7 +4,7 @@ import { Resizable } from "../Resize/Resize.js";
 import { hideFloatingPanels } from "../../EditorUI/FloatingPanel/FloatingPanel.js";
 //Append Styles
 var href =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.3.2-beta/src/Utils/ADISelectionModel/adiSelectionModel.css";
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.3.3-beta/src/Utils/ADISelectionModel/adiSelectionModel.css";
 /*   "../src/Utils/ADISelectionModel/adiSelectionModel.css"; */
 var exists = false;
 document.querySelectorAll("link").forEach((link) => {
@@ -135,7 +135,7 @@ export function selectionModel(state, setState) {
           document.querySelectorAll(".parent-select").forEach((strip) => {
             strip.classList.remove("parent-select");
           });
-          elem.closest(".strip").classList.add("parent-select");
+          elem.closest(".strip")?.classList.add("parent-select");
         } else {
           deselectAll();
           document
@@ -180,7 +180,7 @@ export function selectionModel(state, setState) {
           document.querySelectorAll(".parent-select").forEach((strip) => {
             strip.classList.remove("parent-select");
           });
-          elem.closest(".strip").classList.add("parent-select");
+          elem.closest(".strip")?.classList.add("parent-select");
         } else {
           deselectAll();
           document
