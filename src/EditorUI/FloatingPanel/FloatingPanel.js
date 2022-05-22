@@ -93,8 +93,14 @@ const dragFloatingPanels = () => {
 
       document.onmousemove = (moveEvent) => {
         const mousePos = { x: moveEvent.pageX, y: moveEvent.pageY };
-        panel.style.top = mousePos.y - offset.y + "px";
-        panel.style.left = mousePos.x - offset.x + "px";
+        if (mousePos.y - offset.y >= 89) {
+          setTimeout(() => {
+            panel.style.top = mousePos.y - offset.y + "px";
+          }, 10);
+        }
+
+        if (mousePos.x - offset.x >= 60)
+          panel.style.left = mousePos.x - offset.x + "px";
       };
       document.onmouseup = (moveEvent) => {
         document.onmousemove = null;
@@ -115,7 +121,9 @@ const positionPanels = () => {
       top: parseInt(panel.getAttribute("top")),
       left: parseInt(panel.getAttribute("left")),
     };
-    if (coords.left || coords.left === 0) panel.style.left = coords.left + "px";
-    if (coords.top || coords.top === 0) panel.style.top = coords.top + "px";
+    if (coords.left || coords.left === 0)
+      panel.style.left = coords.left + 60 + "px";
+    if (coords.top || coords.top === 0)
+      panel.style.top = coords.top + 90 + "px";
   });
 };
