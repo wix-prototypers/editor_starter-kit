@@ -3,7 +3,7 @@
 
 import { getCoords, getSize } from "../../Utils/functions.js";
 var href =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.5/src/EditorUI/FloatingPanel/floating-panel.css";
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.6/src/EditorUI/FloatingPanel/floating-panel.css";
 /*   "../src/EditorUI/FloatingPanel/floating-panel.css"; */
 let exists = false;
 document.querySelectorAll("link").forEach((link) => {
@@ -25,7 +25,7 @@ export const FloatingPanel = (state, setState) => {
     panel.insertAdjacentHTML(
       "afterbegin",
       `<div class="panel-header">
-      ${panel.getAttribute("title")}
+      ${panel.getAttribute("data-title")}
        <div class="flex buttons">
           <div class="control-button btn-help ">
              <div class="button-content">

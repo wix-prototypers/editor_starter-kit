@@ -4,7 +4,7 @@ import { Resizable } from "../Resize/Resize.js";
 import { hideFloatingPanels } from "../../EditorUI/FloatingPanel/FloatingPanel.js";
 //Append Styles
 var href =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.5/src/Utils/ADISelectionModel/adiSelectionModel.css";
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.6/src/Utils/ADISelectionModel/adiSelectionModel.css";
 /*   "../src/Utils/ADISelectionModel/adiSelectionModel.css"; */
 var exists = false;
 document.querySelectorAll("link").forEach((link) => {

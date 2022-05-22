@@ -20,7 +20,7 @@ https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
 Add the following links in your prototype's index file.
 
 ```HTML
-<script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.5/src/App.js" />
+<script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.6/src/App.js" />
 
 ```
 
@@ -66,11 +66,11 @@ The following HTML snippet will genrate the editor and a basic site (header,foot
          </div>
       </div>
       <div id="editor"></div>
-      <div class="floating-panel" element="e0" gfpp-trigger="Edit-Text" title="Hello Panel" >
+      <div class="floating-panel" element="e0" gfpp-trigger="Edit-Text" data-title="Hello Panel" >
         Panel Content here
       </div>
      <script src="https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_prototype-panel@2/dist/prototypePanel.js"></script>
-  <script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.5/src/App.js"> </script>
+  <script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.6/src/App.js"> </script>
 <script src="./project.js"> </script>
 </body>
 </html>
@@ -155,7 +155,7 @@ Full Supported values list :
 #### Floating Panel
 
 ```HTML
- <div class="floating-panel" element="e0" gfpp-trigger="Edit-Text" title="Hello Panel" >
+ <div class="floating-panel" element="e0" gfpp-trigger="Edit-Text" data-title="Hello Panel" >
          Panel Content Here
 </div>
 ```
@@ -167,7 +167,7 @@ please make sure the button you choose exists and defined(see instructions above
 ##### Postion panel absolutly, relative to screen
 
 ```HTML
- <div class="floating-panel" element="e0" gfpp-trigger="Edit-Text" title="Hello Panel" top="0" left="0" >
+ <div class="floating-panel" element="e0" gfpp-trigger="Edit-Text" data-title="Hello Panel" top="0" left="0" >
          Panel Content Here
 </div>
 ```
