@@ -4,7 +4,7 @@ import { selectSection } from "../ADISelectionModel/adiSelectionModel.js";
 
 //Append Styles
 var href =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.4/src//Utils/sectionActions/sectionActions.css";
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.5/src//Utils/sectionActions/sectionActions.css";
 let exists = false;
 
 document.querySelectorAll("link").forEach((link) => {

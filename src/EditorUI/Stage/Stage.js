@@ -1,6 +1,6 @@
 //Append Styles
 var href =
-  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.4/src/EditorUI/Stage/stage.css";
+  "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.5/src/EditorUI/Stage/stage.css";
 let exists = false;
 document.querySelectorAll("link").forEach((link) => {
   if (link.getAttribute("href") === href) {
