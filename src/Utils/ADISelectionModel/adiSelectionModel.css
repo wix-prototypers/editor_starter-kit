@@ -65,7 +65,7 @@
   height: calc(100% - 6px);
   outline: 3px solid var(--blue--light);
 }
-.parent-select.strip:before {
+.parent-select:not(.selected).strip:before {
   content: attr(hat);
   position: absolute;
   top: -22px;

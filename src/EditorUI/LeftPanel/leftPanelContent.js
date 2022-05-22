@@ -477,7 +477,7 @@ class="category-name"></span>PayPal Buttons</span></span>
 
 </ul>
 
- <img src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.3.5-beta/src/Images/add-btn.png" style="
+ <img src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.4/src/Images/add-btn.png" style="
  height:1200px; user-drag: none; 
  user-select: none;
  -moz-user-select: none;
@@ -515,7 +515,7 @@ export const appsContent = `
       </div>
    
 <div class="panel-content">
-<img src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.3.5-beta/src/Images/apps.png" style="width: 100%; min-height:650px !important;   z-index:-10 !important;">
+<img src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.4/src/Images/apps.png" style="width: 100%; min-height:650px !important;   z-index:-10 !important;">
 </div>
 </div>`;
 
