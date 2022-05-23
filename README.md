@@ -153,7 +153,6 @@ Full Supported values list :
 
 ##### Custom Gfpp Function
 
-On GFPP Click Custom function
 In your JS file, define a function that will be invoked each time a Gfpp is clicked, the function will have access to  the element container id, and gfpp button type in the context (this). example:
 
 ```JavaScript
