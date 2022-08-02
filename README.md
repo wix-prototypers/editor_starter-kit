@@ -150,6 +150,31 @@ Full Supported values list :
 - <img  width="40" height="40" align="center"  alt="Screen Shot 2022-02-01 at 11 50 37" src="https://user-images.githubusercontent.com/61973635/151946832-1aabd683-419f-44cf-9bc4-f3983b9073b4.png"> transition
 - <img  width="40" height="40" align="center"  alt="Screen Shot 2022-02-01 at 11 50 57" src="https://user-images.githubusercontent.com/61973635/151946883-db21cac4-8437-4801-bc28-d7287076aa28.png"> settingsIcon
 
+
+##### Custom Gfpp Function
+
+In your JS file, define a function that will be invoked each time a Gfpp is clicked, the function will have access to  the element container id, and gfpp button type in the context (this). example:
+
+```JavaScript
+function onGfppClick() {
+  console.log(
+    `GFPP button was clicked. parent-element:${this.elementContainerId} gfpp button :${this.buttonType}`
+  );
+}
+```
+
+##### On Element Select Custom 
+ your in your JS file,  define a function that will be invoked each time an element is selected, the function will have access to the HTML element , and the element container id in the context (this) of the selected element. example:
+ 
+```JavaScript
+function onElementSelect() {
+  console.log(
+    `Element was selected. element:${this.eleme} element id:${this.elemeId}`
+  );
+}
+```
+
+
 ### Editor snippets
 
 #### Floating Panel
