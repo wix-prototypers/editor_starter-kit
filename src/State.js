@@ -21,9 +21,6 @@ export function State(
 
     publish(event, data = {}) {
       this.events = { ...this.events, event: { Name: event, type: data } };
-      /*   console.log(`%c Event:`, "background: #222; color: #ffbbbb");
-      console.log(` Name: %c ${event}`, "background: #222; color: #9484F7");
-      console.log(` Type: %c ${data}`, "background: #222; color: #9484F7"); */
       return this.events;
     }
   }

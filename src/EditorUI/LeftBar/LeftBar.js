@@ -22,6 +22,18 @@ export const LeftBar = (
   leftBarItems = ["Add", "Pages", "Apps", "Design", "Ascend"]
 ) => {
   let container = document.querySelector("#left-bar");
+
+  if (window.leftbar) {
+    const template = window.leftbar().template;
+    const methods = window.leftbar().methods;
+    const keys = Object.keys(methods);
+    container.insertAdjacentHTML("afterbegin", template);
+    keys.forEach((key) => {
+      methods[key](container);
+    });
+    return;
+  }
+
   container.classList.add("leftbar");
   leftBarItems.forEach((item) => {
     container.insertAdjacentHTML(

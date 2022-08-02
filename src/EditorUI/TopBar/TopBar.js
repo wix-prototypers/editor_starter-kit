@@ -24,6 +24,17 @@ const { logo, chev, search, desktop2, mobile2, undo2, redo2, tools } = icons;
 export const TopBar = (state, setState) => {
   let container = document.querySelector("#top-bar");
 
+  if (window.topbar) {
+    const template = window.topbar().template;
+    const methods = window.topbar().methods;
+    const keys = Object.keys(methods);
+    container.insertAdjacentHTML("afterbegin", template);
+    keys.forEach((key) => {
+      methods[key](container);
+    });
+    return;
+  }
+
   container.insertAdjacentHTML(
     "afterbegin",
     `
